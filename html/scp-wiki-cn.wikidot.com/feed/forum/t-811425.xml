@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wikidot="http://www.wikidot.com/rss-namespace">
+
+	<channel>
+		<title>Changing the site&#039;s design</title>
+		<link>http://scp-wiki-cn.wikidot.com/forum/t-811425/changing-the-site-s-design</link>
+		<description>Posts in the discussion thread &quot;Changing the site&#039;s design&quot;</description>
+				<copyright></copyright>
+		<lastBuildDate>Sun, 19 Feb 2017 09:02:34 +0000</lastBuildDate>
+		
+					<item>
+				<guid>http://scp-wiki-cn.wikidot.com/forum/t-811425#post-1991448</guid>
+				<title>Re: Changing the site&#039;s design</title>
+				<link>http://scp-wiki-cn.wikidot.com/forum/t-811425/changing-the-site-s-design#post-1991448</link>
+				<description></description>
+				<pubDate>Fri, 14 Mar 2014 22:03:31 +0000</pubDate>
+				<wikidot:authorName>Dr Devan</wikidot:authorName>				<wikidot:authorUserId>1396679</wikidot:authorUserId>				<content:encoded>
+					<![CDATA[
+						 <p>No, the site change has been finished, so you can remove admin.</p> <p>Whenever you are needed my help, just PM to me. Than I will help you.</p> 
+				 	]]>
+				</content:encoded>							</item>
+					<item>
+				<guid>http://scp-wiki-cn.wikidot.com/forum/t-811425#post-1991237</guid>
+				<title>Re: Changing the site&#039;s design</title>
+				<link>http://scp-wiki-cn.wikidot.com/forum/t-811425/changing-the-site-s-design#post-1991237</link>
+				<description></description>
+				<pubDate>Fri, 14 Mar 2014 15:58:19 +0000</pubDate>
+				<wikidot:authorName>MScarlet</wikidot:authorName>				<wikidot:authorUserId>1745583</wikidot:authorUserId>				<content:encoded>
+					<![CDATA[
+						 <p>Thanks so much of your contribution for this wiki! It looks clean and beatiful and I like it so much.</p> <p>Have anything on this site still need to be adjust? If none, I would like to remove the admin.</p> <p>Wish can get your help if the Chinese sandbox has built.</p> 
+				 	]]>
+				</content:encoded>							</item>
+					<item>
+				<guid>http://scp-wiki-cn.wikidot.com/forum/t-811425#post-1990666</guid>
+				<title>Changing the site&#039;s design</title>
+				<link>http://scp-wiki-cn.wikidot.com/forum/t-811425/changing-the-site-s-design#post-1990666</link>
+				<description></description>
+				<pubDate>Thu, 13 Mar 2014 18:18:13 +0000</pubDate>
+				<wikidot:authorName>Dr Devan</wikidot:authorName>				<wikidot:authorUserId>1396679</wikidot:authorUserId>				<content:encoded>
+					<![CDATA[
+						 <p>I've finished changing the site's design. Here is the update log:</p> <ol> <li>Mobile·Tablet response</li> <li>Forum CSS Update</li> <li>New features: Ruby and Keycap</li> </ol> <h2><span>Ruby</span></h2> <div class="code"> <pre> <code>[[span class=&quot;ruby&quot;]]汉字[[span class=&quot;rt&quot;]]Hànzì[[/span]][[/span]]</code> </pre></div> <p><span class="ruby">汉字<span class="rt">Hànzì</span></span></p> <h2><span>Keycap</span></h2> <div class="code"> <pre> <code>[[span class=&quot;keycap&quot;]]Ctrl[[/span]] + [[span class=&quot;keycap&quot;]]C[[/span]]</code> </pre></div> <p><span class="keycap">Ctrl</span> + <span class="keycap">C</span></p> 
+				 	]]>
+				</content:encoded>							</item>
+				</channel>
+</rss>

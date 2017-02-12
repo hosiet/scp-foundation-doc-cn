@@ -1,0 +1,466 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
+
+<head>
+    <title>Techniki post-processingu w OpenGL - WWW 10</title>
+    
+    
+    
+    <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--edac79f846ba/common--javascript/init.combined.js"></script>
+    <script  type="text/javascript">
+        var URL_HOST = 'www.wikidot.com';
+        var URL_DOMAIN = 'wikidot.com';
+        var USE_SSL =  true ;
+        var URL_STATIC = 'http://d3g0gp89917ko0.cloudfront.net/v--edac79f846ba';
+        // global request information
+        
+        var WIKIREQUEST = {};
+        WIKIREQUEST.info = {};
+        
+        WIKIREQUEST.info.domain = "warsztatywww.wikidot.com";
+        WIKIREQUEST.info.siteId = 64353;
+        WIKIREQUEST.info.siteUnixName = "warsztatywww";
+        WIKIREQUEST.info.categoryId = 4298665;
+        WIKIREQUEST.info.themeId = 25;
+        WIKIREQUEST.info.requestPageName = "www10:opengl";
+        OZONE.request.timestamp = 1487493121;
+        OZONE.request.date = new Date();
+        WIKIREQUEST.info.lang = 'pl';
+                WIKIREQUEST.info.pageUnixName = "www10:opengl";
+        WIKIREQUEST.info.pageId = 22342187;
+                        WIKIREQUEST.info.lang = "pl";
+        OZONE.lang = "pl";
+        var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    </script>
+    
+    
+
+
+    
+        <script  type="text/javascript">
+    
+        require.config({
+            baseUrl: URL_STATIC + '/common--javascript',
+            paths: {
+                'jquery.ui': 'jquery-ui.min',
+                'jquery.form': 'jquery.form'
+            }
+        });
+    
+    </script>
+    
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+            
+    
+    
+    
+    
+    <meta http-equiv="content-language" content="pl"/>
+    <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--edac79f846ba/common--javascript/WIKIDOT.combined.js"></script>
+        
+    
+    <style type="text/css" id="internal-style">
+        
+        /* modules */
+        
+                
+        /* theme */
+                    @import url(http://d3g0gp89917ko0.cloudfront.net/v--edac79f846ba/common--theme/base/css/style.css);
+                    @import url(http://d3g0gp89917ko0.cloudfront.net/v--edac79f846ba/common--theme/cappuccino/css/style.css);
+            </style>
+    
+        
+        
+        
+    <link rel="shortcut icon" href="/local--favicon/favicon.gif"/>
+    <link rel="icon" type="image/gif" href="/local--favicon/favicon.gif"/>
+    
+            <link rel="apple-touch-icon" href="/common--images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/common--images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/common--images/apple-touch-icon-114x114.png" />
+        
+        
+            <link rel="alternate" type="application/wiki" title="Edit this page" href="javascript:WIKIDOT.page.listeners.editClick()"/>
+    
+        <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-18234656-1']);
+        _gaq.push(['_setDomainName', 'none']);
+        _gaq.push(['_setAllowLinker', true]);
+        _gaq.push(['_trackPageview']);
+
+        _gaq.push(['old._setAccount', 'UA-68540-5']);
+        _gaq.push(['old._setDomainName', 'none']);
+        _gaq.push(['old._setAllowLinker', true]);
+        _gaq.push(['old._trackPageview']);
+
+                _gaq.push(['userTracker._setAccount', 'UA-16827888-1']);
+        _gaq.push(['userTracker._trackPageview']);
+            </script>
+    
+    <script type="text/javascript">
+        window.google_analytics_uacct = 'UA-18234656-1';
+        window.google_analytics_domain_name = 'none';
+    </script>
+    
+    </head>
+<body id="html-body">
+<div id="skrollr-body">
+<a name="page-top"></a>
+
+<div id="container-wrap-wrap">
+    <div id="container-wrap">
+        <div id="container">
+            <div id="header">
+              <h1><a href="/"><span>WWW 10</span></a></h1>
+                
+                    <h2><span>Wakacyjne Warsztaty Wielodyscyplinarne 9</span></h2>
+                
+                
+                <!-- google_ad_section_start(weight=ignore) -->
+                
+                <div id="search-top-box" class="form-search">
+    <form id="search-top-box-form" action="dummy" class="input-append">
+        <input id="search-top-box-input" class="text empty search-query" type="text" size="15" name="query" value="Szukaj" onfocus="if(YAHOO.util.Dom.hasClass(this, 'empty')){YAHOO.util.Dom.removeClass(this,'empty'); this.value='';}"/><input class="button btn" type="submit" name="search" value="Szukaj"/>
+    </form>
+</div>
+                
+                
+                    <div id="top-bar">
+                        
+
+<img src="/local--files/nav:top/logo.gif" alt="logo.gif" class="image" />
+                    </div>
+                
+                <div id="login-status"><a href="javascript:;" onclick="WIKIDOT.page.listeners.createAccount(event)" class="login-status-create-account btn">Załóż konto</a> <span>lub</span> <a href="javascript:;" onclick="WIKIDOT.page.listeners.loginClick(event)" class="login-status-sign-in btn btn-primary">Zaloguj się</a> </div>
+                <div id="header-extra-div-1"><span></span></div><div id="header-extra-div-2"><span></span></div><div id="header-extra-div-3"><span></span></div>
+            </div>
+            
+            <div id="content-wrap">
+                
+                    <div id="side-bar">
+                        
+
+
+                        
+
+<p>WWW11</p>
+<ul>
+<li><a href="/start">Strona główna</a></li>
+<li><a href="/www11:program">Program WWW11</a></li>
+<li><a href="/www11:rejestracja">Rejestracja na WWW11</a></li>
+<li><a href="/dla-prowadzacych">Dla prowadzących</a></li>
+<li><a href="/organizatorzy">Organizatorzy</a></li>
+</ul>
+<hr />
+<ul>
+<li><a href="/historia">Historia, zdjęcia i relacje</a></li>
+<li>np. <a href="/www10:program">Program WWW10</a></li>
+</ul>
+<hr />
+<ul>
+<li><a href="/drogowskaz-pasjonata">Drogowskaz Pasjonata</a></li>
+<li><a href="/en:indie-camp-for-hs-geeks">An article on this camp</a> (for gifted high-school students)</li>
+<li><a href="/linki">Linki</a></li>
+</ul>
+<hr />
+<ul>
+<li><a href="/en">In English</a></li>
+<li><a href="http://www.facebook.com/groups/278425497876/">WWW na Facebooku</a></li>
+</ul>
+<p><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwarsztatywww.wikidot.com%2F&amp;width=170&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80&amp;appId=262622227112392" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:170px; height:80px;" allowtransparency="true"></iframe></p>
+<div class="social-frame google">
+<p><iframe src="/nav:side/html/31613c75573c4e7f486366d06df834d3bb357d41-17208489961140958001" allowtransparency="true" frameborder="0" class="html-block-iframe"></iframe></p>
+</div>
+<p><iframe src="/nav:side/html/12d37ed3bc03a7e3fbdbeed05cacf5135804a060-19651179781313192100" allowtransparency="true" frameborder="0" class="html-block-iframe"></iframe></p>
+
+                        
+
+
+                    </div>
+                
+                
+                <!-- google_ad_section_end -->
+                
+                <div id="main-content">
+                    <div id="action-area-top"></div>
+                    
+                    
+                        <div id="page-title">
+                            Techniki post-processingu w OpenGL
+                        </div>
+                    
+
+                    
+
+                    
+
+
+
+                    <div id="page-content">
+                        
+
+<h1 id="toc0"><span>Prowadzący</span></h1>
+<p>Piotr Dulikowski &lt;piodul [at] op [dot] pl&gt;</p>
+<h1 id="toc1"><span>Opis</span></h1>
+<p>Post-processing to określenie na różnego rodzaju metody uatrakcyjnienia gotowego obrazu. Są one często wykorzystywane w aplikacjach 3D do zastosowania efektów wymagających informacji o całym obrazie, np. kreskówkowe obwódki czy rozmycie. Na dodatek nie potrzebują informacji o geometrii sceny, przez co można je wdrożyć do gotowego silnika graficznego z minimalnym wysiłkiem. Na tych warsztatach pokażę kilka ciekawych efektów tego typu wykorzystywanych w nowoczesnych grach komputerowych.</p>
+<h1 id="toc2"><span>Program zajęć</span></h1>
+<div style="float: right;"><a href="http://en.wikipedia.org/wiki/Bloom_(shader_effect)"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Elephants_Dream_-_Emo_and_Proog.jpg/320px-Elephants_Dream_-_Emo_and_Proog.jpg" alt="320px-Elephants_Dream_-_Emo_and_Proog.jpg" class="image" /></a></div>
+<h2 id="toc3"><span>Dzień 1: Podstawy</span></h2>
+<p>Omówię, jak się używa framebuffer-ów w OpenGL-u. Rozszerzymy nasze programy o prosty mechanizm post-fx.</p>
+<h2 id="toc4"><span>Dzień 2-3: The real stuff</span></h2>
+<p>Nauczymy się i naklepiemy bardziej zaawansowane efekty:</p>
+<ul>
+<li>Blur</li>
+<li>Wykrywanie krawędzi</li>
+<li>Depth of Field</li>
+<li>Screen Space Ambient Occlusion</li>
+<li>High Dynamic Range</li>
+<li>Bloom</li>
+<li>Depth of Field + Bokeh</li>
+</ul>
+<p>(Zrobimy, ile zdążymy; w razie nadmiaru czasu mogę zaproponować coś jeszcze)</p>
+<h1 id="toc5"><span>Wymagania</span></h1>
+<ul>
+<li>Umiejętność w miarę sprawnego pisania w C/C++. Do innych języków też są bindingi OpenGL, lecz nie miałem z nimi do czynienia, zatem nie będę w stanie pomóc w razie problemów związanymi z samymi bindingami czy językiem. Używasz na własną odpowiedzialność.</li>
+<li>Trochę geometrii analitycznej - wiedzieć co to wektory, rozumieć w jaki sposób OpenGL wykonuje przekształcenia</li>
+<li>Podstawowa znajomość OpenGL + GLSL (czyli fixed function się nie liczy)</li>
+<li>Znajomość jakiejś przenośnej biblioteki odpalającej okienko i OpenGL-a (np. GLFW + GLEW, SDL, SFML&#8230;)</li>
+<li>Sprzęt z w miarę aktualną wersją OpenGL, co najmniej 3.0</li>
+<li>Trochę wyobraźni</li>
+</ul>
+<h1 id="toc6"><span>Zadania</span></h1>
+<h2 id="toc7"><span>Zadanie nr 1</span></h2>
+<p>Napisz aplikację, która wczyta zadany obrazek z pliku do tekstury, przekształci go za pomocą fragment shadera i narysuje. Chciałbym, aby w Twoim programie znalazły się następujące efekty:</p>
+<ul>
+<li>Odwrócenie kolorów</li>
+<li>Zamiana dwóch kanałów kolorów</li>
+<li>Odcienie szarości</li>
+<li>Posteryzacja</li>
+<li>Lustrzane odbicie</li>
+<li>Falowanie obrazu w czasie</li>
+<li>Pikselizacja (zmniejszenie rozdzielczości)</li>
+<li>Dodanie (pseudo)losowego szumu</li>
+<li>(opcjonalnie) Kilka efektów własnego pomysłu</li>
+</ul>
+<p>Ścieżkę do zadanego obrazka powinno się dać podać jako argument w linii poleceń. Nie musisz dbać o zachowanie proporcji przy wyświetlaniu obrazka. Powinno dać się przełączać pomiędzy efektami za pomocą klawiatury.</p>
+<h2 id="toc8"><span>Zadanie nr 2</span></h2>
+<p>Napisz program, który wczyta zadany model 3D i wyświetli go. Model zapisany będzie w pliku tekstowym, w uproszczonej wersji formatu OBJ. Możesz założyć, że plik jest w poprawnym formacie.</p>
+<h3 id="toc9"><span>Format modelu</span></h3>
+<p>Każda linijka zaczyna się od nazwy definicji - <strong>v</strong>, <strong>vn</strong> bądź <strong>f</strong>. Każda linijka zaczynająca się od innego ciągu znaków powinna być zignorowana.<br />
+Po nazwie jest odstęp, a dalej - argumenty:</p>
+<p><strong>v</strong></p>
+<div class="code">
+<pre>
+<code>v x y z</code>
+</pre></div>
+<br />
+Definiuje pozycję wierzchołka (x, y, z - liczby zmiennoprzecinkowe).
+<p><strong>vn</strong></p>
+<div class="code">
+<pre>
+<code>vn x y z</code>
+</pre></div>
+<br />
+Definiuje wektor normalny (prostopadły) do powierzchni - (x, y, z - liczby zmiennoprzecinkowe).
+<p><strong>f</strong></p>
+<div class="code">
+<pre>
+<code>f v1//vn1 v2//vn2 v3//vn3</code>
+</pre></div>
+<br />
+Definiuje trójkąt. Każdy jego wierzchołek opisany jest przez dwie nieujemne liczby całkowite:
+<ul>
+<li>v<em>i</em> - numer definicji pozycji <em>i</em>-tego wierzchołka trójkąta</li>
+<li>vn<em>i</em> - numer definicji wektora normalnego <em>i</em>-tego wierzchołka trójkąta</li>
+</ul>
+<p>UWAGA: Numery definicji liczone są od jedynki!</p>
+<h3 id="toc10"><span>Przykładowy plik</span></h3>
+<div class="code">
+<pre>
+<code>v 0.0 0.0 0.0
+v 1.0 0.0 0.0
+v 0.0 1.0 0.0
+v 1.0 1.0 0.0
+vn 0.0 0.0 1.0
+f 1//1 2//1 3//1
+f 4//1 2//1 3//1</code>
+</pre></div>
+<br />
+Powyższy fragment opisuje model złożony z dwóch trójkątów o wierzchołkach o współrzędnych:
+<ul>
+<li>1# trójkąt: (0, 0, 0), (1, 0, 0), (0, 1, 0)</li>
+<li>2# trójkąt: (1, 1, 0), (1, 0, 0), (0, 1, 0)</li>
+</ul>
+<p>Każdy z tych wierzchołków ma ten sam wektor normalny - (0, 0, 1).</p>
+<p>Swój program można testować na <a href="http://goanna.cs.rmit.edu.au/~pknowles/models/wt_teapot.obj">czajniczku z Utah</a>, bądź <a href="http://www.prinmath.com/csci5229/OBJ/bunny.zip">stanfordzkim króliku</a>.<br />
+Tego typu model można również łatwo stworzyć samemu w <a href="http://www.blender.org/">Blenderze</a> (eksportując do OBJ zaznacz w opcjach wyłącznie <em>Include Normals</em> i <em>Triangulate Faces</em>)<br />
+Model powinien być oświetlony przez jedno kierunkowe źródło światła. Model powinien dać się obracać, i ewentualnie skalować.</p>
+<h1 id="toc11"><span>Dodatkowe informacje</span></h1>
+<ul>
+<li>Na zajęciach każdy powinien mieć przygotowany program rysujący jakąś prostą scenę/model 3D, który będziemy rozszerzać. Jeżeli nie pisałeś(aś) wcześniej czegoś takiego, możesz wykorzystać aplikację z zadania kwalifikacyjnego, lecz zachęcam do uprzedniej zabawy z OpenGL-em w celu lepszego zapoznania się z biblioteką.</li>
+<li>W razie pytań - śmiało pisz na maila.</li>
+</ul>
+<h1 id="toc12"><span>Przydatne materiały:</span></h1>
+<p>Polecam następujące biblioteki (ich użycie nie jest, oczywiście, wymagane):</p>
+<ul>
+<li><a href="http://www.glfw.org/">http://www.glfw.org/</a> - odpala okienko, przechwytuje input, itp.</li>
+<li><a href="http://glew.sourceforge.net/">http://glew.sourceforge.net/</a> - wczytuje rozszerzenia OpenGL-a</li>
+<li><a href="http://glm.g-truc.net/">http://glm.g-truc.net/</a> - biblioteka matematyczna przypominająca funkcje z shaderów</li>
+<li><a href="http://www.lonesock.net/soil.html">http://www.lonesock.net/soil.html</a> - prosta biblioteka do ładowania tekstur</li>
+</ul>
+
+                    </div>
+
+                    
+
+
+
+                    
+
+                    <div id="page-info-break"></div>
+                    
+                        <div id="page-options-container">
+                            <div id="page-info">wersja strony: 1, ostatnia edycja: <span class="odate time_1401996133 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20temu%29">05 Jun 2014 19:22</span></div>
+            <div id="page-options-bottom"  class="page-options-bottom">
+            <a href="javascript:;" class="btn btn-default" id="edit-button">Edytuj</a>
+<a href="javascript:;" class="btn btn-default" id="tags-button">Tagi</a>
+
+<a href="javascript:;" class="btn btn-default" id="history-button">Historia</a>
+<a href="javascript:;" class="btn btn-default" id="files-button">Pliki</a>
+<a href="javascript:;" class="btn btn-default" id="print-button">Drukuj</a>
+<a href="javascript:;" class="btn btn-default" id="site-tools-button">Narzędzia</a>
+<a href="javascript:;" class="btn btn-default" id="more-options-button">+&nbsp;Opcje</a> 
+</div>
+<div id="page-options-bottom-2" class="page-options-bottom form-actions" style="display:none">
+    <a href="javascript:;" class="btn btn-default" id="edit-sections-button">Edytuj sekcje</a>
+    <a href="javascript:;" class="btn btn-default" id="edit-append-button">Dołącz tekst</a>
+    <a href="javascript:;" class="btn btn-default" id="edit-meta-button">Edytuj tagi meta</a>
+    <a href="javascript:;" class="btn btn-default" id="watchers-button">Obserwowane przez</a> 
+    <a href="javascript:;" class="btn btn-default" id="backlinks-button">Linki zwrotne</a> 
+    <a href="javascript:;" class="btn btn-default" id="view-source-button">Źródło strony</a> 
+    <a href="javascript:;" class="btn btn-default" id="parent-page-button">Strona nadrzędna</a> 
+    <a href="javascript:;" class="btn btn-default" id="page-block-button">Zablokuj stronę</a>    
+    <a href="javascript:;" class="btn btn-default" id="rename-move-button">Zmień nazwę</a> 
+    <a href="javascript:;" class="btn btn-default" id="delete-button">Usuń</a> 
+</div>
+<div id="page-options-area-bottom">
+</div>
+
+                        </div>
+                    
+                    <div id="action-area" style="display: none;"></div>
+                </div>
+            </div>
+            
+            
+            
+            <div id="footer" style="display: block; visibility: visible;">
+                <div class="options" style="display: block; visibility: visible;">
+    <a href="http://www.wikidot.com/doc" id="wikidot-help-button">Pomoc</a>
+    &nbsp;|
+    <a href="http://www.wikidot.com/legal:terms-of-service" id="wikidot-tos-button">Regulamin</a>
+    &nbsp;|
+    <a href="http://www.wikidot.com/legal:privacy-policy" id="wikidot-privacy-button">Prywatność</a>
+    &nbsp;|
+    <a href="javascript:;" id="bug-report-button" onclick="WIKIDOT.page.listeners.pageBugReport(event)">Zgłoś błąd</a>
+    &nbsp;|
+    <a href="javascript:;" id="abuse-report-button" onclick="WIKIDOT.page.listeners.flagPageObjectionable(event)">Zgłoś nadużycie</a>
+</div>
+Umieszczone na <a href="http://www.wikidot.com">Wikidot.com</a> 
+            </div>
+            
+                <div id="license-area" class="license-area">
+                    O ile nie zaznaczono inaczej, treść tej strony objęta jest licencją <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 License</a>
+                </div>
+            
+            
+            
+
+
+
+            <div id="extrac-div-1"><span></span></div><div id="extrac-div-2"><span></span></div><div id="extrac-div-3"><span></span></div>
+            
+            
+            
+            
+                
+            
+        </div>
+        
+    </div>
+<!-- These extra divs/spans may be used as catch-alls to add extra imagery. -->
+<div id="extra-div-1"><span></span></div><div id="extra-div-2"><span></span></div><div id="extra-div-3"><span></span></div>
+<div id="extra-div-4"><span></span></div><div id="extra-div-5"><span></span></div><div id="extra-div-6"><span></span></div>
+</div>
+
+
+
+</div>
+<div id="dummy-ondomready-block" style="display: none;" ></div>
+    <!-- Google Analytics load -->
+    <script type="text/javascript">
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    <!-- Quantcast -->
+    <script type="text/javascript">
+    _qoptions={
+        qacct:"p-edL3gsnUjJzw-"
+    };
+    (function() {
+        var qc = document.createElement('script'); qc.type = 'text/javascript'; qc.async = true;
+        qc.src = ('https:' == document.location.protocol ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(qc, s);
+    })();
+    </script>
+    <noscript>
+        <img src="http://pixel.quantserve.com/pixel/p-edL3gsnUjJzw-.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+    </noscript>
+
+
+
+
+<div id="page-options-bottom-tips" style="display: none;">
+    <div id="edit-button-hovertip">
+        Kliknij aby edytować zawartość strony.    </div>
+</div>
+<div id="page-options-bottom-2-tips"  style="display: none;">
+    <div id="edit-sections-button-hovertip">
+        Click here to toggle editing of individual sections of the page (if possible).         Watch headings for an &quot;edit&quot; link when available.    </div>
+    <div id="edit-append-button-hovertip">
+        Dopisz treść na koniec strony.    </div>
+    <div id="history-button-hovertip">
+        Zobacz historię zmian tej strony.    </div>
+    <div id="discuss-button-hovertip">
+        Jeśli chcesz zobaczyć dyskusję o tej stronie - kliknij.    </div>
+    <div id="files-button-hovertip">
+        Zobacz informacje o dołączonych do tej strony plikach.    </div>
+    <div id="site-tools-button-hovertip">
+        Kilka użytecznych narzędzi.    </div>
+    <div id="backlinks-button-hovertip">
+        Zobacz strony które linkują do tej strony lub ją importują.    </div>
+    <div id="rename-move-button-hovertip">
+        Zmień nazwę (a także adres URL lub kategorię) tej strony.    </div>
+    <div id="view-source-button-hovertip">
+        Zobacz źródło tej strony (bez jej edycji).    </div>
+    <div id="parent-page-button-hovertip">  
+        Ustaw stronę nadrzędną (ułatwia nawigację).    </div>
+            <div id="abuse-report-button-hovertip">
+            Powiadom administratorów o niewłaściwej zawartości strony.        </div>
+        <div id="bug-report-button-hovertip">
+            Coś nie działa jak powinno? Zobacz co możesz zrobić.        </div>
+        <div id="wikidot-help-button-hovertip">
+            Sekcja dokumentacji i pomocy na Wikidot.com.        </div>
+        <div id="wikidot-tos-button-hovertip">
+            Regulamin serwisu Wikidot.com - co można, czego nie itp.        </div>
+        <div id="wikidot-privacy-button-hovertip">
+            Polityka prywatności Wikidot.com.          
+        </div>
+    </div>
+</body>
+</html>

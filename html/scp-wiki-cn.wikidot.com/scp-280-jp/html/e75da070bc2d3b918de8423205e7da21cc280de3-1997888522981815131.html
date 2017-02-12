@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="../../../scp-wiki-cn.wdfiles.com/common--theme/base.css-block.css"/></head><body>
+<!-- WikidotのデフォルトStyleと、SCP-JPのStyleをインポート -->
+<style>
+@import url(../../../d3g0gp89917ko0.cloudfront.net/v--de24f08b1628/common--theme/base/css/style.css);
+@import url(../../../d3g0gp89917ko0.cloudfront.net/v--de24f08b1628/common--theme/shiny/css/style.css);
+@import url(http://scp-jp.wdfiles.com/local--theme/scp-sigma-9-off-canvas/style.css);
+</style>
+
+<div style='float:right;' >
+<table class="wiki-content-table" id='scpimgtbl'>
+<tbody><tr>
+<td colspan="2"><img src='e75da070bc2d3b918de8423205e7da21cc280de3-1997888522981815131.html' alt='' id='scpimg' width='300' class="image"></td>
+</tr>
+<tr>
+<th colspan="2"><sup>███████</sup></th>
+</tr>
+</tbody></table>
+&nbsp;<!-- 画像下のスペース確保 -->
+</div>
+<p id="testjs2">Loading...<br>報告書が表示されない場合は他のブラウザまたは端末からアクセスしてください。</p>
+<script type="text/javascript">
+<!--
+scpsize=1.1
+
+level=0;
+uplevel = 1;
+viewbtn = 0;
+adding = 0;
+
+limen1=15;
+limen2=150;
+limen3=1500;
+limen4=150000;
+limen5=6000000;
+limen6=120000000;
+
+now = new Date();
+hour = now.getHours();
+min = now.getMinutes();
+sec = now.getSeconds();
+ms = now.getMilliseconds();
+year=now.getFullYear();
+month=now.getMonth()+1;
+date=now.getDate();
+
+imgsrc1 = new Image();
+imgsrc2 = new Image();
+imgsrc3 = new Image();
+imgsrc4 = new Image();
+imgsrc5 = new Image();
+imgsrc6 = new Image();
+imgsrc1.src = "http://ja.scp-wiki.net/local--files/scp-280-jp/scpj01.jpg";
+imgsrc2.src = "http://ja.scp-wiki.net/local--files/scp-280-jp/scpj02.jpg";
+imgsrc3.src = "http://ja.scp-wiki.net/local--files/scp-280-jp/scpj03.jpg";
+imgsrc4.src = "http://ja.scp-wiki.net/local--files/scp-280-jp/scpj04.jpg";
+imgsrc5.src = "http://ja.scp-wiki.net/local--files/scp-280-jp/scpj05.jpg";
+imgsrc6.src = "http://ja.scp-wiki.net/local--files/scp-280-jp/scpj06.jpg";
+
+function viewAdmin(){
+viewbtn = 1;
+timer1= setInterval('autoAdd()',4300);
+chgStr();
+}
+
+function addSize(){
+clearInterval( timer1 );
+timer2 = setInterval('addDone()',700);
+adding = 1;
+chgStr();
+}
+
+function addDone(){
+if( scpsize < limen3 ){
+scpsize = scpsize * 2.9;
+}else{
+scpsize = scpsize * 3.9;
+}
+clearInterval( timer2 );
+timer1= setInterval('autoAdd()',4300);
+adding = 0;
+chgStr();
+}
+
+function autoAdd(){
+scpsize=scpsize+ (Math.random() * 0.5);
+chgStr();
+}
+
+str021="Safe";
+str022="<s>Euclid</s> Safe";
+str023="<s>Keter</s> Safe";
+str02x="";
+
+str031= "鑒於SCP-280-JP的不可移動性，以SCP-280-JP為中心建立";
+str032= "收容設施需以真空且無光源的電波暗室來進行收容。收容設施的入口出需嚴密上鎖，防止平民隨意進出。欲使用SCP-180-JP的工作人員需向站點管理者提出指定的申請書。";
+str033="Site-81██。";
+str034="<s>Sector-81██</s> Site-81██。";
+str035="<s>Area-81██</s> Site-81██。";
+
+str03e = "Owing to the immobile property of SCP-280-JP, <s>the place centered around SCP-280-JP has been designated as Area- ██ . </s>Site 81 has been erected around Area- ██ . SCP-280-JP is to be contained in place at Area- ██ inside a vacuum chamber without light and to be enclosed by a Faraday cage. SCP-280-JP’s containment area is to be kept securely locked, and civilians are not allowed within SCP-280-JP’s containment area. The stuff wishing to conduct test involving SCP-280-JP should submit a formal request to the Site Director.";
+
+strInput1="<table border='1' bgcolor='#EEEEEE' width='100%'><tr><td align='left'>";
+
+strInput2a="<b>管理負責人專用：</b>若欲啟動縮小用廢棄物投入協定，請點擊以下按鈕<P align='center'><input type='button' value='進行協議' onClick='addSize();' id='updbtn'></P>";
+
+strInput2b="<b>管理負責人專用：</b>若欲啟動縮小用海水投入協定，請點擊以下按鈕<p align='center'><input type='button' value='進行協議' onClick='addSize();' id='updbtn'></P>";
+
+strInput2c="<b>Only for custodian: </b>When you initiate the seawater injection protocol for retrenchment, please press the following button.<p align='center'><input type='button' value='Initiate the protocol' onClick='addSize();' id='updbtn'></P>";
+
+strInput2d="<p align='center'><input type='button' value='・・・・・' onClick='addSize();' id='updbtn'></P>";
+
+strInput3="</td></tr></table>";
+
+strInput00="<p align='center'><input type='button' value='電子媒體專用 顯示管理I/F(基於280-JP淨空行為)' onClick='viewAdmin();' id='updbtn'></P>";
+
+str042="<P>SCP-280-JP具有使與其接觸的一切東西消失的異常性質，包括物質、電磁波、聲音、光線等。截至目前為止，對消失的物質的追蹤調查都未能成功。SCP-280-JP的直徑會依據消失的物質的質量而相對應地縮小。因為SCP-280-JP會對空氣和電磁波起反應，為了維持目前的直徑，收容措施必須是真空、全暗的電波暗室。</P>";
+
+str043a="<P>SCP-280-JP被發現時位於長野縣██山中的洞窟內。SCP-280-JP在██山中進行的普通遇難者搜索行動裡被發現，經由接獲通報的特工，基金會確認了其存在並且進行收容。";
+
+str043b="SCP-280-JP由於長野縣██山的崩塌而被發現。崩塌的原因，被認為是因為原本成安定狀態的██山的土壤由於某種原因而失去平衡進而塌毀，導致土壤接觸到原本埋在山裡的SCP-280-JP而消失所導致的。在發現SCP-280-JP後，經由接獲通報的特工，基金會確認了其存在並且進行收容。";
+
+str043c="SCP-280-JP因為發生在長野縣██地方的山區消失的大規模災害而被發現。SCP-280-JP是如何出現的不得而知。已經以██地方周邊為火山性有毒氣體的多發地為名目進行偽裝，開始進行SCP-280-JP的縮小程序。因為程序的有效作用，SCP-280-JP縮小至目前的大小。";
+
+str043d= "SCP-280-JP是侵吞了大約██%原先的日本國土的存在。平民自古以來就知道SCP-280-JP是一種時空歪曲；19██年，日本政府正式施行了對策程序。程序有效作用，SCP-280-JP縮小至目前的大小。SCP-280-JP是如何出現的不得而知。另外，雖然已經確認了SCP-280-JP的特性和危險性，但因為無法邏輯性地說明為何以前都沒有辦法施行有效的對策，故這被認為是暗示了項目為現實改變的產物的可能性。";
+
+str043z="<P>SCP-280-JP可以無視物質的硬度而對其進行削切。可以在取得站點管理者的許可之後使用SCP-280-JP進行實驗或是加工。</P>"
+
+chgStr();
+
+function chgStr(){
+
+  strsize = scpsize.toFixed(1);
+
+  if( scpsize < limen3 ){
+    objName = "SCP-280-JP";
+  }else if( scpsize < limen4 ){
+    objName = "SCP-280-JP";
+  }else{
+    objName = "SCP-280-JP";
+  }
+
+  str01a="test";
+  str02a="test";
+  str03a="test";
+  str04a="test";
+  str05a="test"
+  strInput = "";
+
+str041="SCP-280-JP為直徑0.7m(" + year + "/" + month + "/" + date + "截至目前的)的球狀時空異常。其在被發現時為直徑"+ strsize +"m，但經由基金會收容後施行的措施，成功將其縮小至目前的直徑。</P>";
+
+str04e="SCP-280-JP is space-time anomaly which has a diameter of 0.7 meters.(As of " + month + "/" + date + "/" + year + ")  It had a diameter of "+ strsize +" meters at time of discovery, due to the measures of Foundation after containment, currently it has been reduced to a size of diameter of 0.7m.</p><P>SCP-280-JP is hovering over the Zipangu island of the People’s Republic of China, located directly over 36°39’N 138°10’E at an altitude of ██ km. There is a orbicular hole in the island, it appear to had been dug by SCP-280-JP at the time of discovery. Sluices were built on the island and SCP-280-JP has been kept at a manageable size due to seawater injection.</p><p>SCP-280-JP has feature that will disappear matter, electromagnetic wave, sound, light and whatever touched SCP-280-JP. Follow-up actions about disappearing matter have been as of yet unsuccessful. SCP-280-JP reduce its own diameter by a size of disappeared matter. Additionally, SCP-280-JP react to air and electromagnetic wave; therefore, SCP-280-JP’s containment　area have to be a Faraday cage without light and air.</p><p>SCP-280-JP allows cutting operations in defiance of matter hardness. By permission from the Site Director, experimentations and cutting operations will be available.</p>";
+
+str04x=strsize + "</p>";
+
+if( scpsize < limen1 ){
+  // 最小(Safe)
+  if( level == 0 ){
+    level = 1;
+    uplevel=1;
+  }
+  str02a=str021;
+  str01a=objName;
+  str03a=str031 + str033 + str032;
+  str04a=str041 + str043a + str042 + str043z;
+  strInput = strInput1 + strInput2a + strInput3;
+  imgsrc = imgsrc1.src;
+}else if( scpsize < limen2 ){
+  // Euclid
+  if( level == 1 ){
+    level = 2;
+    uplevel=1;
+  }
+  str02a=str022;
+  str01a=objName;
+  str03a=str031 + str033 + str032;
+  str04a=str041 + str043b + str042 + str043z;
+  strInput = strInput1 + strInput2a + strInput3;
+  imgsrc = imgsrc2.src;
+}else if( scpsize < limen3 ){
+  // Keter
+  if( level == 2 ){
+    level = 3;
+    uplevel=1;
+  }
+  str02a=str022;
+  str01a=objName;
+  str03a=str031 + str034 + str032;
+  str04a=str041 + str043c + str042 + str043z;
+  strInput = strInput1 + strInput2b + strInput3;
+  imgsrc = imgsrc3.src;
+}else if( scpsize < limen4 ){
+  // Keter(SCP-280-JP)
+  if( level == 3 ){
+    level = 4;
+    uplevel=1;
+  }
+  str02a=str023;
+  str01a=objName;
+  str03a=str031 + str035 + str032;
+  str04a=str041 + str043d + str042 + str043z;
+  strInput = strInput1 + strInput2b + strInput3;
+  imgsrc = imgsrc4.src;
+}else if( scpsize < limen5 ){
+  // Keter(SCP-280-JP(en))
+  if( level == 4 ){
+    level = 5;
+    uplevel=1;
+  }
+  str02a=str023;
+  str01a=objName;
+  str03a=str03e;
+  str04a=str04e;
+  strInput = strInput1 + strInput2c + strInput3;
+  imgsrc = imgsrc5.src;
+}else if( scpsize < limen6 ){
+  // (nul)
+  if( level == 5 ){
+    level = 6;
+    uplevel=1;
+  }
+  str02a=str02x;
+  str01a="";
+  str03a="";
+  str04a=str04x;
+  strInput = strInput2d;
+  imgsrc = imgsrc6.src;
+}else{
+  // 白紙
+  if( level == 6 ){
+    level = 7;
+    uplevel=1;
+  }
+}
+
+if( viewbtn == 0 ){
+  strInput = strInput00;
+}
+
+if( scpsize < limen4 ){
+  str010="<p><b>項目編號:</b> ";
+  str020="<p><b>項目等級:</b> ";
+  str030="</p><p><b>特殊收容措施:</b> ";
+  str040="</p><p><b>描述:</b> ";
+}else{
+  str010="<p><b>Item #:</b> ";
+  str020="<p><b>Object Class:</b> ";
+  str030="</p><p><b>Special Containment Procedures:</b> ";
+  str040="</p><p><b>Description:</b> ";
+}
+
+if( scpsize >= limen6 ){
+  // すべて削除
+  document.getElementById("testjs2").innerHTML="<font color='#ffffff'></font>"
+}else{
+  // 表示
+  document.getElementById("testjs2").innerHTML= str010 + str01a + "</p>" + str020 + str02a + str030 + str03a + strInput + str040+ str04a;
+  if( adding == 1 ){
+    document.getElementById("updbtn").disabled = true;
+    if( scpsize < limen5 ){
+      document.getElementById("updbtn").value = "Please Wait...";
+    }else if( scpsize < limen6 ){
+      document.getElementById("updbtn").value = "・・・・・";
+    }
+  }
+}
+
+if( uplevel == 1 ){
+  document.getElementById("scpimg").src=imgsrc;
+if( level == 7 ){
+  document.getElementById("scpimgtbl").style.display = 'none';
+}
+}
+uplevel=0;
+}
+//-->
+</script>
+</link>
+<script type="text/javascript" src="../../../scp-wiki-cn.wdfiles.com/common--javascript/html-block-iframe.js"></script></body></html>

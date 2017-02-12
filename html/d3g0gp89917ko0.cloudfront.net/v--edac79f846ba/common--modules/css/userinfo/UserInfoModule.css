@@ -1,0 +1,19 @@
+.profile-title {
+    border-color: #CCCCCC;
+    border-style: solid;
+    border-width: 0 0 0 2px;
+    font-size: 32px;
+    padding-left: 9px;
+}
+
+.profile-box {
+    border-color: #CCCCCC;
+    border-style: solid;
+    border-width: 0 0 0 2px;
+    padding-left: 9px;
+    margin: 10px 0;
+}
+
+.page-title {
+    display: none;
+}

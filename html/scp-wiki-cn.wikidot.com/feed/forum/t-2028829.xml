@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wikidot="http://www.wikidot.com/rss-namespace">
+
+	<channel>
+		<title>回应于 &quot;SCP-6666&quot;</title>
+		<link>http://scp-wiki-cn.wikidot.com/forum/t-2028829/scp-6666</link>
+		<description>Posts in the discussion thread &quot;SCP-6666&quot;</description>
+				<copyright></copyright>
+		<lastBuildDate>Sun, 19 Feb 2017 09:02:30 +0000</lastBuildDate>
+		
+					<item>
+				<guid>http://scp-wiki-cn.wikidot.com/forum/t-2028829#post-2708566</guid>
+				<title>Re: 識別號碼的由來</title>
+				<link>http://scp-wiki-cn.wikidot.com/forum/t-2028829/scp-6666#post-2708566</link>
+				<description></description>
+				<pubDate>Tue, 13 Dec 2016 09:46:56 +0000</pubDate>
+				<wikidot:authorName>MScarlet</wikidot:authorName>				<wikidot:authorUserId>1745583</wikidot:authorUserId>				<content:encoded>
+					<![CDATA[
+						 <p>類似掩蓋頁的存在而已</p> <p>這裡的情況是<br /> 這個SCP原來的編號是6666</p> <p>在得知其對基金會的收容戰略的重要性後，原本在SCP-6666這編號裡的資料都被刪的七七八八了，其完整的版本就是現時的SCP-CN-001。</p> <p>而本部裡面有權限的人士能透過原來SCP-6666存取它的完整版本的資料，你點進那個「需要權限」的連結就能看見真正的提案</p> <p>大概就是這樣</p> 
+				 	]]>
+				</content:encoded>							</item>
+					<item>
+				<guid>http://scp-wiki-cn.wikidot.com/forum/t-2028829#post-2708395</guid>
+				<title>Re: 識別號碼的由來</title>
+				<link>http://scp-wiki-cn.wikidot.com/forum/t-2028829/scp-6666#post-2708395</link>
+				<description></description>
+				<pubDate>Tue, 13 Dec 2016 02:06:29 +0000</pubDate>
+				<wikidot:authorName>Um4vm06</wikidot:authorName>				<wikidot:authorUserId>2854925</wikidot:authorUserId>				<content:encoded>
+					<![CDATA[
+						 <p>所以這提案,名稱是SCP-6666?</p> 
+				 	]]>
+				</content:encoded>							</item>
+					<item>
+				<guid>http://scp-wiki-cn.wikidot.com/forum/t-2028829#post-2708288</guid>
+				<title>識別號碼的由來</title>
+				<link>http://scp-wiki-cn.wikidot.com/forum/t-2028829/scp-6666#post-2708288</link>
+				<description></description>
+				<pubDate>Mon, 12 Dec 2016 22:21:12 +0000</pubDate>
+				<wikidot:authorName>MScarlet</wikidot:authorName>				<wikidot:authorUserId>1745583</wikidot:authorUserId>				<content:encoded>
+					<![CDATA[
+						 <blockquote> <p>beoly.mkaugi.ea.16313711</p> </blockquote> <p>這段密碼的含意其實是</p> <div class="collapsible-block"> <div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;Spolier&nbsp;Alert</a></div> <div class="collapsible-block-unfolded" style="display:none"> <div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;Spolier&nbsp;Alert</a></div> <div class="collapsible-block-content"> <blockquote> <p>受命於天 既壽永昌</p> </blockquote> </div> </div> </div> <p>具體的加密方法看下面：</p> <div class="collapsible-block"> <div class="collapsible-block-folded"><a class="collapsible-block-link" href="javascript:;">+&nbsp;Spolier&nbsp;Alert</a></div> <div class="collapsible-block-unfolded" style="display:none"> <div class="collapsible-block-unfolded-link"><a class="collapsible-block-link" href="javascript:;">-&nbsp;Spolier&nbsp;Alert</a></div> <div class="collapsible-block-content"> <p><br /> 其實就是速成(又稱簡易)輸入法的輸入碼，作為倉頡輸入法的簡易版本，速成的輸入方法是取倉頡碼的首尾兩碼，再加上數字選字。</p> <p>以倉頡碼是&quot;竹人一一弓(hommn)的&quot;行&quot;字為例，其速成碼就是竹弓(hn)，再選第二個字(2)，竹弓2(hn2)。</p> <p>這密碼的加密方式是，將原文轉成速成碼後放在一起，如果有重疊的字母就將後面那個換成點(例：&quot;kk&quot; -&gt; &quot;k.&quot; )，再將所有數字移到後面。</p> <p>以這段密碼來說，重新排位後應該就是：</p> <blockquote> <p>be1 ol6 yy3 mk1 au3 gi7 ie1 aa1</p> </blockquote> <p>用速成輸入法輸入這段就會得出：</p> <blockquote> <p>受命於天 既壽永昌</p> </blockquote> </div> </div> </div> 
+				 	]]>
+				</content:encoded>							</item>
+					<item>
+				<guid>http://scp-wiki-cn.wikidot.com/forum/t-2028829#post-2707972</guid>
+				<title>(no title)</title>
+				<link>http://scp-wiki-cn.wikidot.com/forum/t-2028829/scp-6666#post-2707972</link>
+				<description></description>
+				<pubDate>Mon, 12 Dec 2016 09:59:25 +0000</pubDate>
+				<wikidot:authorName>Um4vm06</wikidot:authorName>				<wikidot:authorUserId>2854925</wikidot:authorUserId>				<content:encoded>
+					<![CDATA[
+						 <p>修複引號內消失的文字，結果用引用要空一隔！</p> 
+				 	]]>
+				</content:encoded>							</item>
+				</channel>
+</rss>

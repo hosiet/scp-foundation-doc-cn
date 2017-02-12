@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="../../../scp-wiki-cn.wdfiles.com/common--theme/base.css-block.css"/></head><body>
+  <script src="http://scpsandbox2.wikidot.com/local--files/anaxagoras/jquery.js"></script>
+
+<style>
+td, tr, table{
+    border-collapse: collapse;
+}
+
+.nonogram {
+    height: 50px;
+    width: 50px;
+    border: 1px black solid;
+    color: red;
+}
+
+.clicked{
+    border: 1px white solid;
+    background-color: black;
+}
+
+.rightClicked{
+    background-color: green;
+    opacity: 0.7;
+}
+
+table{
+    background-image: url(    http://www.scp-wiki.net/local--files/2212-archival-image/2212ImagePuzzleTranslucent.png);
+}
+</style>
+
+<div id="nonogram_table"></div>
+<br />
+<input type=button id=button value="验证" />
+
+<script>
+var grid = [
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+];
+
+var target = [
+    [2, 2, 0, 1, 0, 0, 0, 1, 1, 0],
+    [1, 1, 0, 0, 0, 0, 1, 1, 0, 0],
+    [2, 2, 0, 0, 0, 0, 1, 0, 2, 2],
+    [0, 0, 0, 1, 0, 1, 1, 1, 1, 1],
+    [1, 1, 0, 1, 1, 0, 0, 0, 1, 1],
+    [1, 1, 0, 1, 1, 1, 1, 1, 1, 1],
+    [1, 1, 0, 1, 1, 0, 1, 0, 1, 1],
+    [0, 0, 0, 1, 0, 1, 0, 0, 2, 2],
+    [1, 1, 0, 0, 1, 0, 2, 2, 0, 0],
+    [1, 1, 0, 0, 1, 0, 2, 2, 0, 0]
+];
+
+var correctMessage = "正确编辑排列已找到";
+var incorrectMessage = "错误！";
+var assumptionMessage = "侦测到不合理假设。";
+
+var table = $("<table></table>");
+for(i=0; i<grid.length; i++){
+    var row = $("<tr></tr>");
+    for(j=0; j<grid[i].length; j++){
+        var column = $("<td></td>");
+        if(grid[i][j] == 1){
+            column.addClass("clicked");
+        }
+        column.addClass("nonogram");
+        row.append(column);
+    }
+    table.append(row);
+}
+
+$('#nonogram_table').append(table);
+
+$("#button").click(function (){
+    var correctSquares = true;
+
+    $(".nonogram").each(function (index) {    
+        var i = Math.floor(index / grid.length);
+        var j = index % grid[i].length;
+        if(!squareIsGood(i,j)){
+            correctSquares = false;
+        }
+    });
+    if(!allAmbiguitiesValid())
+        correctSquares = false;
+
+    if(correctSquares){
+        if(allAmbiguitiesCorrect()){
+            alert(correctMessage);
+        }else{
+            alert(assumptionMessage);
+        }
+    } else {
+        alert(incorrectMessage);
+    }
+});
+
+function squareIsGood(i, j){
+    if(target[i][j] == 2){
+        return true;//(grid[i][j] == 0);
+    } else if(target[i][j] == 1){
+        return (grid[i][j] == 1);
+    } else {
+        return (grid[i][j] <= 0);
+    }
+}
+
+function allAmbiguitiesValid(){
+    return ambiguitiesMarkedValidly(grid[0][0], grid[0][1], grid[2][0], grid[2][1])
+        && ambiguitiesMarkedValidly(grid[2][8], grid[2][9], grid[7][8], grid[7][9])
+        && ambiguitiesMarkedValidly(grid[8][6], grid[8][7], grid[9][6], grid[9][7]);
+}
+
+function allAmbiguitiesCorrect(){
+    return ambiguitiesMarkedCorrectly(grid[0][0], grid[0][1], grid[2][0], grid[2][1])
+        && ambiguitiesMarkedCorrectly(grid[2][8], grid[2][9], grid[7][8], grid[7][9])
+        && ambiguitiesMarkedCorrectly(grid[8][6], grid[8][7], grid[9][6], grid[9][7]);
+}
+
+//Give points row-by-row.
+function ambiguitiesMarkedValidly(p1, p2, p3, p4){
+    return (p1 == 1 && p2 != 1 && p3 != 1 && p4 == 1) || (p1 != 1 && p2 == 1 && p3 == 1 && p4 != 1) || (p1 == 0 && p2 == 0 && p3 == 0 && p4 == 0);
+}
+
+function ambiguitiesMarkedCorrectly(p1, p2, p3, p4){
+    return (p1 == 0 && p2 == 0 && p3 == 0 && p4 == 0);
+}
+
+$(".nonogram").click(function () {    
+    var index = $(".nonogram").index( this );
+    var i = Math.floor(index / grid.length);
+    var j = index % grid[i].length;
+
+    if(grid[i][j] == 1){
+        $(this).removeClass("clicked");
+        grid[i][j] = 0;
+    } else {
+        $(this).removeClass("rightClicked");
+        $(this).addClass("clicked");
+        grid[i][j] = 1;
+    }
+});
+
+$(".nonogram").bind("contextmenu",function(){
+    var index = $(".nonogram").index( this );
+    var i = Math.floor(index / grid.length);
+    var j = index % grid[i].length;
+
+    if(grid[i][j] == -1){
+        $(this).removeClass("rightClicked");
+        grid[i][j] = 0;
+    } else {
+        $(this).removeClass("clicked");
+        $(this).addClass("rightClicked");
+        grid[i][j] = -1;
+    }
+    return false;
+});
+</script>
+
+<script type="text/javascript" src="../../../scp-wiki-cn.wdfiles.com/common--javascript/html-block-iframe.js"></script></body></html>

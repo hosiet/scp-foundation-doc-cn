@@ -1,0 +1,23 @@
+.featured-site-grid-box {}
+
+.featured-site-box .container {
+	overflow: hidden;
+}
+
+.featured-site-box .container a {
+	display: block;
+	margin: 2px auto;
+}
+
+.featured-site-box .container a:hover {
+	text-decoration: none;
+}
+
+.featured-site-box .container img {
+	width: 164px;
+	height: 164px;
+	display: block;
+	margin: 0 auto;
+	padding: 2px;
+	border: 1px solid #BBB;
+}

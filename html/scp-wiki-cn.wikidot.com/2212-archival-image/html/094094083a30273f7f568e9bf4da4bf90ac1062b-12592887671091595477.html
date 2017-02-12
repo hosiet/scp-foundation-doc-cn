@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="../../../scp-wiki-cn.wdfiles.com/common--theme/base.css-block.css"/></head><body>
+
+  <script src="http://scpsandbox2.wikidot.com/local--files/anaxagoras/jquery.js"></script>
+
+<style>
+td, tr, table{
+    border-collapse: collapse;
+}
+
+.jokemessage{
+    text-align: center;
+    color: white;
+    height: 30px;
+    width: 30px;
+    border: 1px white solid;
+    background-color: black;
+}
+</style>
+
+<div id="joke_table"></div>
+
+<script>
+var message = "DATAEXPUNGEDREDACTEDYDOWEHAVREALLYFUCKINGOPCOGNITOHAZARDSNEXTONEWILLPROBAMNESIAMYBRAINLIFESOKYPOKEIT";
+
+var table = $("<table></table>");
+for(i=0; i<10; i++){
+    var row = $("<tr></tr>");
+    for(j=0; j<10; j++){
+        var column = $("<td></td>");
+        column.text(message.charAt(i*10 + j));
+        column.addClass("jokemessage");
+        row.append(column);
+    }
+    table.append(row);
+}
+
+$('#joke_table').append(table);
+</script>
+
+<script type="text/javascript" src="../../../scp-wiki-cn.wdfiles.com/common--javascript/html-block-iframe.js"></script></body></html>

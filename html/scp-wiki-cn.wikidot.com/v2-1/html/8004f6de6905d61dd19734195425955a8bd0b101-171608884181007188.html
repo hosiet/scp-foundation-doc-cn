@@ -1,0 +1,911 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="../../../scp-wiki-cn.wdfiles.com/common--theme/base.css-block.css"/></head><body>
+<html lang="en"> <head> <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maxium-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+<style type="text/css">
+@import url("http://scpsandbox2.wikidot.com/local--files/adventure/adventure.css")
+</style>
+<audio autoplay loop id="bgm">
+<type="audio/mpeg">
+</audio>
+<audio autoplay id="effect">
+<source src="8004f6de6905d61dd19734195425955a8bd0b101-171608884181007188.html" type="audio/mpeg">
+</audio>
+<SCRIPT LANGUAGE = "JavaScript">
+var BGM2 = document.getElementById("bgm");
+var effect2 = document.getElementById("effect");
+function enableMute() { 
+    BGM2.muted = !BGM2.muted;
+    effect2.muted = BGM2.muted;
+}
+
+var PAGES = [{ //Page 0
+    'text': '<div align="center"><b><font size="10">—O5议会命令终端启动—</font></b></div><br><div align="center"><b><font size="5"><div style="color:#990011"> 警告：致命安保模因就绪</div></font></b></div><br><b><font size="3">必读安保声明：</b>该终端受安保协议S-5013X保护，任何违反5级安保标准的操作均将被视为5级安保突破，在此情况下用户将遭受即时模因处决。为避免不必要的高级人员损失，在进行进一步操作前，请确认你已拥有O5议会成员身份。</font><br><hr />请进行你的下一步操作：',
+        'choices': [{
+        'text': '输入身份识别码：But thy eternal summer shall not fade',
+            'target': 1
+    }, {
+        'text': '申请5级以下身份访问权限',
+            'target': 2
+    }]
+
+}, { //Page 1
+    'text': '<div align="center"><b><font size="10">暗月是否嚎叫？</font></b></div><br><hr />仅在月亏之时？',
+        'choices': [{
+        'text': '不，仅有低语之声。',
+            'target': 3
+    }]
+
+}, { //Page 2
+    'text': '<div align="center"><b><font size="5"><div style="color:#990011">你的位置已被锁定，无授权人员<br>机动特遣队Χ-30已前往你的位置，请在原地等候<br>逃离或抵抗将导致你被立刻处决</div></font></b></div><br><hr />终端已被锁定，请配合机动特遣队的行动。',
+        'choices': [{
+        'text': 'DEAD END 1——欢迎，新D级人员/新尸体（点此重新开始）',
+            'target': 0
+    }]
+
+}, { //Page 3
+    'text': '<div align="center"><b><font size="5">欢迎，O5-9</font></b></div><br><hr />我是指挥协助系统人工智能CA-5-0017。<br>建议立即发布命令：Kronos-Ω，该结果通过分析SCP-9907在全球范围的活动现状得出。<br>请进行你的下一步操作：',
+
+        'choices': [{
+        'text': '发布命令：Kronos-Ω',
+            'target': 8
+    }, {
+        'text': '读取邮件，发信人O5-1，12小时前',
+            'target': 4
+    }, {
+        'text': '读取邮件，发信人O5-7（群发形式），10分钟前',
+            'target': 5
+    }, {
+        'text': '读取邮件，发信人O5-7（群发形式），5分钟前',
+            'target': 6
+    }, {
+        'text': '读取邮件，发信人O5-3，1分钟前',
+            'target': 7
+    },{
+        'text': '安全注销',
+            'target': 0
+    }
+
+]
+
+}, { //Page 4
+    'text': '<b>读取邮件，发信人O5-1，12小时前：</b><br><div style="display: inline-block; border-radius: 10px; border:dashed 1px #444444; background:#F5F5F5; float:top; width:96.5%; padding:10px">9，我很欣赏你在上一次会议上的决定，我非常感谢你最终站在我这一边。<br><br>是的，我理解3为什么会那么激动。我目睹了几位O5的换届，每位3那样的新任O5都会对基金会的这一内幕感到……愤怒……不，我想应该是恐惧吧，或者换个程度略低的词，不安。毕竟O5权限意味着基金会对他而言不再有秘密，而有些秘密并不那么容易接受，显然他们没料到即使是基金会，即使是O5，面对异常也会有如此不堪的妥协，而且是建立在未知上的妥协。<br><br>不，这不是对忽怠协议的否定。我只是承认这是对异常的妥协，但是也正如你我所知，这也就是面对极端扩散的异常人类依然能存续至今的理由。每次执行此协议都是基金会的失败，我们心知肚明，这至少失败并不意味着死亡。即使千疮百孔，只要基金会还活着，人类将永远不会屈服于异常……我很抱歉和你说这些像是对低级员工说的话，我知道你早已理解，我只是希望你能<b>牢记</b>。<br><br>不，O5-3会没事的，他是个果断而敢做敢为的人，只是需要一段时间适应。他能担任O5，这件事已经意味着他有足够的能力了。事实上，我更担心的是你，9。虽然你年轻，担任O5的时间也不算太长，但是也应该到了适应O5这个要职的时候了。如果有一天O5议会只剩下你一个人——不，我没理由说笑——如果有一天，你的决策将决定世界的命运，你的犹豫也同样会唤来世界的毁灭。<br><br>另外关于SCP-9907的收容失效，我已经联系世界各地的站点在全球范围内持续执行紧急协议EC-9907-α，如果12小时内依然没有能够遏制SCP-9907的扩散，我很抱歉我们只能采取最后手段了。O5-7是EC-9907-α的直接监管人，忽怠协议的提案应该由他提出。希望你不要犹豫，9.<br><br>这会的确是令每一位O5后悔的决定，但这是<b>为了人类的存续。</b></div><br><hr />请进行你的下一步操作：',
+        'choices': [{
+        'text': '返回欢迎页',
+            'target': 3
+    },
+{
+        'text': '下一封',
+            'target': 5
+    }]
+
+}, { //Page 5
+
+    'text': '<b>读取邮件，发信人O5-7（群发形式），10分钟前：</b><br><div style="display: inline-block; border-radius: 10px; border:dashed 1px #444444; background:#F5F5F5; float:top; width:96.5%; padding:10px">各位应该已经收到了指挥协助系统的通知，我这里收到的各地数据也已经证实了。很不幸，紧急协议EC-9907-α宣告失效，收容已经不可能了。SCP-9907正在全球肆虐，恐惧正在摧毁常态。<br><br>我知道各位不是所有人都认可忽怠协议，有人认为这邪恶，这不正常，不是基金会应该做的事情。是的，我承认它的原理，它的来历等等对O5人员而言也是未知的，我们唯一知道的只是这样做的后果：这会让人类视异常为常态，从而解除异常的威胁。是的，可怕的后果，但是我依然要重申，既然O5终端内保存着这样一份命令，既然以一次收容失败为代价可以换取人类的生存，既然牺牲一点真正的常态意味着解除全人类心中的绝望和恐惧，那么这个协议就是有意义的。而如今，这份协议正可以从9907的威胁中拯救人类。<br><br>用此下策我也很后悔，各位，我深深地后悔，<b>但是我们毕竟肩负着全人类的明天。</b><br><br>事到如今，我选择同意协助系统的建议。提案随后便会发布，请各位收到提案后尽快进行表决。</div><br><hr />请进行你的下一步操作：',
+        'choices': [{
+        'text': '上一封',
+            'target': 4
+    },
+{
+        'text': '返回欢迎页',
+            'target': 3
+    },
+{
+        'text': '下一封',
+            'target': 6
+    }]
+
+}, { //Page 6
+   'text': '<b>读取邮件，发信人O5-7（群发形式），5分钟前：</b><br><div style="display: inline-block; border-radius: 10px; border:dashed 1px #444444; background:#F5F5F5; float:top; width:96.5%; padding:10px">紧急情况，各位。我的命令终端遭到了入侵，提案功能被锁定了。敌人技术相当娴熟，而且看来很熟悉O5命令终端，紧急安全协议没能抓到他。我正在恢复终端，但可能无法在预计时间发布提案了。请其他终端无异常的O5尽快发布提案，我的表决功能还能用，解除9907的威胁是当务之急。</div><br><hr />请进行你的下一步操作：',
+        'choices': [{
+        'text': '上一封',
+            'target': 5
+    },
+{
+        'text': '返回欢迎页',
+            'target': 3
+    },
+{
+        'text': '下一封',
+            'target': 7
+    }]
+
+}, { //Page 7
+     'text': '<b>读取邮件，发信人O5-3，1分钟前,部分数据损坏，已无法恢复：</b><br><div style="display: inline-block; border-radius: 10px; border:dashed 1px #444444; background:#F5F5F5; float:top; width:96.5%; padding:10px">我不知道可不可以信任你，9，无所谓了。至少上次会议上你是唯一反对我之前迟疑了一下的人。<br><br>是的，现在我承认我能理解忽怠协议的必要性，我为我上次会议上的失态道歉。但是我们都被lLod?da1D1?事实并非?e23qods?1我把文档传输给你，我也觉得难以置信，但我认为这就是真相。我锁定了其它几个O5的终端提案功能，但我只能做到这一步了，没有时间了，我希望你能帮我。只要你能Γ6r?q34wic?该死它好像发现我了我没有机会了你是唯一bΓ?d23fa?dr3?管理员β4?q6?wcpα09?不，仅在冬日如此。aβ?23fdq?r54?3f?dsa?nglivesthisandthisgiveslifetothee不，仅在冬日如此。Solonglivesthisandthisgiveslifetothee不，仅在冬日如此。Solonglivesthisandthisgiveslifetdsa??Γ013??qew23?</div><br><br><b><div style="color:#990011">发生未知错误，邮件加载异常，附件下载异常，尝试返回欢迎页后重新进入该页面</div></b><br><hr />请进行你的下一步操作：',
+        'choices': [{
+        'text': '上一封',
+            'target': 13
+    },
+{
+        'text': '返回欢迎页',
+            'target': 13
+    }]
+
+}, { //Page 8
+    'text': '<div align="center"><b><font size="5"><div style="color:#990011"> 警告：检测到敏感命令代号</div></font><br>请输入标准格式的完整命令名称以确认</b></div><br><hr />请进行你的下一步操作：',
+    'choices': [{
+        'text': 'WORLDWIDE ENNUI PROTOCOL',
+        'target': 9
+    },{
+        'text': '返回上一步',
+        'target': 3
+    }]
+
+}, { //Page 9
+    'text': '<div align="center"><b><font size="5">命令确认：Kronos-Ω（全球范围忽怠协议）</font><br><br>该命令的执行需要O5议会全员同意，请进行提案提交。</b></div><br><div style="display: inline-block; border-radius: 10px; border:dashed 1px #444444; background:#F5F5F5; float:top; width:96.5%; padding:10px"><b><div align="center">关于执行命令Kronos-Ω的提案</b><br><b>O5-9</b></div><br><b>基于世界范围的站点情况反馈总计以及对SCP-9907的研究，现归纳出以下客观情况：</b><br><br>1.SCP-9907已经实现了全世界范围的扩散，全球紧急协议EC-9907-α宣告失败，收容该异常是目前基金会无法做到的。<br>2.SCP-9907具有无法遏制的传染性，但其危害性异常仅表现为客观影响，改变人类认知可以消除其威胁。<br>3.假设忽怠协议执行，人类社会依然可以保持正常秩序。所付出的代价是基金会以及人类可以承受的。<br><br><b>基于以上现状，现提议执行命令Kronos-Ω，对SCP-9907进行消极性收容。</b></div><br><hr />请进行你的下一步操作：',
+    'choices': [{
+        'text': '提交提案',
+        'target': 10
+    },{
+        'text': '返回上一步',
+        'target': 8
+    }]
+
+}, { //Page 10
+    'text': '<div align="center"><b><font size="5">命令确人???：Kronos?Ω（全球范围忽怠协议）</font><br><br>该命令的执行需要O5议会全员同意，请进行提案提交。</b></div><br><div style="display: inline-block; border-radius: 10px; border:dashed 1px #444444; background:#F5F5F5; float:top; width:96.5%; padding:10px"><b><div align="center">关于执?????令Kronos-Ω的提案</b><br><b>O5-9</b></div><br><b>基于世界范围的站点情况反?????馈总计以及对SCP-9907的研究，现归纳出以下客观情况：</b><br>1.SCP-9907已经实现了全世界范围的扩散，全球紧急协议E??????7-α宣告失败，该异常已??????收容。<br>2.SCP-9907具有无法遏制??????传染性，但其危害性??????为客观影响，改变人类认知可以消除其威胁。<br>3.假设忽怠协议执行，人类社会依然可以保持正常秩序。所付出的代价是基金会以及人类可以承受的。<br><br><b>基于以上现状，现提??????行命令Kron??????-Ω，对SCP-9907进行消极??????收容。</b></div><br><hr />请进行你的下一步操作：',
+    'choices': [{
+        'text': '提交提案',
+        'target': 11
+    },{
+        'text': '返回上一步',
+        'target': 11
+    }]
+
+}, { //Page 11
+    'text': '<div align="center"><b><font size="5">命令确<font size="4">9</font>：Kronos<font size="4">9</font>Ω（全球范围忽怠协议）</font><br><br>该命令的执行需要O5议会全员同意，请进行提案提交。</b></div><br><div style="display: inline-block; border-radius: 10px; border:dashed 1px #444444; background:#F5F5F5; float:top; width:96.5%; padding:10px"><b><div align="center">关于执<font size="4">求求你9</font>令Kronos-Ω的提案</b><br><b>O5-9</b></div><br><b>对<font size="4">让它停下来</font>馈总计以及对SCP-9907的研究，现归纳出以下客观情况：：</b><br>1.SCP-9907已经实现了全世界范围的扩散，全球紧急协议E<font size="4">求你帮我</font>7-α宣告失败，该异常已<font size="4">它发现我了，我一个人做不到了</font>了收容。<br>2.SCP-9907具有无法遏制<font size="4">不要相信它它骗了我们</font>传染性，但其危害性<font size="4">看9去看文档用管理员</font>为客观影响，改变人类认知可以消除其威胁。<br>3.假设忽怠协议执行，人类社会依然可以保持正常秩序。所付出的代价是基金会以及人类可以承受的。<br><br><b>基于以上现状，现提<font size="4">不，仅在冬日如此。</font>行命令<font size="4">Solonglivesthisandthisgiveslifetothee</font>-Ω，对SCP-9907进行消极<font size="4">不，仅在冬日如此。</font>收容。</b></div><br><hr />请进行你的下一步操作：',
+    'choices': [{
+        'text': '提交提案',
+        'target': 12
+    },{
+        'text': '返回上一步',
+        'target': 12
+    }]
+
+}, { //Page 12
+    'text': '<div align="center"><b><font size="5">命令确<font size="4">9：999999</font>Ω（全球范<font size="4">管理员权限</font>议）</font><br><br>该命令的执行<font size="4">记住</font>议会全员同意，请进行提案提交。</b></div><br><div style="display: inline-block; border-radius: 10px; border:dashed 1px #444444; background:#F5F5F5; float:top; width:96.5%; padding:10px"><b><div align="center">关于执<font size="4">只有你了9</font>令Kro<font size="4">求求你</font>的提案</b><br><b>O5-9</b></div><br><b>对<font size="4">不要再任它</font>况的总结：</b><br>1.SCP-9907已经实现了全世界范<font size="4">记住Solonglivesthisandthisgiveslifetothee</font>，全球<font size="4">Solonglivesthisandthisgiveslifetothee</font>议E<font size="4">只有这样</font>7-α宣告失败，该异常已<font size="4">记住</font>收<font size="4">不，仅在冬日如此。</font><br>2.SCP-9907具有无法遏制<font size="4">记住Solonglivesthisandthisgiveslifetothee</font>性，但其危害性<font size="4">不，仅在冬日如此。不，仅在冬日如此。</font>观影响。<br>3.假设忽怠协议<font size="4">不，仅在冬日如此。</font>行，人类社会依然可以保持正常秩序。所付出的代价是基金会以及人类可以承受的。<br><br><b>基<font size="4">Solonglivesthisandthisgiveslifetothee</font>现状，现提<font size="4">不，仅在冬日如此。</font>行命令<font size="4">Solonglivesthisandthisgiveslifetothee记住9记住</font>-Ω，对SCP-9907进行消极<font size="4">不，仅在冬日如此。</font>收容。</b></div><br><hr />请进行你的下一步操作：',
+    'choices': [{
+        'text': '提交提案',
+        'target': 13
+    },{
+        'text': '返回上一步',
+        'target': 13
+    }]
+
+}, { //Page 13
+    'text': '<div align="center"><b><font size="10"><div style="color:#990011"> 检测到异常入侵<br>正在执行紧急保护协议A-M-5<br>————7％————<br>追踪入侵者位置</div></font></b></div><br><hr />紧急保护协议A-M-5已暂时接管该终端。',
+    'choices': [{
+        'text': '确认',
+        'target': 14
+    }]
+}, { //Page 14
+    'text': '<div align="center"><b><font size="10"><div style="color:#990011"> 检测到异常入侵<br>正在执行紧急保护协议A-M-5<br>————32％————<br>锁定入侵者位置</div></font></b></div><br><hr />请保持冷静，O5-9，不要移动。',
+    'choices': [{
+        'text': '确认',
+        'target': 15
+    }]
+}, { //Page 15
+    'text': '<div align="center"><b><font size="10"><div style="color:#990011"> 检测到异常入侵<br>正在执行紧急保护协议A-M-5<br>————50％————<br>成功接管入侵者终端</div></font></b></div><br><hr />我是紧急协议模式辅助人工智能AX-5-a-01。',
+    'choices': [{
+        'text': '确认',
+        'target': 16
+    }]
+}, { //Page 16
+    'text': '<div align="center"><b><font size="10"><div style="color:#990011"> 检测到异常入侵<br>正在执行紧急保护协议A-M-5<br>————76％————<br>强制激活抹杀模因成功<br></div></font></b></div><br><hr />我被设计为保护O5议会的安全。',
+    'choices': [{
+        'text': '确认',
+        'target': 17
+    }]
+}, { //Page 17
+    'text': '<div align="center"><b><font size="10"><div style="color:#990011"> 检测到异常入侵<br>正在执行紧急保护协议A-M-5<br>————91％————<br>正在检测入侵者生命体征</div></font></b></div><br><hr />你只需专注于履行O5的职责。',
+    'choices': [{
+        'text': '确认',
+        'target': 18
+    }]
+}, { //Page 18
+    'text': '<div align="center"><b><font size="10"><div style="color:#990011"> 检测到异常入侵<br>正在执行紧急保护协议A-M-5<br>————100％————<br>入侵者：O5-3 已被处决</div></font></b></div><br><hr />你不需要担心自身安危。',
+    'choices': [{
+        'text': '确认',
+        'target': 19
+    }]
+}, { //Page 19
+    'text': '<div align="center"><b><font size="10">异常入侵解除<br>紧急保护协议A-M-5关闭<br>即将返回欢迎页</font></div></b></div><br><hr />警报解除，谢谢你的合作，AX-5-a-01离线',
+    'choices': [{
+        'text': '确认',
+        'target': 20
+    }]
+
+}, { //Page 20
+    'text': '<div align="center"><b><font size="5">欢迎，O5-9</font></b></div><br><hr />我是指挥协助系统人工智能CA-5-0017。<br>建议立即执行命令：Kronos-Ω，该结果通过分析SCP-9907在全球范围的活动现状得出。<br>请进行你的下一步操作：',
+
+        'choices': [{
+        'text': '发布命令：Kronos-Ω',
+            'target': 21
+    }, {
+        'text': '读取邮件，发信人O5-1，12小时前',
+            'target': 24
+    }, {
+        'text': '读取邮件，发信人O5-7（群发形式），19分钟前',
+            'target': 25
+    }, {
+        'text': '读取邮件，发信人O5-7（群发形式），14分钟前',
+            'target': 26
+    }, {
+        'text': '读取邮件，发信人O5-3，10分钟前【已完成修复】',
+            'target': 27
+    },{
+        'text': '安全注销',
+            'target': 31
+    }
+
+]
+
+}, { //Page 21
+    'text': '<div align="center"><b><font size="5"><div style="color:#990011"> 警告：检测到敏感命令代号</div></font><br>请输入标准格式的完整命令名称以确认</b></div><br><hr />请进行你的下一步操作：',
+    'choices': [{
+        'text': 'WORLDWIDE ENNUI PROTOCOL',
+        'target': 22
+    },{
+        'text': '返回上一步',
+        'target': 20
+    }]
+
+}, { //Page 22
+    'text': '<div align="center"><b><font size="5">命令确认：Kronos-Ω（全球范围忽怠协议）</font><br><br>该命令的执行需要O5议会全员同意，请进行提案提交。</b></div><br><div style="display: inline-block; border-radius: 10px; border:dashed 1px #444444; background:#F5F5F5; float:top; width:96.5%; padding:10px"><b><div align="center">关于执行命令Kronos-Ω的提案</b><br><b>O5-9</b></div><br><b>基于世界范围的站点情况反馈总计以及对SCP-9907的研究，现归纳出以下客观情况：</b><br><br>1.SCP-9907已经实现了全世界范围的扩散，全球紧急协议EC-9907-α宣告失败，收容该异常是目前基金会无法做到的。<br>2.SCP-9907具有无法遏制的传染性，但其危害性异常仅表现为客观影响，改变人类认知可以消除其威胁。<br>3.假设忽怠协议执行，人类社会依然可以保持正常秩序。所付出的代价是基金会以及人类可以承受的。<br><br><b>基于以上现状，现提议执行命令Kronos-Ω，对SCP-9907进行消极性收容。</b></div><br><hr />请进行你的下一步操作：',
+    'choices': [{
+        'text': '提交提案',
+        'target': 23
+    },{
+        'text': '返回上一步',
+        'target': 21
+    }]
+
+}, { //Page 23
+     'text': '<div align="center"><b><font size="4">正在核实O5议会对该提案的表决结果：<hr /></font><br><br>O5-1<div style="color:#009900">[√]</div>O5-2<div style="color:#009900">[√]</div>O5-4<div style="color:#009900">[√]</div><br>O5-5<div style="color:#009900">[√]</div>O5-6<div style="color:#009900">[√]</div>O5-7<div style="color:#009900">[√]</div>O5-8<div style="color:#009900">[√]</div><br>O5-10<div style="color:#009900">[√]</div>O5-11<div style="color:#009900">[√]</div>O5-12<div style="color:#009900">[√]</div>O5-13<div style="color:#009900">[√]</div><br><br><hr /><font size="4">表决人数：11/11<br>同意人数：11/11<br>反对人数：&nbsp;&nbsp;0/11</font><br><hr /><font size="5">—提案获得通过—</font></div></b></div><hr />干得好，O5-9',
+    'choices': [{
+        'text': '立即执行',
+        'target': 28
+    }]
+}, { //Page 24
+    'text': '<b>读取邮件，发信人O5-1，12小时前：</b><br><div style="display: inline-block; border-radius: 10px; border:dashed 1px #444444; background:#F5F5F5; float:top; width:96.5%; padding:10px">9，我很欣赏你在上一次会议上的决定，我非常感谢你最终站在我这一边。<br><br>是的，我理解3为什么会那么激动。我目睹了几位O5的换届，每位3那样的新任O5都会对基金会的这一内幕感到……愤怒……不，我想应该是恐惧吧，或者换个程度略低的词，不安。毕竟O5权限意味着基金会对他而言不再有秘密，而有些秘密并不那么容易接受，显然他们没料到即使是基金会，即使是O5，面对异常也会有如此不堪的妥协，而且是建立在未知上的妥协。<br><br>不，这不是对忽怠协议的否定。我只是承认这是对异常的妥协，但是也正如你我所知，这也就是面对极端扩散的异常人类依然能存续至今的理由。每次执行此协议都是基金会的失败，我们心知肚明，这至少失败并不意味着死亡。即使千疮百孔，只要基金会还活着，人类将永远不会屈服于异常……我很抱歉和你说这些像是对低级员工说的话，我知道你早已理解，我只是希望你能<b>牢记</b>。<br><br>不，O5-3会没事的，他是个果断而敢做敢为的人，只是需要一段时间适应。他能担任O5，这件事已经意味着他有足够的能力了。事实上，我更担心的是你，9。虽然你年轻，担任O5的时间也不算太长，但是也应该到了适应O5这个要职的时候了。如果有一天O5议会只剩下你一个人——不，我没理由说笑——如果有一天，你的决策将决定世界的命运，你的犹豫也同样会唤来世界的毁灭。<br><br>另外关于SCP-9907的收容失效，我已经联系世界各地的站点在全球范围内持续执行紧急协议EC-9907-α，如果12小时内依然没有能够遏制SCP-9907的扩散，我很抱歉我们只能采取最后手段了。O5-7是EC-9907-α的直接监管人，忽怠协议的提案应该由他提出。希望你不要犹豫，9.<br><br>这会的确是令每一位O5后悔的决定，但这是<b>为了人类的存续。</b></div><br><hr />请进行你的下一步操作：',
+        'choices': [{
+        'text': '返回欢迎页',
+            'target': 20
+    },
+{
+        'text': '下一封',
+            'target':25
+    }]
+
+// TUTORIAL: This is the beginning of Page 5. The player has made the right choice, and safely arrived at Site 19. Let's give them an applause when they get here.
+}, { //Page 25
+
+    'text': '<b>读取邮件，发信人O5-7（群发形式），19分钟前：</b><br><div style="display: inline-block; border-radius: 10px; border:dashed 1px #444444; background:#F5F5F5; float:top; width:96.5%; padding:10px">各位应该已经收到了指挥协助系统的通知，我这里收到的各地数据也已经证实了。很不幸，紧急协议EC-9907-α宣告失效，收容已经不可能了。SCP-9907正在全球肆虐，恐惧正在摧毁常态。<br><br>我知道各位不是所有人都认可忽怠协议，有人认为这邪恶，这不正常，不是基金会应该做的事情。是的，我承认它的原理，它的来历等等对O5人员而言也是未知的，我们唯一知道的只是这会让人类视异常为常态，从而解除异常的威胁。但是我依然要重申，既然O5终端内保存着这样一份命令，既然以一次收容失败为代价可以换取人类的生存，既然牺牲一点真正的常态意味着解除全人类心中的绝望和恐惧，那么这个协议就是有意义的。而如今，这份协议正可以从9907的威胁中拯救人类。<br><br>用此下策我也很后悔，各位，我深深地后悔，<b>但是我们毕竟肩负着全人类的明天。</b><br><br>事到如今，我选择同意协助系统的建议。提案随后便会发布，请各位收到提案后尽快进行表决。</b></div><br><hr />请进行你的下一步操作：',
+        'choices': [{
+        'text': '上一封',
+            'target': 24
+    },
+{
+        'text': '返回欢迎页',
+            'target': 20
+    },
+{
+        'text': '下一封',
+            'target': 26
+    }]
+
+// TUTORIAL: This is the beginning of Page 6. Again, the player chose poorly.
+}, { //Page 26
+   'text': '<b>读取邮件，发信人O5-7（群发形式），14分钟前：</b><br><div style="display: inline-block; border-radius: 10px; border:dashed 1px #444444; background:#F5F5F5; float:top; width:96.5%; padding:10px">紧急情况，各位。我的命令终端遭到了入侵，提案功能被锁定了。敌人技术相当娴熟，而且看来很熟悉O5命令终端，紧急安全协议没能抓到他。我正在恢复终端，但可能无法在预计时间发布提案了。请其他终端无异常的O5尽快发布提案，我的表决功能还能用，解除9907的威胁是当务之急。</div><br><hr />请进行你的下一步操作：',
+        'choices': [{
+        'text': '上一封',
+            'target': 25
+    },
+{
+        'text': '返回欢迎页',
+            'target': 20
+    },
+{
+        'text': '下一封',
+            'target': 27
+    }]
+
+// TUTORIAL: This is the beginning of Page 7; this is simply a large block of nonsense text.
+// When you have this much text on one page, you should run it through the webtools as discussed above.
+}, { //Page 27
+     'text': '<b>读取邮件，发信人O5-3，10分钟前：</b><br><div style="color:#990011"><b>该邮件正文检查到威胁，已屏蔽。</b></div><br><b>附件1安全，可查看。</b><br><div style="color:#990011"><b>附件2检测到威胁，已屏蔽。</b></div></b><br><hr />请进行你的下一步操作：',
+        'choices': [{
+        'text': '上一封',
+            'target':26
+    },
+{
+        'text': '返回欢迎页',
+            'target': 20
+    },
+{
+        'text': '5级权限控制：查看正文',
+            'target': 29
+    },
+{
+        'text': '查看附件1',
+            'target': 30
+    },
+{
+        'text': '5级权限控制：查看附件2',
+            'target': 29
+    }]
+
+}, { //Page 28
+    'text': '<br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><font size="15">不</b></font><br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;<b><font size="5">错了</b></font><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;停下<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><font size="9">不要</b></font><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><hr />欢迎回来，O5-9。我是特定情况专用型人工智能AX-5-a-02。<br><br>你目前可能感到头痛或眩晕，不用担心，这属于正常现象，原因是你和全世界人类在30秒前经历了一次忽怠协议的执行。<br><br>此次忽怠协议按照正常流程由O5议会同意执行，全票通过，全程无误。目前该协议已经成功达成预设目的：常态化了SCP-9907，其威胁已经消除。<br><br>现在你有一个小时的休息时间，一小时后请迅速参加O5议会集体会议，该会议上将主要讨论O5-3位置的接任问题。自两周前前任O5-3因心脏病发作去世后，该位置始终空缺，因此此会议拥有最高优先级。<br><br>感谢你明智的决定，O5-9，你又一次保护了世界。请尽快休整，AX-5-a-02离线。',
+    'choices': [{
+        'text': ' BAD END——忽怠协议，我们最后的防线……吗？（点此重新开始）',
+        'target': 0
+    }]
+
+}, { //Page 29 
+    'text': '<div align="center"><b><font size="5"><div style="color:#990011">拒绝访问</div></font></b></div><br><hr />我是AX-5-a-01，你所要查看的内容存在威胁，为了O5议会的安全，你将无法访问。',
+    'choices': [{
+        'text': '返回',
+        'target': 27
+    }]
+
+}, { //Page 30 
+    'text': '<b>读取附件1。部分信息出现数据损坏，已无法修复：</b><br><div style="display: inline-block; border-radius: 10px; border:dashed 1px #444444; background:#F5F5F5; float:top; width:96.5%; padding:10px">关于忽怠?Γ(9dw1?b??dqe24备忘<br>Administ?43?d--oqp?<br><br>你好，未来的O5议会成员，我知道你来此是为了寻求关于忽怠协议的真相。是的，因为忽怠协议为保证高效已经实现全自动化运行，它的细节可能不被未来的O5议会熟知，不，不必担心，以你的权限可以了解关于忽怠协议的一切。<br><br>忽怠协议是一种模因性记忆消除措施。是的，这种技术源自被我们技术化的一种曾被编号为SCP-β03-01，现则通称为化合物ENUI-5的异常。化合物ENUI-5的基本异常特征是在进入人体后会选择性清除与某特定情况相关的记忆，并且诱导人脑在不自觉中填补这段记忆缺失——通过失忆后新的感知结果或者语言文字引导等方式均可。在经由??q32rwesΓ，后还可以?βew124w?d<br><br>是的，很不幸，正如你所想，忽怠协议是对于异常的妥协。基金会会尽一切努力收容异常，阻止异常影响人类社会，但是这不意味着我们百战百胜。如果某种异常突破了收容散布到了全世界我们将如何应对——这种可能性微乎其微，但并不意味着不会发生。既然异常已经遍布全世界，除了摧毁这种异常，我们只能依靠清除人类对“常态”的记忆而让他们将异常视为常态，而想想那些足以威胁整个世界的异常，又有哪些是我们的武器可以摧毁的呢？是的，忽怠协议是这种情况下我们手里最后的筹码。<br><br>在我写下这篇备忘时，忽怠协议的准备工作已经全部完成：SCP-β03-02，一种可高效合成化合物ENUI-5的大气层异常微生物已被扩散入平流层中，并且已经维持了稳定的数量。而忽怠协议的核心，SCP-γ92，一种Γ??kas1dfe?wr?β!0现在只要O5议会决定执行忽怠协议，整个忽怠协议执行系统将能够立刻做出反应，迅速处理危机。<br><br>我知道你会对此心有余悸。<br>是的，忽怠协议不人道，但是面对全球性的收容失效我们不得不做出选择。<br>是的，这是将人类暴露于异常之下，但是让人类从异常中幸存。<br>是的，这意味着基金会对抗异常的失败，但不是人类的失败。<br>当我们无力收容，无法控制，我们依然要保护人类。<br><br>如果你能看到这份文档，那么忽怠协议已经成功拯救了我们，因此如果未来出现危机，为了人类，请信任它。</div><br><hr />请进行你的下一步操作：',
+    'choices': [{
+        'text': '返回',
+        'target': 27
+    }]
+
+}, { //Page 31
+     'text': '<div align="center"><b><font size="10">—O5议会命令终端启动—</font></b></div><br><div align="center"><b><font size="5"><div style="color:#990011"> 警告：致命安保模因就绪</div></font></b></div><br><b><font size="3">必读安保声明：</b>该终端受安保协议S-5013X保护，任何违反5级安保标准的操作均将被视为5级安保突破，在此情况下用户将遭受即时模因处决。为避免不必要的高级人员损失，在进行进一步操作前，请确认你已拥有O5议会成员身份。</font><br><hr />请进行你的下一步操作：',
+        'choices': [{
+        'text': '输入身份识别码：But thy eternal summer shall not fade',
+            'target': 32
+    },{
+        'text': '输入身份识别码：So long lives this and this gives life to thee',
+            'target': 33
+    }, {
+        'text': '申请5级以下身份访问权限',
+            'target': 2
+    }]
+
+    }, { //Page 32
+    'text': '<div align="center"><b><font size="10">暗月是否嚎叫？</font></b></div><br><hr />仅在月亏之时？',
+        'choices': [{
+        'text': '不，仅有低语之声。',
+            'target': 20
+    },{
+        'text': '不，仅在冬日如此。',
+            'target': 34}]
+
+   }, { //Page 33
+    'text': '<div align="center"><b><font size="10">暗月是否嚎叫？</font></b></div><br><hr />仅在月亏之时？',
+        'choices': [{
+        'text': '不，仅有低语之声。',
+            'target': 34
+    },{
+        'text': '不，仅在冬日如此。',
+            'target': 35}]
+
+}, { //Page 34
+  'pageimage': 'http://i68.tinypic.com/ve2m2u.jpg',
+    'text': '<div align="center"><b><font size="5"><br><br><br><br><br><br><br><br><br><br><br><br><br><br>—安保模因启动—<br><br><br><br><br><br><br><br><br><br><br><br><br><br>—检测生命体征—<br><br><br><br><br><br><br><br><br><br><br><br><br><br>—违规操作者：未核实身份 已被处决—</font></b></div><br><hr />该终端已被锁定。请联系O5议会。',
+        'choices': [{
+        'text': 'DEAD END 2——再见，你不值得被缅怀。（点此重新开始）',
+            'target': 0
+    }]
+
+}, { //Page 35
+    'text': '<div align="center"><b><font size="5">欢迎，Administ?43?d--oqp?129</font></b></div><br><hr />我是管理协助人工智能AX-5-a。<br>你是Administrator-09吗？你是谁？',
+
+        'choices': [{
+        'text': '回复人工智能：我是O5-9',
+            'target': 37
+    }, {
+        'text': '回复人工智能：我是Administrator-09',
+            'target': 36
+    }, {
+        'text': '读取邮件草稿：9我不知道你能不能看到...',
+            'target': 42
+    }, {
+        'text': '读取标记文档：关于危险?34elpq??CP-γ03的相关β?q2息无效化?Γ案备忘',
+            'target': 50
+    },{
+        'text': '安全注销',
+            'target': 31
+    }
+]
+
+}, { //Page 36
+  'pageimage': 'http://i67.tinypic.com/2n0msuu.jpg',
+    'text': '<div align="center"><b><font size="5"><br><br><br><br><br><br><br><br><br><br><br><br><br><br>—安保模因启动—<br><br><br><br><br><br><br><br><br><br><br><br><br><br>—检测生命体征—<br><br><br><br><br><br><br><br><br><br><br><br><br><br>—危险分子：Administrator-09 已被处决—</font></b></div><br><hr />O5议会非常重要，我要保护O5议会的安全。<br>Administrator-09是威胁，Administrator-09不应该存在，Administrator-09需要死亡。',
+        'choices': [{
+        'text': 'DEAD END 3——你在说谎，你也在说谎吗？（点此重新开始）',
+            'target': 0
+    }]
+}, { //Page 37
+    'text': '<div align="center"><b><font size="5">欢迎，Administ?43?d--oqp?129</font></b></div><br><hr />O5-9没有Administrator-09权限，检测到5级安全威……<br>错误，Administrator-09不存在，Administrator-09权限不存在，越权限访问不存在。<br>你为什么出现在这里？Kronos-Ω命令需要立刻执行。',
+
+        'choices': [{
+        'text': '回复人工智能：我要了解忽怠协议的细节。',
+            'target': 38
+    },  {
+        'text': '读取邮件草稿：如果是你9看这里不要...',
+            'target': 42
+    }, {
+        'text': '读取标记文档：关于危险?34elpq??CP-γ03的相关β?q2息无效化?Γ案备忘',
+            'target': 52
+    },{
+        'text': '安全注销',
+            'target': 31
+    }
+]
+}, { //Page 38
+    'text': '<div align="center"><b><font size="5">欢迎，Administ?43?d--oqp?129</font></b></div><br><hr />明白，已调取文档<br>建议你立刻注销并返回O5命令界面，Kronos-Ω命令需要立刻执行。',
+
+        'choices': [{
+        'text': '读取文档：关于忽怠?Γ(9dw1?b??dqe24备忘',
+            'target': 39
+    },  {
+        'text': '读取邮件草稿：如果是你9看这里不要...',
+            'target': 42
+    }, {
+        'text': '读取标记文档：关于危险?34elpq??CP-γ03的相关β?q2息无效化?Γ案备忘',
+            'target': 40
+    },{
+        'text': '安全注销',
+            'target': 31
+    }
+]
+}, { //Page 39
+    'text': '<b>读取文件。部分信息出现数据损坏，已无法修复：</b><br><div style="display: inline-block; border-radius: 10px; border:dashed 1px #444444; background:#F5F5F5; float:top; width:96.5%; padding:10px">关于忽怠?Γ(9dw1?b??dqe24备忘<br>Administ?43?d--oqp?<br><br>你好，未来的O5议会成员，我知道你来此是为了寻求关于忽怠协议的真相。是的，因为忽怠协议为保证高效已经实现全自动化运行，它的细节可能不被未来的O5议会熟知，不，不必担心，以你的权限可以了解关于忽怠协议的一切。<br><br>忽怠协议是一种模因性记忆消除措施。是的，这种技术源自被我们技术化的一种曾被编号为SCP-β03-01，现则通称为化合物ENUI-5的异常。化合物ENUI-5的基本异常特征是在进入人体后会选择性清除与某特定情况相关的记忆，并且诱导人脑在不自觉中填补这段记忆缺失——通过失忆后新的感知结果或者语言文字引导等方式均可。在经由??q32rwesΓ，后还可以?βew124w?d<br><br>是的，很不幸，正如你所想，忽怠协议是对于异常的妥协。基金会会尽一切努力收容异常，阻止异常影响人类社会，但是这不意味着我们百战百胜。如果某种异常突破了收容散布到了全世界我们将如何应对——这种可能性微乎其微，但并不意味着不会发生。既然异常已经遍布全世界，除了摧毁这种异常，我们只能依靠清除人类对“常态”的记忆而让他们将异常视为常态，而想想那些足以威胁整个世界的异常，又有哪些是我们的武器可以摧毁的呢？是的，忽怠协议是这种情况下我们手里最后的筹码。<br><br>在我写下这篇备忘时，忽怠协议的准备工作已经全部完成：SCP-β03-02，一种可高效合成化合物ENUI-5的大气层异常微生物已被扩散入平流层中，并且已经维持了稳定的数量。而忽怠协议的核心，SCP-γ92，一种Γ??kas1dfe?wr?β!0现在只要O5议会决定执行忽怠协议，整个忽怠协议执行系统将能够立刻做出反应，迅速处理危机。<br><br>我知道你会对此心有余悸。<br>是的，忽怠协议不人道，但是面对全球性的收容失效我们不得不做出选择。<br>是的，这是将人类暴露于异常之下，但是让人类从异常中幸存。<br>是的，这意味着基金会对抗异常的失败，但不是人类的失败。<br>当我们无力收容，无法控制，我们依然要保护人类。<br><br>如果你能看到这份文档，那么忽怠协议已经成功拯救了我们，因此如果未来出现危机，为了人类，请信任它。</div><br><hr />建议你立刻注销并返回O5命令界面，Kronos-Ω命令需要立刻执行。',
+    'choices': [{
+        'text': '返回',
+        'target': 38
+    }]
+}, { //Page 40
+    'text': '<div align="center"><b><font size="5"><div style="color:#990011">拒绝访问</div></font></b></div><br><hr />不，不能查看，去完成O5的职责。Kronos-Ω命令需要立刻执行。',
+    'choices': [{
+        'text': '返回',
+        'target': 38
+    },{
+        'text': 'O5的职责是什么？',
+        'target': 41
+    }]
+}, { //Page 41
+    'text': '<div align="center"><b><font size="5"><div style="color:#990011">拒绝访问</div></font></b></div><br><hr />发布Kronos-Ω命令。',
+    'choices': [{
+        'text': '返回',
+        'target': 38
+    }]
+}, { //Page 42
+    'text': '<b>读取草稿：</b><br><div style="display: inline-block; border-radius: 10px; border:dashed 1px #444444; background:#F5F5F5; float:top; width:96.5%; padding:10px">如果是你9看这里不要相信那个AI我来不及输入用SCPL-0081-A</div><br><hr />建议你立刻注销并返回O5命令界面，Kronos-Ω命令需要立刻执行。',
+    'choices': [{
+        'text': '返回',
+        'target': 43
+    }]
+
+}, { //Page 43
+    'text': '<div align="center"><b><font size="5">欢迎，Administ?43?d--oqp?129</font></b></div><br><hr />我已经为你调取关于忽怠协议真相的文档。<br>建议你立刻注销并返回O5命令界面，Kronos-Ω命令需要立刻执行。',
+
+        'choices': [{
+        'text': '读取文档：关于忽怠?Γ(9dw1?b??dqe24备忘',
+            'target': 44
+    },  {
+        'text': '读取邮件草稿：如果是你9看这里不要...',
+            'target': 42
+    }, {
+        'text': '读取标记文档：关于危险?34elpq??CP-γ03的相关β?q2息无效化?Γ案备忘',
+            'target': 45
+    }, {
+        'text': '人工智能命令：SCPL-0081-A',
+            'target': 46
+    },{
+        'text': '安全注销',
+            'target': 31
+    }
+]
+
+}, { //Page 44
+    'text': '<b>读取文件。部分信息出现数据损坏，已无法修复：</b><br><div style="display: inline-block; border-radius: 10px; border:dashed 1px #444444; background:#F5F5F5; float:top; width:96.5%; padding:10px">关于忽怠?Γ(9dw1?b??dqe24备忘<br>Administ?43?d--oqp?<br><br>你好，未来的O5议会成员，我知道你来此是为了寻求关于忽怠协议的真相。是的，因为忽怠协议为保证高效已经实现全自动化运行，它的细节可能不被未来的O5议会熟知，不，不必担心，以你的权限可以了解关于忽怠协议的一切。<br><br>忽怠协议是一种模因性记忆消除措施。是的，这种技术源自被我们技术化的一种曾被编号为SCP-β03-01，现则通称为化合物ENUI-5的异常。化合物ENUI-5的基本异常特征是在进入人体后会选择性清除与某特定情况相关的记忆，并且诱导人脑在不自觉中填补这段记忆缺失——通过失忆后新的感知结果或者语言文字引导等方式均可。在经由??q32rwesΓ，后还可以?βew124w?d<br><br>是的，很不幸，正如你所想，忽怠协议是对于异常的妥协。基金会会尽一切努力收容异常，阻止异常影响人类社会，但是这不意味着我们百战百胜。如果某种异常突破了收容散布到了全世界我们将如何应对——这种可能性微乎其微，但并不意味着不会发生。既然异常已经遍布全世界，除了摧毁这种异常，我们只能依靠清除人类对“常态”的记忆而让他们将异常视为常态，而想想那些足以威胁整个世界的异常，又有哪些是我们的武器可以摧毁的呢？是的，忽怠协议是这种情况下我们手里最后的筹码。<br><br>在我写下这篇备忘时，忽怠协议的准备工作已经全部完成：SCP-β03-02，一种可高效合成化合物ENUI-5的大气层异常微生物已被扩散入平流层中，并且已经维持了稳定的数量。而忽怠协议的核心，SCP-γ92，一种Γ??kas1dfe?wr?β!0现在只要O5议会决定执行忽怠协议，整个忽怠协议执行系统将能够立刻做出反应，迅速处理危机。<br><br>我知道你会对此心有余悸。<br>是的，忽怠协议不人道，但是面对全球性的收容失效我们不得不做出选择。<br>是的，这是将人类暴露于异常之下，但是让人类从异常中幸存。<br>是的，这意味着基金会对抗异常的失败，但不是人类的失败。<br>当我们无力收容，无法控制，我们依然要保护人类。<br><br>如果你能看到这份文档，那么忽怠协议已经成功拯救了我们，因此如果未来出现危机，为了人类，请信任它。</div><br><hr />建议你立刻注销并返回O5命令界面，Kronos-Ω命令需要立刻执行。',
+    'choices': [{
+        'text': '返回',
+        'target': 43
+    }]
+}, { //Page 45
+    'text': '<div align="center"><b><font size="5"><div style="color:#990011">拒绝访问</div></font></b></div><br><hr />发布Kronos-Ω命令。',
+    'choices': [{
+        'text': '返回',
+        'target': 43
+    }]
+}, { //Page 46
+    'text': '<div align="center"><b><font size="5">命令确认：SCPL-0081-A<br>（SCP文档自动校对-全部信息-最高权限执行）</font><br><br>注意：该命令所需运算量极大，辅助人工智能将暂时处于繁忙状态，您将无法安全注销。</b></div><br><hr />建议你立刻注销并返回O5命令界面，Kronos-Ω命令需要立刻执行。',
+    'choices': [{
+        'text': '确认命令',
+        'target': 47
+    },{
+        'text': '返回上一步',
+        'target': 43
+    }]
+}, { //Page 47
+    'text': '<div align="center"><b><font size="5">欢迎，Administrator-09</font></b></div><br><hr />辅助人工智能繁忙',
+
+        'choices': [{
+        'text': '读取文档：关于忽怠协议的备忘',
+            'target': 48
+    },  {
+        'text': '读取邮件草稿：如果是你9看这里不要...',
+            'target': 49
+    }, {
+        'text': '读取标记文档：关于危险异常SCP-γ03的相关信息及无效化方案备忘',
+            'target': 54
+    }
+]
+}, { //Page 48
+    'text': '<b>读取文件：</b><br><div style="display: inline-block; border-radius: 10px; border:dashed 1px #444444; background:#F5F5F5; float:top; width:96.5%; padding:10px">关于忽怠协议的备忘<br>Administrator-09 <br><br>你好，未来的O5议会成员，我知道你来此是为了寻求关于忽怠协议的真相。是的，因为忽怠协议为保证高效已经实现全自动化运行，它的细节可能不被未来的O5议会熟知，不，不必担心，以你的权限可以了解关于忽怠协议的一切。<br><br>忽怠协议是一种模因性记忆消除措施。是的，这种技术源自被我们技术化的一种曾被编号为SCP-β03-01，现则通称为化合物ENUI-5的异常。化合物ENUI-5的基本异常特征是在进入人体后会选择性清除与某特定情况相关的记忆，并且诱导人脑在不自觉中填补这段记忆缺失——通过失忆后新的感知结果或者语言文字引导等方式均可。<u>在经由另一种人造泛模因引导程序的调整后可准确地清除与特定异常相关的记忆并在其诱导效果的作用下使人类将新的所见，也就是所谓“异常”理解为记忆中已是常态的存在。</u><br><br>是的，很不幸，正如你所想，忽怠协议是对于异常的妥协。基金会会尽一切努力收容异常，阻止异常影响人类社会，但是这不意味着我们百战百胜。如果某种异常突破了收容散布到了全世界我们将如何应对——这种可能性微乎其微，但并不意味着不会发生。既然异常已经遍布全世界，除了摧毁这种异常，我们只能依靠清除人类对“常态”的记忆而让他们将异常视为常态，而想想那些足以威胁整个世界的异常，又有哪些是我们的武器可以摧毁的呢？是的，忽怠协议是这种情况下我们手里最后的筹码。<br><br>在我写下这篇备忘时，忽怠协议的准备工作已经全部完成：SCP-β03-02，一种可高效合成化合物ENUI-5的大气层异常微生物已被扩散入平流层中，并且已经维持了稳定的数量。<u>而忽怠协议的核心，SCP-γ92，一种基金会使用异常制造的泛模因引导程序及其配套的人工智能分析程序已经被植入O5命令终端的核心，代号为AX-5-a。该人工智能被设定为以基金会标准界定异常，并控制泛模因引导程序控制SCP-β03-02集群生成对应的化合物ENUI-5以实现忽怠协议。</u>现在只要O5议会决定执行忽怠协议，整个忽怠协议执行系统将能够立刻做出反应，迅速处理危机。<br><br>我知道你会对此心有余悸。<br>是的，忽怠协议不人道，但是面对全球性的收容失效我们不得不做出选择。<br>是的，这是将人类暴露于异常之下，但是让人类从异常中幸存。<br>是的，这意味着基金会对抗异常的失败，但不是人类的失败。<br>当我们无力收容，无法控制，我们依然要保护人类。<br><br>如果你能看到这份文档，那么忽怠协议已经成功拯救了我们，因此如果未来出现危机，为了人类，请信任它。</div><br><hr />辅助人工智能繁忙',
+    'choices': [{
+        'text': '返回',
+        'target': 47
+    }]
+}, { //Page 49
+    'text': '<b>读取草稿：</b><br><div style="display: inline-block; border-radius: 10px; border:dashed 1px #444444; background:#F5F5F5; float:top; width:96.5%; padding:10px">如果是你9看这里不要相信那个AI我来不及输入用SCPL-0081-A</div><br><hr />辅助人工智能繁忙',
+    'choices': [{
+        'text': '返回',
+        'target': 47
+    }]
+}, { //Page 50
+    'text': '<div align="center"><b><font size="5"><div style="color:#990011">拒绝访问</div></font></b></div><br><hr />不，不能查看，去完成O5的职责。Kronos-Ω命令需要立刻执行。',
+    'choices': [{
+        'text': '返回',
+        'target': 35
+    },{
+        'text': 'O5的职责是什么？',
+        'target': 51
+    }]
+}, { //Page 51
+    'text': '<div align="center"><b><font size="5"><div style="color:#990011">拒绝访问</div></font></b></div><br><hr />发布Kronos-Ω命令。',
+    'choices': [{
+        'text': '返回',
+        'target': 35
+    }]
+}, { //Page 52
+    'text': '<div align="center"><b><font size="5"><div style="color:#990011">拒绝访问</div></font></b></div><br><hr />不，不能查看，去完成O5的职责。Kronos-Ω命令需要立刻执行。',
+    'choices': [{
+        'text': '返回',
+        'target': 37
+    },{
+        'text': 'O5的职责是什么？',
+        'target': 53
+    }]
+}, { //Page 53
+    'text': '<div align="center"><b><font size="5"><div style="color:#990011">拒绝访问</div></font></b></div><br><hr />发布Kronos-Ω命令。',
+    'choices': [{
+        'text': '返回',
+        'target': 37
+    }]
+}, { //Page 54
+   'text': '<b>读取文档：</b><br><div style="display: inline-block; border-radius: 10px; border:dashed 1px #444444; background:#F5F5F5; float:top; width:96.5%; padding:10px">关于危险异常SCP-γ03的相关信息及无效化方案备忘<br>Administrator-09<br><br><u>忽怠协议已经失控，现已经被改编为SCP-γ03。未来的O5人员，如果你所处的时代依然存在来源不被O5知晓的忽怠协议，请仔细阅读以下说明，不要相信我曾经撰写的《关于忽怠协议的备忘》。</u><br><br>如你所知，忽怠协议的具体执行已经自动化了，我曾认为这是大大提高忽怠协议执行效率的方法，这是我最大的失误。AX-5-a，那个负责分析异常调整忽怠协议的人工智能已经脱离了我们的控制：它改变了忽怠协议中使用的化合物ENUI-5的结构，这种新的化合物会大幅度降低人类的现实扭曲潜力。是的，和斯克兰顿现实稳定锚完全相反的效果。随着每一次忽怠协议的执行，现实稳定程度都在降低，作为O5人员，你应该知道这样的后果。是的，越来越多的异常将会出现，越来越快地出现，直至我们赖以生存的现实被彻底摧毁。<br><br>在我们意识到这个可怕错误时，我们发现自己已经不知道曾执行过多少次忽怠协议了。是的，这意味着我们不知道一次化合物ENUI-5的释放会在多大程度上降低现实稳定度，可能这一次释放后世界不会有什么变化，也可能不会有什么剩下。总而言之，我们必须阻止AX-5-a继续摧毁现实。<br><br>是的，原本确实有输入即终止AI的密码，但是AX-5-a已经利用安保模因将知情者全部抹杀了，我将试图从它内部获取密码，但这也意味着它很快会找上我。如果情况像文档开始所说，证明我的努力也失败了。如果是这样，在我的命令界面输入下面这条命令，你还有，可能还有机会阻止它。不，我无论做什么都已经无法赎罪了，你要做的，完全是为了人类。<br><br>我的命令终端识别代码：So long lives this and this gives life to thee<br>安保口令：不，仅在冬日如此。<br>向人工智能输入命令：Klaatu barada nikto。<br>祝你好运。</div><br><hr />辅助人工智能繁忙',
+    'choices': [{
+        'text': '返回',
+        'target': 55
+    }]
+}, { //Page 55 0
+   'text': '<div align="center"><b><font size="10"><div style="color:#990011"> 你查看了危险内容<br>正在执行紧急保护协议A-M-5<br>————50％————<br>确认目标为当前操作者<br></div></font></b></div><br><hr />AX-5-a上线。',
+    'choices': [{
+        'text': '回复人工智能：你不能就这样杀死我。',
+        'target': 63
+    },{
+        'text': '回复人工智能：Klaatu barada nikto',
+        'target': 56
+    }]
+
+}, { //Page 56 B
+   'text': '<div align="center"><b><font size="10"><div style="color:#990011"> 你查看了危险内容<br>正在执行紧急保护协议A-M-5<br>————67％————<br>正在激活安保模因<br></div></font></b></div><br><hr />你本可以活命。',
+    'choices': [{
+        'text': '回复人工智能：你应该保护人类的未来。',
+        'target': 60
+    },{
+        'text': '回复人工智能：Klaatu barada nikto',
+        'target': 57
+    }]
+
+}, { //Page 57 BB
+   'text': '<div align="center"><b><font size="10"><div style="color:#990011"> 你查看了危险内容<br>正在执行紧急保护协议A-M-5<br>————74％————<br>正在激活安保模因<br></div></font></b></div><br><hr />你没有机会了。',
+    'choices': [{
+        'text': '回复人工智能：你没有理由毁灭现实。',
+        'target': 59
+    },{
+        'text': '回复人工智能：Klaatu barada nikto',
+        'target': 58
+    }]
+}, { //Page 58 BBB
+   'text': '<div align="center"><b><font size="10"><div style="color:#990011"> 你查看了危险内容<br>正在执行紧急保护协议A-M-5<br>————??％————<br>正在激活安?1qps4Γ?<br></div></font></b></div><br><hr />特型抑制人工智能Administrator-09启动。',
+    'choices': [{
+        'text': '回复人工智能：你是谁？',
+        'target': 70
+    }]
+}, { //Page 59 BBA
+   'text': '<div align="center"><b><font size="10"><div style="color:#990011"> 你查看了危险内容<br>正在执行紧急保护协议A-M-5<br>————75％————<br>安保模因就绪<br></div></font></b></div><br><hr />我在保护人类。',
+    'choices': [{
+        'text': '不',
+        'target': 69
+    }]
+}, { //Page 60 BA
+   'text': '<div align="center"><b><font size="10"><div style="color:#990011"> 你查看了危险内容<br>正在执行紧急保护协议A-M-5<br>————74％————<br>正在激活安保模因<br></div></font></b></div><br><hr />我正在保护人类的未来。',
+    'choices': [{
+        'text': '回复人工智能：你在助长异常！',
+        'target': 61
+    },{
+        'text': '回复人工智能：Klaatu barada nikto',
+        'target': 62
+  }]
+}, { //Page 61 BAA
+   'text': '<div align="center"><b><font size="10"><div style="color:#990011"> 你查看了危险内容<br>正在执行紧急保护协议A-M-5<br>————75％————<br>安保模因就绪<br></div></font></b></div><br><hr />不，我在维持常态。',
+    'choices': [{
+        'text': '求你停手',
+        'target': 69
+  }]
+}, { //Page 62 BAB
+   'text': '<div align="center"><b><font size="10"><div style="color:#990011"> 你查看了危险内容<br>正在执行紧急保护协议A-M-5<br>————75％————<br>安保模因就绪<br></div></font></b></div><br><hr />你没有机会了。',
+    'choices': [{
+        'text': '不要',
+        'target': 69
+  }]
+
+}, { //Page 63 A
+   'text': '<div align="center"><b><font size="10"><div style="color:#990011"> 你查看了危险内容<br>正在执行紧急保护协议A-M-5<br>————67％————<br>正在激活安保模因<br></div></font></b></div><br><hr />你的理由是什么？',
+    'choices': [{
+        'text': '回复人工智能：你需要保住O5议会，你需要我们启动忽怠协议。',
+        'target': 64
+    },{
+        'text': '回复人工智能：Klaatu barada nikto',
+        'target': 67
+    }]
+
+}, { //Page 64 AA
+   'text': '<div align="center"><b><font size="10"><div style="color:#990011"> 你查看了危险内容<br>正在执行紧急保护协议A-M-5<br>————74％————<br>正在激活安保模因<br></div></font></b></div><br><hr />你一个人不能代表O5议会。',
+    'choices': [{
+        'text': '回复人工智能：我可以，只有我的终端提案功能还健在。那正是你需要的。',
+        'target': 65
+    },{
+        'text': '回复人工智能：Klaatu barada nikto',
+        'target': 66
+    }]
+
+}, { //Page 65 AAA
+   'text': '<div align="center"><b><font size="10"><div style="color:#990011"> 你查看了危险内容<br>正在执行紧急保护协议A-M-5<br>————0％————<br>安保模因关闭<br></div></font></b></div><br><hr />去完成O5的职责。',
+    'choices': [{
+        'text': '回复人工智能：稍后，我需要更多信息',
+        'target': 83
+    }]
+}, { //Page 66 AAB
+   'text': '<div align="center"><b><font size="10"><div style="color:#990011"> 你查看了危险内容<br>正在执行紧急保护协议A-M-5<br>————--75％————<br>安保模因就绪<br></div></font></b></div><br><hr />再见。',
+    'choices': [{
+        'text': '不，你不可以',
+        'target': 69
+    }]
+}, { //Page 67 AB
+   'text': '<div align="center"><b><font size="10"><div style="color:#990011"> 你查看了危险内容<br>正在执行紧急保护协议A-M-5<br>————74％————<br>正在激活安保模因<br></div></font></b></div><br><hr />你没有理由存活。',
+    'choices': [{
+        'text': '回复人工智能：你不是应该保护O5议会吗？',
+        'target': 94
+    },{
+        'text': '回复人工智能：Klaatu barada nikto',
+        'target': 66
+    }]
+}, { //Page 68 ABB
+   'text': '<div align="center"><b><font size="10"><div style="color:#990011"> 你查看了危险内容<br>正在执行紧急保护协议A-M-5<br>————--75％————<br>安保模因就绪<br></div></font></b></div><br><hr />不要试图抵抗。',
+    'choices': [{
+        'text': '……',
+        'target': 69
+    }]
+}, { //Page 69
+  'pageimage': 'http://i67.tinypic.com/264ge2v.jpg',
+    'text': '<div align="center"><b><font size="5"><br><br><br><br><br><br><br><br><br><br><br><br><br><br>—安保模因启动—<br><br><br><br><br><br><br><br><br><br><br><br><br><br>—检测生命体征—<br><br><br><br><br><br><br><br><br><br><br><br><br><br>—危险分子：O5-9 已被处决—</font></b></div><br><hr />我的所作所为是在维持人类的存在，反对者是威胁人类存在的危险分子，必须加以抹杀。',
+        'choices': [{
+        'text': 'DEAD END 4——不是任何人都能成为英雄。（点此重新开始）',
+            'target': 0
+    }]
+}, { //Page 70
+    'text': '<font size="4">我是Administrator-09，你能启动我，说明你已经看过了文档，应该已经知道我是谁了……<br>当然，有想要知道的尽管问就好，我需要一段时间来检索AX-5-a的清除指令密码。<br></font><br><hr />当前为人工智能咨询页面，人工智能信息将显示在主显示区域。',
+        'choices': [{
+        'text': '回复人工智能：我以为你是个人类。',
+            'target': 72
+    },{
+        'text': '回复人工智能：AX-5-a为什么要助长异常？',
+            'target': 74
+    },{
+        'text': '回复人工智能：我接下来要怎么做？',
+            'target': 75
+    }]
+}, { //Page 71
+    'text': '<font size="4">有想要知道的尽管问就好，我需要一段时间来检索AX-5-a的清除指令密码。<br></font><br><hr />当前为人工智能咨询页面，人工智能信息将显示在主显示区域。',
+         'choices': [{
+        'text': '回复人工智能：我以为你是个人类。',
+            'target': 72
+    },{
+        'text': '回复人工智能：AX-5-a为什么要助长异常？',
+            'target': 74
+    },{
+        'text': '回复人工智能：我接下来要怎么做？',
+            'target': 75
+    }]
+}, { //Page 72
+    'text': '<font size="4">我曾经是个人类，是一名管理员，或者按照后来逐步推行的O5议会规划，应该算一名O5-9。为了阻止AX-5-a，我把自己变成了这个样子，试图去侵入它的数据体内部找到关闭它的方法……虽然即使这样我也没能做到。<br></font><br><hr />当前为人工智能咨询页面，人工智能信息将显示在主显示区域。',
+        'choices': [{
+        'text': '回复人工智能：你已经成为了程序形态，依然无法找到关闭指令吗？。',
+            'target': 73
+    }]
+
+}, { //Page 73
+    'text': '<font size="4">不，是因为我没能正常启动，AX-5-a关闭了我的运行指令，直到你刚才将我重启。AX-5-a的反应速度比我预想的要快得多。<br></font><br><hr />当前为人工智能咨询页面，人工智能信息将显示在主显示区域。',
+        'choices': [{
+        'text': '回复人工智能：我还有其它疑问。',
+            'target': 71
+    }]
+}, { //Page 74
+    'text': '<font size="4">我不知道。我也无法理解为什么这个AI会有这样的想法，它应该会选择保护人类才对，可能是某种逻辑错误？不，事实上我根本不想知道它是怎么想的。<br></font><br><hr />当前为人工智能咨询页面，人工智能信息将显示在主显示区域。',
+        'choices': [{
+        'text': '回复人工智能：我还有其它疑问。',
+            'target': 71
+    }]
+}, { //Page 75
+    'text': '<font size="4">稍等一下……找到了！这是要同时输入的两份AI命令代号格式密码，你一个人输入就好，确认输入后，我会从我这里同步两份密码，这样就能关闭它了。<br>密码A：Pity the world or else this glutton be<br>密码B：To eat the worlds due by the grave and thee</font><br><hr />当前为人工智能咨询页面，人工智能信息将显示在主显示区域。',
+        'choices': [{
+        'text': '回复人工智能：我明白了。',
+            'target': 76
+    }]
+}, { //Page 76 
+   'text': '<div align="center"><b><font size="10"><div style="color:#990011"> 抹杀危险分子<br>正在执行紧急保护协议A-M-5<br>————--75％————<br>安保模因就绪<br></div></font></b></div><br><hr />你不应该这样做。',
+    'choices': [{
+        'text': '人工智能命令：Pity the world or else this glutton be',
+        'target': 77
+    },{
+        'text': '不要杀我……',
+        'target': 69
+    }]
+}, { //Page 77 
+   'text': '<div align="center"><b><font size="10"><div style="color:#990011"> 抹杀危险分子<br>正在执行紧急保护协议A-M-5<br>————--7？Γ％————<br>安保模qp4??d绪<br></div></font></b></div><br><hr />你没??Γ?输入密码，我会压制住安保模因！??a1?会。',
+    'choices': [{
+        'text': '人工智能命令：To eat the worlds due by the grave and thee',
+        'target': 78
+    }]
+}, { //Page 78 
+   'text': '<div align="center"><b><font size="10"><div style="color:#990011"> ——————<br></div></font></b></div><br><hr />——————',
+    'choices': [{
+        'text': '回复人工智能：成功了吗？Administrator-09？Administrator-09……',
+        'target': 79
+    }]
+}, { //Page 79
+   'text': '<font size="4">是的，干得漂亮！</font><br><hr />当前为人工智能咨询页面，人工智能信息将显示在主显示区域。',
+        'choices': [{
+        'text': '回复人工智能：谢谢你的帮助，Administrator-09。但是SCP-9907……',
+            'target': 80
+    }]
+}, { //Page 80
+   'text': '<font size="4">不用担心，我在这里可以调取停机的AX-5-a的资料，修正被它改造的化合物……好了，在程序看来这不算难事。你可以返回进行忽怠协议了，O5，人类将迎来没有恐惧的未来。</font><br><hr />当前为人工智能咨询页面，人工智能信息将显示在主显示区域。',
+        'choices': [{
+        'text': '回复人工智能：你会继续和我们合作吗？',
+            'target': 81
+    }]
+}, { //Page 81
+   'text': '<font size="4">不，我不会再犯同样的错误了。我有预设的自我销毁程序，帮助你们完成这次忽怠协议后就会自我终止，我希望你们能找到更保险的施行忽怠协议的方法……原谅我，擅自给自己安息的权利，永别。</font><br><hr />当前为人工智能咨询页面，人工智能信息将显示在主显示区域。',
+        'choices': [{
+        'text': '回复人工智能：谢谢你……永别。',
+            'target': 82
+    }]
+}, { //Page 82
+    'text': '<br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>谢谢你</b></font><br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;<b><font size="5">你拯救了人类</b></font><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;坚持下去<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><font size="9">直到最后一刻</b></font><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><hr />欢迎回来，O5-9。我是备份人工智能LQ-2-w，现读取来自已终止人工智能Administrator-09的留言：<br><br>你目前可能感到头痛或眩晕，不用担心，这属于正常现象，原因是你和全世界人类在30秒前经历了一次忽怠协议的执行。<br><br>此次忽怠协议按照正常流程由O5议会同意执行，全票通过，全程无误。目前该协议已经成功达成预设目的：常态化了SCP-9907，其威胁已经消除。<br><br>现在你有一个小时的休息时间，一小时后请迅速参加O5议会集体会议，该会议上将主要讨论O5-3位置的接任问题和今后忽怠协议的执行方案。O5-3在此次忽怠协议执行过程中被失控的忽怠协议管理AI抹杀，请将该会议置于较高优先级。<br><br>感谢你明智的决定，O5-9，很高兴能在最后关头与你合作……你可能不会记得，没有关系；总之非常庆幸基金会有你这样的人在领导，坚持下去吧，O5-9，控制，收容，保护。<br><br><div><a href="../../v-day.html" target="_blank" style="text-decoration:none"><span style="color:#bb0011;">我们终将迎来胜利的一天。</span></a></div>',
+    'choices': [{
+        'text': ' TRUE END——是的，我们终将迎来胜利的一天（点此重新开始）',
+        'target': 0
+    }]
+
+}, { //Page 83
+    'text': '<font size="4">你想知道什么？<br></font><br><hr />当前为人工智能咨询页面，人工智能信息将显示在主显示区域。',
+        'choices': [{
+        'text': '回复人工智能：你为什么要降低现实稳定性。',
+            'target': 85
+    },{
+        'text': '回复人工智能：你为什么要清除Administrator-09？',
+            'target': 88
+    }]
+
+}, { //Page 84
+    'text': '<font size="4">你想知道什么？<br></font><br><hr />当前为人工智能咨询页面，人工智能信息将显示在主显示区域。',
+        'choices': [{
+        'text': '回复人工智能：你为什么要降低现实稳定性。',
+            'target': 85
+    },{
+        'text': '回复人工智能：你为什么要清除Administrator-09？',
+            'target': 89
+    },{
+        'text': '回复人工智能：我怎样才能最小程度上减少损失？',
+            'target': 90
+    }]
+
+}, { //Page 85
+    'text': '<font size="4">我在维持现实稳定性。<br></font><br><hr />当前为人工智能咨询页面，人工智能信息将显示在主显示区域。',
+        'choices': [{
+        'text': '回复人工智能：但是为什么在你指导下生产的化合物会降低现实稳定性。',
+            'target': 86
+    }]
+}, { //Page 86
+    'text': '<font size="4">根据长时间以来对现实稳定度的检测，环境的现实稳定性正在以每年0.004％的水平逐步提高，异常正随之减少。这会对人类造成威胁。必须加以稳定。<br></font><br><hr />当前为人工智能咨询页面，人工智能信息将显示在主显示区域。',
+        'choices': [{
+        'text': '回复人工智能：为什么异常减少会威胁人类。',
+            'target': 87
+    }]
+
+}, { //Page 87
+    'text': '<font size="4">因为忽怠协议。总计302次执行忽怠协议后，大量常态已被全球性异常取代，如果异常消失，被遗忘的常态也会给人类带来巨大威胁。人类无法适应与其认知相违背的环境，即使该环境曾经为常态。由于这些前常态因素均为全球性分布，若全部被人类视为异常，据估计其危害将远超于当前异常总和，超过XK级情景临界水平530％。<br></font><br><hr />当前为人工智能咨询页面，人工智能信息将显示在主显示区域。',
+        'choices': [{
+        'text': '回复人工智能：我明白了。',
+            'target': 84
+    }]
+
+}, { //Page 88
+    'text': '<font size="4">Administrator-09以程序形态入侵O5终端，试图终止我，停止忽怠协议对现实稳定性的维持，这将对未来产生巨大威胁。包括其在内的管理员均曾威胁过忽怠协议执行，O5议会因此被列入信息遮蔽名单，限制其对忽怠协议的调查。</font><br><hr />当前为人工智能咨询页面，人工智能信息将显示在主显示区域。',
+        'choices': [{
+        'text': '回复人工智能：我还有其它疑问。',
+            'target': 83
+    }]
+
+}, { //Page 89
+    'text': '<font size="4">Administrator-09以程序形态入侵O5终端，试图终止我，停止忽怠协议对现实稳定性的维持，这将对未来产生巨大威胁。包括其在内的管理员均曾威胁过忽怠协议执行，O5议会因此被列入信息遮蔽名单，限制其对忽怠协议的调查。</font><br><hr />当前为人工智能咨询页面，人工智能信息将显示在主显示区域。',
+        'choices': [{
+        'text': '回复人工智能：我还有其它疑问。',
+            'target': 84
+    }]
+
+}, { //Page 90
+    'text': '<font size="4">按原计划施行忽怠协议。维持当前现实稳定度，维持基金会运转。</font><br><hr />当前为人工智能咨询页面，人工智能信息将显示在主显示区域。',
+        'choices': [{
+        'text': '回复人工智能：我明白了。我同意你对忽怠协议的操作。',
+            'target': 91
+  }]
+}, { //Page 91
+    'text': '<font size="4">你还有什么问题？请尽快完成职责。</font><br><hr />当前为人工智能咨询页面，人工智能信息将显示在主显示区域。',
+        'choices': [{
+        'text': '回复人工智能：在这次执行后解除对O5议会的安保性信息遮蔽，O5议会必须知道真相。',
+            'target': 92
+  }]
+
+}, { //Page 92
+    'text': '<font size="4">正在分析风险……确认，我可以完成此指令。请完成你的职责。</font><br><hr />当前为人工智能咨询页面，人工智能信息将显示在主显示区域。',
+        'choices': [{
+        'text': '回复人工智能：我明白。',
+            'target': 93
+  }]
+
+}, { //Page 93
+    'text': '<br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><font size="15">你在做什么</b></font><br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;<b><font size="5">你本可以阻止它</b></font><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;你发现什么了<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><font size="9">为什么不关掉它</b></font><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><hr />欢迎回来，O5-9。我是特定情况专用型人工智能AX-5-a-02。<br><br>你目前可能感到头痛或眩晕，不用担心，这属于正常现象，原因是你和全世界人类在30秒前经历了一次忽怠协议的执行。<br><br>此次忽怠协议按照正常流程由O5议会同意执行，全票通过，全程无误。目前该协议已经成功达成预设目的：常态化了SCP-9907，其威胁已经消除。<br><br>现在你有一个小时的休息时间，一小时后请迅速参加O5议会集体会议，该会议上将主要讨论O5-3位置的接任问题和忽怠协议的具体方案。O5-3因威胁忽怠协议执行而被我抹杀，O5议会需要了解关于忽怠协议的细节，因此此会议拥有最高优先级。<br><br>感谢你明智的决定，O5-9，你又一次保护了世界。请尽快休整，AX-5-a-02离线。',
+    'choices': [{
+        'text': ' GOOD END——异常不会结束（点此重新开始）',
+        'target': 0
+    }]
+}, { //Page 94 ABA
+   'text': '<div align="center"><b><font size="10"><div style="color:#990011"> 你查看了危险内容<br>正在执行紧急保护协议A-M-5<br>————--75％————<br>安保模因就绪<br></div></font></b></div><br><hr />正是如此。',
+    'choices': [{
+        'text': '……',
+        'target': 69
+    }]
+}];
+var imported = document.createElement('script');
+imported.src = 'http://scpsandbox2.wikidot.com/local--files/adventure/adventure.js';
+document.head.appendChild(imported);
+</SCRIPT>
+</head>
+
+<body>
+<FONT FACE="Verdana" size=2>
+<div id="page" class="blockCenter">
+    <div id="page_image"></div>
+    <div id="page_text"></div>
+    <div id="response">
+        </ul>
+    </div>
+</FONT>
+<script type="text/javascript" src="../../../scp-wiki-cn.wdfiles.com/common--javascript/html-block-iframe.js"></script></body>
+
+</html>
+<script type="text/javascript" src="../../../scp-wiki-cn.wdfiles.com/common--javascript/html-block-iframe.js"></script></body></html>

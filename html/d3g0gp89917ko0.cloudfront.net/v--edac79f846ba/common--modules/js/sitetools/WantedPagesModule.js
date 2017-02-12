@@ -1,0 +1,1 @@
+WIKIDOT.modules.WantedPagesModule={};WIKIDOT.modules.WantedPagesModule.updateList=function(b,a){OZONE.ajax.requestModule("sitetools/WantedPagesModule",{p:b,embed:true},function(c){$j(a).parents(".wanted-pages-module").first().html(c.body)})};

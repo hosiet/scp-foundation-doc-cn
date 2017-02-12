@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wikidot="http://www.wikidot.com/rss-namespace">
+
+	<channel>
+		<title>新条目通告 (new threads)</title>
+		<link>http://scp-wiki-cn.wikidot.com/forum/c-882989/</link>
+		<description>Threads in the forum category &quot;新条目通告&quot; - 在此通告新的条目或改动。</description>
+				<copyright></copyright>
+		<lastBuildDate>Sun, 19 Feb 2017 08:58:59 +0000</lastBuildDate>
+		
+					<item>
+				<guid>http://scp-wiki-cn.wikidot.com/forum/t-1720434</guid>
+				<title>刪帖公告串1</title>
+				<link>http://scp-wiki-cn.wikidot.com/forum/t-1720434/1</link>
+				<description>刪掉頁面後請在這裡公告之</description>
+				<pubDate>Fri, 27 May 2016 04:10:21 +0000</pubDate>
+				<wikidot:authorName>MScarlet</wikidot:authorName>				<wikidot:authorUserId>1745583</wikidot:authorUserId>				<content:encoded>
+					<![CDATA[
+						 <p>在刪除了一個頁面後，請在這裡通知一聲，並附上適當的原因</p> 
+				 	]]>
+				</content:encoded>							</item>
+					<item>
+				<guid>http://scp-wiki-cn.wikidot.com/forum/t-1709434</guid>
+				<title>新SCP發佈帖 1：歷史的車輪又在滾了</title>
+				<link>http://scp-wiki-cn.wikidot.com/forum/t-1709434/scp-1</link>
+				<description>在這裡發佈你的新原創SCP吧！</description>
+				<pubDate>Sat, 14 May 2016 16:44:05 +0000</pubDate>
+				<wikidot:authorName>MScarlet</wikidot:authorName>				<wikidot:authorUserId>1745583</wikidot:authorUserId>				<content:encoded>
+					<![CDATA[
+						 <p>小說裡老是說&quot;歷史的車輪開始滾動了&quot;云云<br /> 那難道車輪不滾了時間就會停止了不成?(</p> <p><strong>要發佈新原創，在最下方點&quot;新文章&quot;</strong></p> 
+				 	]]>
+				</content:encoded>							</item>
+				</channel>
+</rss>

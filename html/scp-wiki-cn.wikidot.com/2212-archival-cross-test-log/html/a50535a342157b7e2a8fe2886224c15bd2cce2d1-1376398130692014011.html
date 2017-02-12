@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="../../../scp-wiki-cn.wdfiles.com/common--theme/base.css-block.css"/></head><body>
+<script src="http://scpsandbox2.wikidot.com/local--files/anaxagoras/jquery.js"></script>
+
+<style>
+td, tr, table{
+    border-collapse: collapse;
+}
+
+.gridSquare {  
+    border: 1px black solid;
+    background-color: white;
+    color: black;
+}
+
+.digit {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+}
+</style>
+
+<div id="crosstest_table"></div>
+
+<script>
+var scpnum = [2, 2, 1, 2];
+
+var table = $("<table></table>");
+for(i = 0; i < 5; i++){
+    var row = $("<tr></tr>");
+    for(j = 0; j < 5; j++){
+        var column = $("<td></td>");
+        var input = $('<input type="text">');
+        input.addClass("digit");
+        if(i == 1 && j != 4){
+            input.css('background-color', 'rgb(0, 150, 200)');
+            if(i == 1 && j == 1)
+                input.css('background-color', 'rgb(0, 200, 200)');
+            input.val(scpnum[j]);
+            input.prop('readonly', true);
+        }
+        else if(j == 1 && i != 4)
+            input.css('background-color', 'rgb(0, 200, 150)');
+        column.addClass("gridSquare");
+        column.append(input);
+        row.append(column);
+    }
+    table.append(row);
+}
+
+$('#crosstest_table').append(table);
+
+var a = [];
+for (i = 48; i < 58; i++)
+    a.push(i);
+
+$('input').keypress(function(e) {
+
+    var k = e.which;
+    if(k===8)
+        return;
+    if (!(a.indexOf(k)>=0) || ($(this).val().length != 0))
+        e.preventDefault();
+});
+</script>
+<script type="text/javascript" src="../../../scp-wiki-cn.wdfiles.com/common--javascript/html-block-iframe.js"></script></body></html>

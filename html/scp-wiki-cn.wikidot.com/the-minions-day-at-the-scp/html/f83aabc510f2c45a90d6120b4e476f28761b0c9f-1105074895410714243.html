@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="../../../scp-wiki-cn.wdfiles.com/common--theme/base.css-block.css"/></head><body>
+
+<!--TUTORIAL: Hi, and welcome to the official SCP CYOA code tutorial! To find out how to modify the code to suit your Choose Your Own Adventure story, look for any lines that say TUTORIAL at the beginning in this source code.-->
+
+<!--WARNING: Don't edit anything unless you're told to, or the code might break.-->
+<html lang="en"> <head> <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maxium-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+<style type="text/css">
+@import url("http://scpsandbox2.wikidot.com/local--files/adventure/adventure.css")
+</style>
+<audio autoplay loop id="bgm">
+
+<!--TUTORIAL: Change the file location BELOW to change the starting Background Music.-->
+<!--If you want to start with BGM off, or no BGM, replace the web address with a space; in other words, just put " ".-->
+<source src="http://scpsandbox2.wdfiles.com/local--files/minions/minions.mp3" type="audio/mpeg">
+
+</audio>
+
+<audio autoplay id="effect">
+<source src="f83aabc510f2c45a90d6120b4e476f28761b0c9f-1105074895410714243.html" type="audio/mpeg">
+</audio>
+
+<!--TUTORIAL: If you have no background music, all the text between here...-->
+
+<div align="right">
+<button onclick="enableMute()" type="button">靜音</button>
+</div>
+
+<!--TUTORIAL: ...and here can be removed to get rid of the Mute button.-->
+
+<SCRIPT LANGUAGE = "JavaScript">
+
+var BGM2 = document.getElementById("bgm");
+var effect2 = document.getElementById("effect");
+function enableMute() { 
+    BGM2.muted = !BGM2.muted;
+    effect2.muted = BGM2.muted;
+}
+
+// TUTORIAL: PAGES is the variable that's going to hold your story!
+// Each Page of the story is separated by brackets.
+// As you create more pages, you should number them to keep track of what you're doing.
+// This is the first page of the story, Page 0.
+var PAGES = [{ //Page 0
+
+// TUTORIAL: The image below is the one that will be loaded at the top of Page 0.
+    'pageimage': 'http://i63.tinypic.com/2ue67vo.jpg',
+
+// TUTORIAL: The text below is the text that will appear on Page 0.
+// Note that whenever we want a ' symbol to appear, we have to type \' instead.
+// If you want to go to the next line, add the symbol <br>.
+// If you don't want to worry about getting the formatting right, then type up each page (and choice) in an external word processor, then run that text through the following web tool:
+// http://www.htmlescape.net/htmlescape_tool.html
+// Then, the output of that should be run through:
+// http://www.htmlescape.net/stringescape_tool.html
+// After this, paste that output between the ' quotes and you're set to go!
+
+    'text': '<div align="center">（譯註：因為語法問題，譯註都放在底下的「討論」區）</div><br>嗨歡營來稻小小兵©在scp的一天，我的名字是Randomini然後偶鞋了這個故事。在這個故事裡面，<font size="5">你</font>事一個小小兵！！！ <i>幫住泥的小小兵盆友活者肚過這一天！！！</i>如果泥的小小兵都活下來了泥會得到分數:D。</b>好請輸入泥的名字來開始遊戲<br> <br> <div align="center"> 者麼做？？？ </div>',
+
+// TUTORIAL: Here are the choices for Page 0.
+        'choices': [{
+
+// TUTORIAL: There are two things we need for each choice; the text and the target.
+// The text is what it says on that option.
+// The target is the page we will go to when it is clicked.
+// For this option, the text says 'Walk.'
+// When this option is chosen, we will move to Page 1.
+        'text': '/去19號站點（#site19）',
+            'target': 1
+    }, {
+
+// TUTORIAL: For this option, the text says 'Drive.'
+// When this option is chosen, we will move to Page 2.
+        'text': '/去17號站點（#site17）',
+            'target': 2
+    }]
+
+// TUTORIAL: This is the beginning of Page 1. Note the format is much the same as above, but we only have the one choice, which returns us to Page 0 as the player has died.
+}, { //Page 1
+    'pageimage': 'http://i66.tinypic.com/otzrpk.jpg',
+    'text': '19站點持有醉<font size="5">威險險險</font>的SPC所以如果泥犯了錯，泥會<font size="5">屎</font>！！！但泥布只會死，這張塗只是先堵為快;D <b>\x3Cb\x3E<font size="5">生命值：存活</font>\x3Cb\x3E<b>',
+        'choices': [{
+        'text': '繼續前浸！！！',
+            'target': 3
+    }]
+
+// TUTORIAL: This is the beginning of Page 2. As the player has lived, they will go to Page 5, which takes them to Site 19.
+}, { //Page 2
+    'pageimage': 'http://i64.tinypic.com/2gw7qyu.jpg',
+    'text': '不行泥去19站點',
+        'choices': [{
+        'text': '偶不想鞋兩個故事所以泥去19站點好不好',
+            'target': 3
+    }]
+
+// TUTORIAL: This is the beginning of Page 3. Again, the character died, so they return to Page 0.
+}, { //Page 3
+    'pageimage': 'http://i68.tinypic.com/rhihxf.jpg',
+    'text': '你來到19站點了！！！泥有許多小小兵©在scp的一天朋友，要先根哪個縮話？？？',
+
+        'choices': [{
+        'text': '根clef縮話',
+            'target': 4
+    }, {
+        'text': '根SCP-173縮話',
+            'target': 5
+    }, {
+        'text': '根SCP-682縮話',
+            'target': 6
+    }, {
+        'text': '根rumetzen縮話',
+            'target': 7
+    }, {
+        'text': '根泥自擠縮話',
+            'target': 8
+    }
+]
+
+// TUTORIAL: This is the beginning of Page 4. Again, the player has lived, so they will go to Page 5.
+}, { //Page 4
+    'pageimage': 'http://i63.tinypic.com/2u76i39.jpg',
+    'text': '泥勾引了clef博士;D <b>\x3Cb\x3E<font size="5">歡愛次數：CLEF</font> \x3Cb\x3E<b>',
+        'choices': [{
+        'text': '取消？？？',
+            'target': 3
+    }]
+
+// TUTORIAL: This is the beginning of Page 5. The player has made the right choice, and safely arrived at Site 19. Let's give them an applause when they get here.
+}, { //Page 5
+    'pageimage': 'http://scp-wiki.wdfiles.com/local--files/scp-173/SCP-173.jpg',
+
+// If you want a page to play a sound effect when you arrive on a page, put the address to that effect the same way as below.
+    'effect': 'http://scpsandbox2.wdfiles.com/local--files/adventure/applause.mp3',
+
+    'text': '呃呃呃呃呃173是世芥上醉痔命的SCP泥這個<font size="5">該屎的白痴</font>！！！泥死了！！！ \n 創作者資訊：\n\n SCP-173文中使用的圖片是Izumi Kato的藝術作品Untitled 2004。該照片由Keisuke Yamamoto拍攝。作者保留所有權利。\n\n注意：SCP-173是對藝術作品Untitled 2004的二次利用，該圖片由Izumi Kato創作。SCP-173的概念與Untitled 2004的原始概念毫無關係。\n\n該雕像、其外貌與照片並未採用任何創用CC授權。只有這篇文章的文本採用創用CC。此雕像及其外貌在任何情況下都不能用於商業用途。Izumi Kato已親切地允許SCP基金會及其愛好者僅依非商業目的使用Untitled 2004的圖片。',
+        'choices': [{
+        'text': '重新開始。',
+            'target': 0
+    }]
+
+// TUTORIAL: This is the beginning of Page 6. Again, the player chose poorly.
+}, { //Page 6
+    'pageimage': 'http://i.imgur.com/ppaDnz5.png',
+    'text': ' scp-682喜歡小小兵並且和泥玩了一會兒！！！接者他告塑了泥他不為人枝的過去……',
+        'choices': [{
+        'text': '他不為人枝的過去？？？',
+            'target': 9
+    }]
+
+// TUTORIAL: This is the beginning of Page 7; this is simply a large block of nonsense text.
+// When you have this much text on one page, you should run it through the webtools as discussed above.
+}, { //Page 7
+    'pageimage': 'http://i.imgur.com/3ulGOwW.jpg',
+    'text': '哇耶好一個大個子蠢貨！',
+    'choices': [{
+        'text': '這是圈內人才懂的笑話如果你覺得不好笑晴不要給負芬:L ',
+        'target': 3
+    }]
+
+// TUTORIAL: This is the beginning of Page 8. The player wants to change the background music.
+}, { //Page 8
+    'pageimage': 'http://i68.tinypic.com/2mffbxl.jpg',
+    'text': '嘿沒有必要跟泥自擠縮話老兇，泥有盆友兒且我們再泥森邊。請跟我們或醫療專業仁員縮話，我們只是希望泥可以擺脫這個困境好嗎;_;洩洩泥',
+    'choices': [{
+        'text': 'https:\x2F\x2Fwww.beyondblue.org.au\x2Fthe-facts\x2Fsuicide',
+        'target': 3
+    }]
+
+// TUTORIAL: This is the beginning of Page 9. Again, we change the BGM.
+}, { //Page 9
+    'pageimage': 'http://i65.tinypic.com/143qgk6.jpg',
+    'text': ' scp-682開使根泥縮一個關於被放竹者之圖書館之類的故事可是聽起來他媽的有夠蠢而且一點都不討人喜翻。',
+    'choices': [{
+        'text': '哇那超吳聊的不過好我們繼續前浸！！！',
+        'target': 10
+    }]
+
+// TUTORIAL: This is the beginning of Page 10. The player wanted to remove the BGM.
+// To do this, we simply assign an empty value to the BGM.
+}, { //Page 10
+    'pageimage': 'http://i66.tinypic.com/1zn7l12.jpg',
+    'text': '糟了因為泥他喵的根本布在乎被放竹者之圖書館spc-682生汽了！！！看來泥藥趕快逃跑了……',
+    'choices': [{
+        'text': '……至少<font size="5">現再</font>先逃跑……',
+        'target': 11
+    }]
+
+}, { //Page 11
+    'pageimage': 'http://i.ytimg.com/vi/cCSz4ssUvcU/hqdefault.jpg',
+    'text': '<font size="5">等一下</font>！！！當泥停下角步的時候，泥發現…………泥弄滴歐你的香蕉蕉了！那是這<font size="5">世芥上</font>你<font size="5">最喜歡</font>的香蕉蕉，現在它卻被世芥上最反英雄的SCP緊咬不放！！！看來泥可能需要尋球……<font size="5">幫住</font>……',
+
+    'choices': [{
+        'text': '請球clef……<font size="5">幫芒</font>……',
+            'target': 12
+    }, {
+        'text': '請球173……<font size="5">幫芒</font>……',
+            'target': 5
+    }, {
+        'text': '請球亞伯（able）……<font size="5">幫芒</font>……',
+            'target': 13
+    }, {
+        'text': '請球O5……<font size="5">幫芒</font>……',
+            'target': 14
+    }, {
+        'text': '好吧，天住自住著……',
+            'target': 15
+    }
+]
+
+}, { //Page 12 - clef
+    'pageimage': 'http://i64.tinypic.com/2nqe4ch.jpg',
+    'text': '你們之前的歡愛讓clef累壞了除非你沒選那個選項這種情況下就是出於<font size="5">抹種</font>原因才找不到他……',
+    'choices': [{
+        'text': '只有藥上床時才藻得到clef……<font size="5">男人</font>就是<font size="5">男人</font>！！！',
+        'target': 11
+    }]
+
+}, { //Page 13 - able
+    'pageimage': 'http://pre13.deviantart.net/ae87/th/pre/i/2014/031/3/d/scp_076__able__by_traicere-d74hode.png',
+    'text': '亞伯不喜歡小小兵，亞伯只喜歡SCP……如果有辦法把你變成一個你自己創作的正式SCP就好了……泥應該找誰談呢？？？（提示：零五）另外圖片來自 http:\x2F\x2Ftraicere.deviantart.com\x2Fart\x2FSCP-076-Able-430806434如果泥他媽的在乎',
+    'choices': [{
+        'text': '等泥事scp時再回來！',
+        'target': 11
+    }]
+
+}, { //Page 14 - o5s
+    'pageimage': 'https://i.imgur.com/pJflLgv.jpg',
+    'text': 'o5是小小兵的粉絲並讓你作為自己創作的SCP進入基金會！既然泥已經分類為SCP了（SCP-<font size="5">小小兵</font>）泥或許有<font size="5">機會</font>了……',
+    'choices': [{
+        'text': '不過首先泥得先和其他SCP成為盆友！！！',
+        'target': 16
+    }]
+
+}, { //Page 15 - YHWH
+    'pageimage': 'http://i65.tinypic.com/qz10r4.jpg',
+    'text': '泥向耶和華和耶和華祈禱但他們都不聽……也許泥應該試著去做不同的柿因為上帝不存在大呆瓜！！！另外如果這是你第二次選到這個我很抱歉你會被送回第一次去因為做這個遊戲實在很難對不起',
+    'choices': [{
+        'text': '去看上帝錯覺了解真巷，泥這無知的蠢或！',
+        'target': 11
+    }]
+
+}, { //Page 16 - friends
+    'pageimage': 'http://i65.tinypic.com/fvyeix.jpg',
+    'text': '泥現在是一個SCP了，所以泥可以向其他SCP請球幫住！！！（圖片來自http://thefoggygolem.tumblr.com/post/123252018004/july-4th-2015-freedom-rings-again-as-the-war-on）',
+    'choices': [{
+        'text': '請球173……<font size="5">幫芒</font>……',
+            'target': 5
+    }, {
+        'text': '請球亞伯……<font size="5">幫芒</font>……',
+            'target': 17
+    }, {
+        'text': '請球055……<font size="5">幫芒</font>……',
+            'target': 18
+    }, {
+        'text': '請球縊王（The hanged King）……<font size="5">幫芒</font>……',
+            'target': 19
+    }, {
+        'text': '請球redd先生（mr redd）……<font size="5">幫芒</font>……',
+            'target': 20
+    }, {
+        'text': '請球SCP-____-J……<font size="5">幫芒</font>……',
+            'target': 21
+    }, {
+        'text': '好吧，343住自住著……',
+            'target': 15
+    }
+]
+
+}, { //Page 17 - able
+    'pageimage': 'http://i.imgur.com/P7i4RV4.png',
+    'text': '你聞亞伯願不願意幫住泥徹底殺死SCP682！！！亞伯說\「我很樂意試著殺掉像SCP-682：不滅孽蜥這樣可敬的隊手。上來這裡坐在我煎上，我們現在是盆友了:)\」所以你坐在亞伯的煎膀上，此時他英勇地往SCP-682……<font size="5">孩有</font>泥弄滴歐的香蕉蕉前進！！！',
+    'choices': [{
+        'text': '繼續……',
+        'target': 22
+    }]
+
+}, { //Page 18 - 055
+    'pageimage': 'http://i67.tinypic.com/insncw.jpg',
+    'text': '偶從來沒聽說過那個SCP！！！',
+    'choices': [{
+        'text': '開玩笑的，如果你聽不董這個笑話的話去看SCP-055 :)',
+        'target': 16
+    }]
+
+}, { //Page 19 - hanged king
+    'pageimage': 'https://i.imgur.com/lftyM8T.png',
+    'text': '泥請球縊王幫芒對付682，他說好！縊王前去試圖切碎682但一點用都沒有。縊王沒有強大到足以殺死682，所以如果你享破關的話，你要選一個強到能夠殺死682的SCP來幫你……可是有哪個SCP比682還牆大？？？（提示與技巧小節：不要選173不管幾次他都會殺了你）',
+    'choices': [{
+        'text': '回去請鱉的SCP來幫芒！',
+        'target': 16
+    }]
+
+}, { //Page 20 - mr redd
+    'pageimage': 'http://i.imgur.com/ymUsu3c.jpg',
+    'text': '泥只是一個SCP不是Mister Collector——雖然如果你享的話泥可能咳以當一個<font size="5">小小兵</font>收藏家（MINION collector）;D不管哪個都選錯了',
+    'choices': [{
+        'text': '不過他狠酷，雖然是措的卻是好選擇;D ',
+        'target': 16
+    }]
+
+}, { //Page 21 - SCP-____-J
+    'pageimage': 'http://www.minion143.com/wp-content/uploads/2015/05/8f9cf3bf0783a614887aef5ee0662716.jpg',
+    'text': '偶晚一點會把它寫完（不是真的這樣，開玩笑的;D）',
+    'choices': [{
+        'text': '如果泥還煤看過SCP-____-J快去看這是最棒的SCP之一！',
+        'target': 16
+    }]
+
+}, { //Page 22 - able fights 682
+    'pageimage': 'http://i.imgur.com/qJKIesk.png',
+    'text': '亞伯走向682並舉起他的濺可是接著682就縮 \「等一下偶到底做了什麼？？？\」兒亞伯說 \「嗯SCP-<font size="5">小小兵</font>說亻尔亻俞了他的香蕉蕉！\」然後682說 \「哎偶這麼做只是因為偶沒有<font size="5">自己的</font>香蕉蕉可以吃……\」',
+    'choices': [{
+        'text': '泥開始覺得有點內救……',
+        'target': 23
+    }]
+
+}, { //Page 23 - bananabs regrets
+    'pageimage': 'http://i.imgur.com/obi6URJ.png',
+    'text': '把這頁靜音然後去https://www.youtube.com/watch?v=HDCUnLM6UUc播放那首歌再回來完成這頁時再重新打開背景音樂 \n 「世界上有許多饑餓的人，在他們面前，神示現為麵包。」\n～聖雄甘地（虔誠的傢伙）\n\n「有人說慾望是意志的產物，然而反過來說恰恰是對的：意志是慾望的產物。」\n～德尼．狄德羅（1713-1784）法國哲學家。 \n\n「只有藉由經歷願望的對立面，人才可能實現願望，這是每個人類的缺陷。」\n～索倫．齊克果（1813-1855）丹麥哲學家及作家。 \n\n泥要知道泥對香蕉蕉的渴球會刺雞你……渴望導致飢渴……飢渴導致恐懼……恐懼導致你的好盆友受苦……而你所做的這一切都只是為了<font size="5">一根</font>香蕉蕉？？？也許這次泥不符合<font size="5">歷史</font>潮流了……\n\n「我們所求愈少，便愈像神靈。」\n～蘇格拉底（西元前468-西元前399）古希臘雅典哲學家',
+    'choices': [{
+        'text': '我成了死神，世界的毀滅者。若不藉著我，沒有人能到父那裡去。',
+        'target': 24
+    }]
+
+}, { //Page 24 - happy end
+    'pageimage': 'http://i.imgur.com/vVM0TKd.png',
+    'text': '所以反之你把你的香蕉蕉分享給你的朋友！！！<font size="5">美滿的結局</font>',
+    'choices': [{
+        'text': '重新開始。',
+        'target': 0
+    }]
+
+// TUTORIAL: That's our last page. If you want to add more pages, simply copy the code for one of the pages above, paste it here, and change the comment to remember which page it is.
+
+// TUTORIAL: And that's it! Just tweak and combine the above code to make whatever stories you want to create.
+
+// WARNING: Don't edit anything below here!
+}];
+var imported = document.createElement('script');
+imported.src = 'http://scpsandbox2.wikidot.com/local--files/adventure/adventure.js';
+document.head.appendChild(imported);
+</SCRIPT>
+</head>
+
+<body>
+<FONT FACE="Verdana" size=2>
+<div id="page" class="blockCenter">
+    <div id="page_image"></div>
+    <div id="page_text"></div>
+    <div id="response">
+        </ul>
+    </div>
+</FONT>
+<script type="text/javascript" src="../../../scp-wiki-cn.wdfiles.com/common--javascript/html-block-iframe.js"></script></body>
+
+</html>
+<script type="text/javascript" src="../../../scp-wiki-cn.wdfiles.com/common--javascript/html-block-iframe.js"></script></body></html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html-block-html" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" href="../../../scp-wiki-cn.wdfiles.com/common--theme/base.css-block.css"/></head><body>
+<script src="http://www.scp-wiki.net/local--files/scp-2212/jquery-1.11.3.min.js"></script>
+<style>
+body{
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 0.80em;
+    line-height: 141%;
+}
+
+blockquote{
+    background-color: rgb(241,241,241);
+    border-width: 1px;
+    border-color: rgb(135,135,135);
+    border-style: dashed;
+    padding: 3px 10px 10px;
+}
+</style>
+
+<blockquote>
+    <span id="Instructions"></span>
+    <input type="text" id="password" /> <br>
+    <button type="submit" id="submit">确认密码</button>
+    <input type=button id=button value="重置" />
+</blockquote>
+
+<div id="PageImage" style="float:right; margin:0 2em 1em 2em; width:300px; border:0;"></div>
+<p><b> 项目编号： </b>SCP-2212</p>
+<span id="Class"></span>
+<span id="Containment"></span>
+<span id="Description"></span>
+<span id="Interview"></span>
+<span id="CrossTest"></span>
+
+<script>
+/*\
+|*|
+|*|  :: cookies.js ::
+|*|
+|*|  A complete cookies reader/writer framework with full unicode support.
+|*|
+|*|  Revision #1 - September 4, 2014
+|*|
+|*|  https://developer.mozilla.org/en-US/docs/Web/API/document.cookie
+|*|  https://developer.mozilla.org/User:fusionchess
+|*|
+|*|  This framework is released under the GNU Public License, version 3 or later.
+|*|  http://www.gnu.org/licenses/gpl-3.0-standalone.html
+|*|
+|*|  Syntaxes:
+|*|
+|*|  * docCookies.setItem(name, value[, end[, path[, domain[, secure]]]])
+|*|  * docCookies.getItem(name)
+|*|  * docCookies.removeItem(name[, path[, domain]])
+|*|  * docCookies.hasItem(name)
+|*|  * docCookies.keys()
+|*|
+\*/
+var docCookies = {
+      getItem: function (sKey) {
+       if (!sKey) {
+            return null; 
+        }
+        return decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + encodeURIComponent(sKey).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) || null;
+      },
+      setItem: function (sKey, sValue, vEnd, sPath, sDomain, bSecure) {
+        if (!sKey || /^(?:expires|max\-age|path|domain|secure)$/i.test(sKey)) {
+            return false;
+        }
+        var sExpires = "";
+        if (vEnd) {
+         switch (vEnd.constructor) {
+            case Number:
+              sExpires = vEnd === Infinity ? "; expires=Fri, 31 Dec 9999 23:59:59 GMT" : "; max-age=" + vEnd;
+              break;
+            case String:
+              sExpires = "; expires=" + vEnd;
+              break;
+            case Date:
+              sExpires = "; expires=" + vEnd.toUTCString();
+            break;
+          }
+        }
+        document.cookie = encodeURIComponent(sKey) + "=" + encodeURIComponent(sValue) + sExpires + (sDomain ? "; domain=" + sDomain : "") + (sPath ? "; path=" + sPath : "") + (bSecure ? "; secure" : "");
+        return true;
+      },
+     removeItem: function (sKey, sPath, sDomain) {
+        if (!this.hasItem(sKey)) { return false; }
+        document.cookie = encodeURIComponent(sKey) + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT" + (sDomain ? "; domain=" + sDomain : "")+(sPath ? "; path="+sPath : "");
+        return true;
+      },
+      hasItem: function (sKey) {
+        if (!sKey) { return false; }
+        return (new RegExp("(?:^|;\\s*)" + encodeURIComponent(sKey).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=")).test(document.cookie);
+      },
+      keys: function () {
+        var aKeys = document.cookie.replace(/((?:^|\s*;)[^\=]+)(?=;|$)|^\s*|\s*(?:\=[^;]*)?(?:\1|$)/g, "").split(/\s*(?:\=[^;]*)?;\s*/);
+        for (var nLen = aKeys.length, nIdx = 0; nIdx < nLen; nIdx++) {
+            aKeys[nIdx] = decodeURIComponent(aKeys[nIdx]);
+        }
+        return aKeys;
+    }
+};
+
+String.prototype.hashCode = function(){
+    var hash = 0;
+    if (this.length == 0) return hash;
+    for (i = 0; i < this.length; i++) {
+        char = this.charCodeAt(i);
+        hash = ((hash<<5)-hash)+char;
+        hash = hash & hash; // Convert to 32bit integer
+    }
+    return hash;
+}
+
+$("#button").click(function (){
+    docCookies.setItem("numSolved", 0);
+    docCookies.removeItem("image");
+    docCookies.removeItem("class");
+    docCookies.removeItem("containment");
+    docCookies.removeItem("interview");
+    docCookies.removeItem("cross");
+    updateText();
+});
+
+var mostInstructions = '<p style="text-align: center; color: red"><b>安全警告</b></p><p>自动化系统已在这篇文档中检测到大量数据库损坏。为保证没有具有危害性的或不准确的内容显示，受影响的部分已被完全编辑。</p><p>已提供至上一个已知安全副本的链接。依据协议C-Gobekli，一份解密密码可以从这些归档档案中的每一份里提取，并输入下方的安全区域以恢复此页损坏的部分。按照制定密码最好的办法，每个密码都将是一个英文单词。</p>'
+var finalInstructions = '<p style="text-align: center; font-size: 200%;"><span style="color:red">5</span>, <span style="color:magenta">2</span>, <span style="color:blue">4</span>, <span style="color:green">7</span>, <span style="color:orange">1</span></p>'
+function adjustOverview(){
+    var numSolved = parseInt(docCookies.getItem("numSolved"));
+    var solStrings = [mostInstructions,
+                      mostInstructions,
+                      mostInstructions,
+                      mostInstructions,
+                      mostInstructions,
+                      finalInstructions];
+    $("#Instructions").html(solStrings[numSolved]);
+}
+
+var imagePuzzleUnsolved = '<table style="table-layout:fixed; width: 300px; height:300px; border-width: 1px; border-color: rgb(117, 117, 117); border-style: solid; border-collapse: collapse;"><tr style="height: 300px"><td colspan="2" style="background-color: rgb(100,0,0);"></td></tr><tr><th colspan="2" style="border-width: 1px; border-color: rgb(117, 117, 117); border-style: solid; background-color: rgb(234,234,234);"><sup><a href="../../2212-archival-image.1.html" target="_blank">[大规模数据库损坏]</a></sup></th></tr></table>';
+var imagePuzzleSolved = '<table style="border-width: 1px; border-color: rgb(117, 117, 117); border-style: solid; border-collapse: collapse;"><tr><td colspan="2"><img src="http://scp-wiki.wdfiles.com/local--files/scp-2212/2212.png" width="300px" alt="SCP-2212.png" class="image" /></td></tr><tr><th colspan="2" style="border-width: 1px; border-color: rgb(117, 117, 117); border-style: solid; background-color: rgb(234,234,234);"><sup>尝试复原的SCP-2212在收容中的图像</sup></th></tr></table>';
+function handleImagePuzzle(){
+    if(docCookies.getItem("image") == "solved"){
+        $("#PageImage").html(imagePuzzleSolved);
+    } else {
+        $("#PageImage").html(imagePuzzleUnsolved);
+    }
+}
+
+var classPuzzleUnsolved = '<p><b>项目等级：</b><a href="../../2212-archival-class.html" target="_blank">[大规模数据库损坏]</a></p>'
+var classPuzzleSolved = "<p><b>项目等级：</b>Euclid</p>"
+function handleClassPuzzle(){
+    if(docCookies.getItem("class") == "solved"){
+        $("#Class").html(classPuzzleSolved);
+    } else {
+        $("#Class").html(classPuzzleUnsolved);
+    }
+}
+
+var containPuzzleUnsolved = '<p><b>特殊收容措施：</b><a href="../../2212-archival-containment-procedures.html" target="_blank">[大规模数据库损坏]</a></p>'
+var containPuzzleSolved = "<p><b>特殊收容措施：</b><br><i>修订版本21</i></p><p>SCP-2212需被收容在一间圆柱形钛制收容室内，这间收容室半径3米，高2米。收容室由铅内衬，并需时刻被照明。由于SCP-2212不需要营养，除非为了测试，没有人员被允许进入收容室。</p><p>除此以外，第二层附加的收容室将被建造，半径为30米。这间收容室需为八边形，并且放射状地再分为8间小室，面向主方向和次主方向。</p><p>人员将与SCP-2212互动时，强烈建议他们保持距离并保持防辐射障碍在任何时候都处于他们和SCP-2212之间。</p><p>最近的安全监控录像审查发现SCP-2212定期性的收容失效是由于一部分受控制的守卫释放了它而导致的。将项目转移至新的团队并升至Keter级的决定悬而未决。在这段过渡期，SCP-2212的收容隔间被相信能够抑制住它。新的收容措施将在进一步的审查结果的基础上进行研发。</p>"
+function handleContainmentPuzzle(){
+    if(docCookies.getItem("containment") == "solved"){
+        $("#Containment").html(containPuzzleSolved);
+    } else {
+        $("#Containment").html(containPuzzleUnsolved);
+    }
+}
+
+var noneSolved = '<p><b>描述：</b>███-████ ███████，██████████████████。██████████，██████████████████。███████████，████，█████████████████。████████████████████，███████ ███-████ ██████████。███-████ ██ █.█ █，██ ██ ██。</p><p>███-████ ███████、███、██████████，██████。███████，████████ ███-████ █████████，████████ █.█ ██ ███，██████████████████████。██████████，█████████，████████████。█████████████████。</p><p>███-████ █████████。████████████████，███████████。███-████ █████<span style="color:red">[编辑]</span>████████。</p><p>█ ███-████ ██████ ███-████ ██████████████，████，██<span style="color:green">[编辑]</span>██，████████，███████ ███-████ █████。███████████████████████ ███-████ ██。██████，██████ ███-████ █████████，█████████████ ███-████ ████████。████████████████<span style="color:blue">[编辑]</span>████，█████████，█████████████。</p><p>███████████████████████████████，███-████ ███。███████████████ ███，██████████████████████████。█████████████。█████ ███-████ █████████████ ████ ███ ███，████████████████<span style="color:magenta">[编辑]</span>。██，██ ███-████ ███，██████<span style="color:orange">[编辑]</span>。█████████████ ███-████，████████████████ ████ ██。</p>';
+var oneSolved = '<p><b>描述：</b>SCP-2212 ███████，██████████████████。██████████，██████████████████。███████████，████，█████████████████。████████████████████，███████ SCP-2212 ██████████。SCP-2212 ██ 1.9 米，██ 35 千克。</p><p>SCP-2212 ███████、███、██████████，██████。██████，████████ SCP-2212 █████████，████████ 0.3 Sv ███，██████████████████████。██████████，█████████，████████████。█████████████████。</p><p>SCP-2212 █████████。████████████████，███████████。SCP-2212 █████<span style="color:red">[编辑]</span>████████。</p><p>█ SCP-2212 ██████ SCP-2212 ██████████████，████，██<span style="color:green">[编辑]</span>██，████████，███████ SCP-2212 █████。███████████████████████ SCP-2212 ██。██████，██████ SCP-2212 ██████████，█████████████ SCP-2212 ████████。████████████████<span style="color:blue">[编辑]</span>████，█████████，█████████████。</p><p><p>███████████████████████████████，SCP-2122 ███。███████████████ ███，██████████████████████████。█████████████。█████ SCP-2212 █████████████ ████ 260 ███，████████████████<span style="color:magenta">[编辑]</span>。██，██ SCP-2212 ███，██████<span style="color:orange">[编辑]</span>。█████████████ SCP-2212，████████████████ ████17。</p>';
+var twoSolved = '<p><b>描述：</b> SCP-2212 ███████，██████████████人形██。███生命█能够移动，██没有███████攻击█████。███████████，████，█████细长的躯干███████。████材质████████不确定███，███████ SCP-2212 ████等离子体██。SCP-2212 ██ 1.9 米，██ 35 千克。</p><p>SCP-2212 ██发出███、███、位于光谱██████，██伽马██。██████，████████ SCP-2212 █████████，████████ 0.3 Sv ███，████████中毒█████风险█长期██。██████████，█████████，█有时███████十倍。█████████████████。</p><p>SCP-2212 ██智能█████。███理解████语言█████，███████████。SCP-2212 ███无法<span style="color:red">[编辑]</span>關於█性質███。</p><p>█ SCP-2212 互动██研究 SCP-2212 ███████有害的████，██失忆，█度<span style="color:green">[编辑]</span>██，████████，███行为██ SCP-2212 ███影响。███████████████████████ SCP-2212 谈话。██████，██████ SCP-2212 ████████吻合，████████仍会███ SCP-2212 ████安全██。████████████████<span style="color:blue">[编辑]</span>████，█意识██████，███平静██████距离。</p><p><p>██████澳大利亚███████████次元█████变动█，SCP-2122 ███。███████████████ Way，████████████地震██不███████调查。特工█████████中心。█████ SCP-2212 █不反抗█████████ ████ 260 ███，████认出███装备█████<span style="color:magenta">[编辑]</span>。然而，由于 SCP-2212 █辐射，██████<span style="color:orange">[编辑]</span>。████████安全地██ SCP-2212，███████安全████运送█ ████ 17。 </p>';
+var threeSolved = '<p><b>描述：</b><p> SCP-2212 是一个████，█████████████的人形██。它具有生命且能够移动，██没有███████攻击██的██。它拥有████和一个█，但███，并通过用其细长的躯干███████。对其构成材质█████产生了不确定███，最██████ SCP-2212 是由██等离子体██。SCP-2212 █约 1.9 米，█约 35 千克。</p><p>SCP-2212 也会发出███、███、位于光谱██████，██伽马██。██████，当一个█████ SCP-2212 一米的位置一分钟后，█████受到约 0.3 Sv ███，█以██████中毒以及███风险的长期██。当无█与之█████，█████趋于██，但有时也会████约十倍。尚未██关于███████████。</p><p>SCP-2212 具有智能且████。它██理解多数██语言并████，███████████。SCP-2212 ██它无法<span style="color:red">[编辑]</span>關於其性質███。</p><p>与 SCP-2212 互动过或研究 SCP-2212 ███████有害的████，██失忆，█度<span style="color:green">[编辑]</span>██，和在██████，他们的行为受到 SCP-2212 ███影响。这种██迄今为止██的███████████与 SCP-2212 谈话。██████，这██与受到 SCP-2212 ████████吻合，不过██████仍会███ SCP-2212 ████安全██。██████████好像处在一种<span style="color:blue">[编辑]</span>████，█意识到自己的██，但██平静并与它们保持距离。</p><p><p>在█████澳大利亚██████████于次元█████变动后，SCP-2122 被██。由于█████████████ Way，████████████地震██不██进行███调查。特工被████████中心。他们███ SCP-2212 并不反抗█████其██至 ████ 260 ███，并且██认出了他们装备上的███<span style="color:magenta">[编辑]</span>。然而，由于 SCP-2212 的辐射，所有████<span style="color:orange">[编辑]</span>。第二支█████安全地██ SCP-2212，后者██为了█安全███被运送至 ████ 17。</p>';
+var fourSolved = '<p><b>描述：</b> SCP-2212 是一个████，███显然██████组成的人形实体。它具有生命且能够移动，不过没有显示出████攻击██的迹象。它拥有两条手臂和一个█，但缺少█，并通过用其细长的躯干█████移动。对其构成材质取样的努力产生了不确定的██，最典型的██为 SCP-2212 是由某种等离子体构成。SCP-2212 高约 1.9 米，重约 35 千克。</p><p>SCP-2212 也会发出温和的、可变的、位于光谱████的光，包括伽马射线。██████，当一个人站在距离 SCP-2212 一米的位置一分钟后，此人通常会受到约 0.3 Sv 的辐射，足以导致████中毒以及患癌症风险的长期██。当无█与之█████，辐射输出会趋于减少，但有时也会异常增加约十倍。尚未找到关于辐射强度变化的明确模式。</p><p>SCP-2212具有智能且高度智慧。它能够理解多数██语言并████，且能迅速地学习新的语言。SCP-2212 声称它无法<span style="color:red">[编辑]</span>關於其性質███。</p><p>与 SCP-2212 互动过或研究 SCP-2212 的人可能会██有害的心理影响，包括失忆，轻度<span style="color:green">[编辑]</span>发作，和在██████，他们的行为受到 SCP-2212 的直接影响。这种影响迄今为止采取的主要形式为██████与 SCP-2212 谈话。值得注意的是，这一般与受到 SCP-2212 ████████吻合，不过受影响的人员仍会在接近 SCP-2212 前███安全██。受影响的人员报告感觉好像处在一种<span style="color:blue">[编辑]</span>████，能意识到自己的行为，但相当平静并与它们保持距离。</p><p><p>在基金会位于澳大利亚的监测站侦测到了符合于次元穿越的██变动后，SCP-2122 被██。由于澳大利亚中部有许多████ Way，与次元变动同时发生的轻微地震活动不██进行过多的调查。特工被派遣去调查变动的中心。他们汇报称 SCP-2212 并不反抗█████其██至 Site 260 ███，并且似乎认出了他们装备上的基金会<span style="color:magenta">[编辑]</span>。然而，由于 SCP-2212 的辐射，所有四名特工<span style="color:orange">[编辑]</span>。第二支███能够安全地██ SCP-2212，后者之后为了更安全的██被运送至 Site 17。 </p>';
+var fiveSolved = '<p><b>描述：</b>SCP-2212 是一个由松散的，未知且显然为无机的成分组成的人形实体。它具有生命且能够移动，不过没有显示出任何进行攻击行为的迹象。它拥有两条手臂和一个头，但缺少腿，并通过用其细长的躯干进行跳跃来移动。对其构成材质取样的努力产生了不确定的结果，最典型的意见为 SCP-2212 是由某种等离子体构成。SCP-2212 高约 1.9 米，重约 35 千克。</p><p>SCP-2212 也会发出温和的、可变的、位于光谱不同位置的光，包括伽马射线。测量结果表明，当一个人站在距离 SCP-2212 一米的位置一分钟后，此人通常会受到约 0.3 Sv 的辐射，足以导致轻度辐射中毒以及患癌症风险的长期增长。当无人与之相互影响时，辐射输出会趋于减少，但有时也会异常增加约十倍。尚未找到关于辐射强度变化的明确模式。</p><p>SCP-2212 具有智能且高度智慧。它能够理解多数常用语言并以之讲话，且能迅速地学习新的语言。SCP-2212 声称它无法<span style="color:red">[编辑]</span>關於其性質的信息。</p><p>与 SCP-2212 互动过或研究 SCP-2212 的人可能会受到有害的心理影响，包括失忆，轻度<span style="color:green">[编辑]</span>发作，和在罕见的情况下，他们的行为受到 SCP-2212 的直接影响。这种影响迄今为止采取的主要形式为强迫受影响者与 SCP-2212 谈话。值得注意的是，这一般与受到 SCP-2212 辐射的时间长度相吻合，不过受影响的人员仍会在接近 SCP-2212 前穿戴好安全装备。受影响的人员报告感觉好像处在一种<span style="color:blue">[编辑]</span>的状态中，能意识到自己的行为，但相当平静并与它们保持距离。</p><p>在基金会位于澳大利亚的监测站侦测到了符合于次元穿越的现实变动后，SCP-2122 被回收。由于澳大利亚中部有许多未监视的 Way，与次元变动同时发生的轻微地震活动不需要进行过多的调查。特工被派遣去调查变动的中心。他们汇报称 SCP-2212 并不反抗特工试图将其运送至 Site 260 的努力，并且似乎认出了他们装备上的基金会<span style="color:magenta">[编辑]</span>。然而，由于 SCP-2212 的辐射，所有四名特工<span style="color:orange">[编辑]</span>。第二支考察队能够安全地收容 SCP-2212，后者之后为了更安全的环境被运送至 Site 17。</p>';
+function adjustDescriptionText(){
+    var numSolved = parseInt(docCookies.getItem("numSolved"));
+    var solStrings = [noneSolved,
+                      oneSolved,
+                      twoSolved,
+                      threeSolved,
+                      fourSolved,
+                      fiveSolved];
+    $("#Description").html(solStrings[numSolved]);
+}
+
+function handleInterviewPuzzle(){
+    if(docCookies.getItem("interview") == "solved"){
+        $("#Interview").html(interviewPuzzleSolved);
+    } else {
+        $("#Interview").html(interviewPuzzleUnsolved);
+    }
+}
+
+var crossPuzzleUnsolved = '<p><b>交互测试：</b></p><blockquote><a href="../../2212-archival-cross-test-log.1.html" target="_blank">[大规模数据库损坏]</a></blockquote>'
+var crossPuzzleSolved = '<p><b>交互测试：</b></p><blockquote><b>实验2212-1220</b><br><b>日期：</b>9/5/2016<br><b>首席研究员：</b>Dr. Luis Ricardo</blockquote>'
+function handleCrossPuzzle(){
+    if(docCookies.getItem("cross") == "solved"){
+        $("#CrossTest").html(crossPuzzleSolved);
+    } else {
+        $("#CrossTest").html(crossPuzzleUnsolved);
+    }
+}
+
+function updateText(){
+    adjustOverview();
+    handleImagePuzzle();
+    handleClassPuzzle();
+    handleContainmentPuzzle();
+    adjustDescriptionText();
+    handleInterviewPuzzle();
+    handleCrossPuzzle();
+}
+
+var imagePassword = -1705883138;
+var containmentPassword = -522328435;
+var interviewPassword = -1742484951;
+var crossTestPassword = 103149608;
+var classPassword = 3327780;
+var finalPassword = 104069929;
+$("#submit").click(function(){
+    var t = $("#password").val().toLowerCase();
+    if(t.hashCode() == containmentPassword){
+       if(docCookies.getItem("containment") != "solved"){
+            docCookies.setItem("containment", "solved");
+            docCookies.setItem("numSolved", parseInt(docCookies.getItem('numSolved'))+1);
+        } else {
+            alert("已解开！");
+        }
+    } else if(t.hashCode() == interviewPassword){
+        if(docCookies.getItem("interview") != "solved"){
+            docCookies.setItem("interview", "solved");
+            docCookies.setItem("numSolved", parseInt(docCookies.getItem('numSolved'))+1);
+        } else {
+            alert("已解开！");   
+        }
+    } else if(t.hashCode() == imagePassword){
+        if(docCookies.getItem("image") != "solved"){
+            docCookies.setItem("image", "solved");
+            docCookies.setItem("numSolved", parseInt(docCookies.getItem('numSolved'))+1);
+        } else {
+            alert("已解开！");   
+        }
+    } else if(t.hashCode() == crossTestPassword){
+        if(docCookies.getItem("cross") != "solved"){
+            docCookies.setItem("cross", "solved");
+            docCookies.setItem("numSolved", parseInt(docCookies.getItem('numSolved'))+1);
+        } else {
+            alert("已解开！");   
+        }
+    } else if(t.hashCode() == classPassword){
+        if(docCookies.getItem("class") != "solved"){
+            docCookies.setItem("class", "solved");
+            docCookies.setItem("numSolved", parseInt(docCookies.getItem('numSolved'))+1);
+        } else {
+            alert("已解开！");   
+        }
+    } else {
+        alert("密码错误");
+    }
+    updateText();
+});
+
+var interviewPuzzleUnsolved = '<p><b>采访2212-104：</b><a href="../../2212-archival-interview.html" target="_blank">[大规模数据库损坏]</a></p>'
+var interviewPuzzleSolved = "<p><b>采访2212-104：</b></p><p><strong>Dr. Mueller：</strong>你好，SCP-2212。我想问一些有关于你的背景和目的的问题。首先， 10.18事件——我们回收你的地方。我们的传感器检测到了符合跨空间穿越的严重现实分裂，没有Way或是其它稳定路径的帮助，但是还有我们最好的研究显示出应该跟它没有任何关系的地震活动出现。什么产生了它？</p><p><strong>SCP-2212：</strong>初级研究员，好好读文本。他们并没有努力尝试来了解我，不是吗？甚至从你这样的种子中也能生长出令人惊奇的点子来。你的研究员们是对的：世界间的道路不需要改变世界本身的物质。但是地震跟这个没关系。想想看为什么。</p><p><strong>Dr. Mueller：</strong>啊，我不认为我会参与那项工作。关于你所做的我们已经了解得足够了。</p><p><strong>SCP-2212：</strong>你们还没有。比如，就现在，你在奇怪于我的词语选择。你已经读过了所有关于我的采访，而且你知道我的语法可以是完全正常的。但是这么做会把事情弄得太简单。</p><p><strong>Dr. Mueller：</strong>你也不想那样。嗯，让我们看看。自从被基金会收押，你已经参与了不少于三起收容失效。但是你有数次机会能在守卫失能期间离开设施，你却留了下来。为什么？</p><p><strong>SCP-2212：</strong>为什么我想离开基金会？的确，不先造成一起收容失效就逃离收容室对我来说很困难，但是我不在乎。你们都是如此优秀的科学家，我也爱你们永不停止探求的精神。在这样一个地方我能吃得好，活得爽。</p><p><strong>Dr. Mueller：</strong>终于！你正常讲话了。我现在不太确定：这不只是再一次用到“I”，但我也不很清楚。不，停下。这不会把你带到任何地方。</p><p><strong>SCP-2212：</strong>嗯?</p><p><strong>Dr. Mueller：</strong>Dr.Richardo？我要终止采访了。这没有用。或许找个不明白他们在看什么的人吧。</p><p><strong>SCP-2212：</strong>那就足够了，Sonia Mueller。你会解脱的，别担心。不过在你走之前，你对我在说话上的问题有什么了解了吗？</p><p><strong>Dr. Mueller：</strong>要我来讲，你就是在瞎说。我甚至都说不出那些声音。但是我能听懂，意味着你在我进入房间后就钻进了我的头，然后一直待在那里。这肯定是你在上一次收容失效里对那些守卫做的。去你的，我们一直就不能跟你对话，不是吗？好吧，你没有用过“I”我也不认为你用了“a”。这是某种字母替换吗？但是你每次都听起来不一样，还有一次你正常讲话——</p><p><strong>Dr. Ricardo：</strong>Dr.Mueller，你还好吗？离开房间。</p><p><strong>SCP-2212：</strong>她很快就会离开。很好，Dr.Mueller。你领略到它的精髓了，不过你如果再多解一点的话，你的雇主估计会想杀了你。这对我们两个都不好。</p><p><strong>Dr. Mueller：</strong>Luis，我出来了。重复，中止采访。我绝对不想再和这死玩意儿互动了。它怎么就不是Keter呢？</p><p><strong>SCP-2212：</strong>博士们，关掉你们的记录前最后一个词：“REALIZE”。有七样来自我的东西会写进你们今天的报告。从每个里，你们都能获得解开七个来自我最后信息的字母中的每一个的钥匙。简单的看看“n”能做什么，并对其它对应字母进行同样的变换。仔细想，真相就会到来。</p>"
+
+$(document).ready(function(){
+    if(!docCookies.hasItem("numSolved")){
+        docCookies.setItem("numSolved", 0);
+        }
+    updateText();
+})
+</script>
+<script type="text/javascript" src="../../../scp-wiki-cn.wdfiles.com/common--javascript/html-block-iframe.js"></script></body></html>

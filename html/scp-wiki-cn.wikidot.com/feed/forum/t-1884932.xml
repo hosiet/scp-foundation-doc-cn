@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wikidot="http://www.wikidot.com/rss-namespace">
+
+	<channel>
+		<title>Wikidot和维基百科的语法系统是不通用的？</title>
+		<link>http://scp-wiki-cn.wikidot.com/forum/t-1884932/wikidot</link>
+		<description>Posts in the discussion thread &quot;Wikidot和维基百科的语法系统是不通用的？&quot;</description>
+				<copyright></copyright>
+		<lastBuildDate>Sun, 19 Feb 2017 09:02:33 +0000</lastBuildDate>
+		
+					<item>
+				<guid>http://scp-wiki-cn.wikidot.com/forum/t-1884932#post-2631271</guid>
+				<title>Re: Wikidot和维基百科的语法系统是不通用的？</title>
+				<link>http://scp-wiki-cn.wikidot.com/forum/t-1884932/wikidot#post-2631271</link>
+				<description></description>
+				<pubDate>Sun, 18 Sep 2016 14:27:02 +0000</pubDate>
+				<wikidot:authorName>MScarlet</wikidot:authorName>				<wikidot:authorUserId>1745583</wikidot:authorUserId>				<content:encoded>
+					<![CDATA[
+						 <p>這個嘛<br /> 我倒是沒什麼辦法的<br /> 就當成是學第二種語言吧(<br /> 我個人都有為<a href="http://edit.komica.org/wiki3/">Komica Wiki</a>裡的一些條目作出過些貢獻，那裡用的PukiWiki的語法也跟wikidot的有分別，我有時都會把這兩個給搞混的</p> <p>有不明白的地方可以參考我翻譯的<a href="http://scp-wiki-cn.wikidot.com/wiki-syntax">維基語法</a>，或者乾脆看<a href="http://scp-wiki-cn.wikidot.com/syntax-quick-refrence">快速參考</a>也行</p> 
+				 	]]>
+				</content:encoded>							</item>
+					<item>
+				<guid>http://scp-wiki-cn.wikidot.com/forum/t-1884932#post-2628679</guid>
+				<title>Wikidot和维基百科的语法系统是不通用的？</title>
+				<link>http://scp-wiki-cn.wikidot.com/forum/t-1884932/wikidot#post-2628679</link>
+				<description></description>
+				<pubDate>Sat, 17 Sep 2016 12:26:10 +0000</pubDate>
+				<wikidot:authorName>BrettD</wikidot:authorName>				<wikidot:authorUserId>2836745</wikidot:authorUserId>				<content:encoded>
+					<![CDATA[
+						 <p>之前给维基百科贡献过一些词条，对那一套语法系统掌握的比较熟练了，但是现在突然发现Wikidot的wiki语法和其他的维基网站都完全不一样？维基百科、Minecraft Gamepedia Wiki、Wikia等除了Wikidot之外我见过的所有维基网站使用的语法都是通用的，为什么唯独Wikidot另辟蹊径采用自己独创的语法系统？</p> <p>同时掌握两种语法标记对我来说太难了，简直是杀害脑细胞，就像是同时熟练使用德语布局的键盘和英语布局的键盘一样困难乃至于无法做到。大家都是怎么克服这个问题的呢？有没有互相转换的工具可以使用呢？</p> 
+				 	]]>
+				</content:encoded>							</item>
+				</channel>
+</rss>

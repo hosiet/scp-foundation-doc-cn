@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wikidot="http://www.wikidot.com/rss-namespace">
+
+	<channel>
+		<title>回应于 &quot;標準插圖方塊&quot;</title>
+		<link>http://scp-wiki-cn.wikidot.com/forum/t-780513/</link>
+		<description>Posts in the discussion thread &quot;標準插圖方塊&quot;</description>
+				<copyright></copyright>
+		<lastBuildDate>Sun, 19 Feb 2017 09:03:45 +0000</lastBuildDate>
+		
+					<item>
+				<guid>http://scp-wiki-cn.wikidot.com/forum/t-780513#post-2433534</guid>
+				<title>Page Source</title>
+				<link>http://scp-wiki-cn.wikidot.com/forum/t-780513/#post-2433534</link>
+				<description></description>
+				<pubDate>Sun, 03 Jan 2016 05:05:18 +0000</pubDate>
+				<wikidot:authorName>Letitia213</wikidot:authorName>				<wikidot:authorUserId>2353778</wikidot:authorUserId>				<content:encoded>
+					<![CDATA[
+						 <p>和主站上的有些分別、且無法置中或置左</p> <div class="code"> <pre> <code>[[include component:image-block-base name={$name}|caption={$caption}|width={$width}|width=300px|link={$link}|link=#|align={$align}|align=right]]</code> </pre></div> 
+				 	]]>
+				</content:encoded>							</item>
+				</channel>
+</rss>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wikidot="http://www.wikidot.com/rss-namespace">
+
+	<channel>
+		<title>[也是大坑]SCP-CN-100 平行世界基金會資料碟</title>
+		<link>http://scp-wiki-cn.wikidot.com/forum/t-2063369/scp-cn-100</link>
+		<description>Posts in the discussion thread &quot;[也是大坑]SCP-CN-100 平行世界基金會資料碟&quot;</description>
+				<copyright></copyright>
+		<lastBuildDate>Sun, 19 Feb 2017 09:02:41 +0000</lastBuildDate>
+		
+					<item>
+				<guid>http://scp-wiki-cn.wikidot.com/forum/t-2063369#post-2728639</guid>
+				<title>Re: [也是大坑]SCP-CN-100 平行世界基金會資料碟</title>
+				<link>http://scp-wiki-cn.wikidot.com/forum/t-2063369/scp-cn-100#post-2728639</link>
+				<description></description>
+				<pubDate>Tue, 17 Jan 2017 23:12:13 +0000</pubDate>
+				<wikidot:authorName>Um4vm06</wikidot:authorName>				<wikidot:authorUserId>2854925</wikidot:authorUserId>				<content:encoded>
+					<![CDATA[
+						 <p>感謝</p> 
+				 	]]>
+				</content:encoded>							</item>
+					<item>
+				<guid>http://scp-wiki-cn.wikidot.com/forum/t-2063369#post-2728409</guid>
+				<title>Re: [也是大坑]SCP-CN-100 平行世界基金會資料碟</title>
+				<link>http://scp-wiki-cn.wikidot.com/forum/t-2063369/scp-cn-100#post-2728409</link>
+				<description></description>
+				<pubDate>Tue, 17 Jan 2017 16:27:23 +0000</pubDate>
+				<wikidot:authorName>fuban</wikidot:authorName>				<wikidot:authorUserId>2922576</wikidot:authorUserId>				<content:encoded>
+					<![CDATA[
+						 <p>文筆仍令人悲傷，然而以內容的量來看也是很努力了吧。</p> <blockquote> <p>其加密、壓縮方程式卻<span style="text-decoration: underline;">使用</span>██博士死後才<span style="text-decoration: underline;">使用</span>的格爾那共振加密方程式跟<span style="text-decoration: underline;">使用</span>多重壓縮加密技術，<span style="text-decoration: underline;">使用</span>基金會超級電腦網路解碼跟破密後</p> </blockquote> <p>使用令人悲傷。<br /> 然而除了重複字詞令人覺得冗餘，這句子的結構也有點異常。</p> <p>解讀方法一：</p> <blockquote> <p>其加密、壓縮方程式卻使用██博士死後才使用的格爾那共振加密方程式跟<span style="text-decoration: line-through;">使用</span>多重壓縮加密技術，使用基金會超級電腦網路解碼跟破密後</p> </blockquote> <p>說明：多重加密技術為XX博士死後才開始使用，所以應與格爾那對等。</p> <p>解讀方法二：</p> <blockquote> <p>其加密、壓縮方程式<span style="text-decoration: underline;">使用了多重壓縮加密技術之外</span>卻<span style="text-decoration: underline;">還</span>使用██博士死後才使用的格爾那共振加密方程式，使用基金會超級電腦網路解碼跟破密後</p> </blockquote> <p>說明：多重壓縮加密技術並非XX博士死後才開始使用的，於是應避免把它夾進卻的後面，而且動詞是一樣的就更容易誤會了，此外<span style="text-decoration: underline;">跟</span>是介詞不該用在連結動詞的地方，並且在我看來還具有口語性質，令人悲傷。</p> <p>其餘不多講。</p> <p>置中問題的解決方法是把collapsible的頭尾都單獨用一對置中的頭尾框住，裡面的排列再另外處理。<br /> 例：<br /> <span style="white-space: pre-wrap;">[[=]]</span><br /> <span style="white-space: pre-wrap;">[[collapsible]]</span><br /> <span style="white-space: pre-wrap;">[[/=]]</span><br /> <span style="white-space: pre-wrap;">[[&lt;]]</span><br /> ©<br /> <span style="white-space: pre-wrap;">[[/&lt;]]</span><br /> <span style="white-space: pre-wrap;">[[=]]</span><br /> <span style="white-space: pre-wrap;">[[/collapsible]]</span><br /> <span style="white-space: pre-wrap;">[[/=]]</span></p> 
+				 	]]>
+				</content:encoded>							</item>
+					<item>
+				<guid>http://scp-wiki-cn.wikidot.com/forum/t-2063369#post-2728151</guid>
+				<title>[也是大坑]SCP-CN-100 平行世界基金會資料碟</title>
+				<link>http://scp-wiki-cn.wikidot.com/forum/t-2063369/scp-cn-100#post-2728151</link>
+				<description></description>
+				<pubDate>Tue, 17 Jan 2017 08:51:14 +0000</pubDate>
+				<wikidot:authorName>Um4vm06</wikidot:authorName>				<wikidot:authorUserId>2854925</wikidot:authorUserId>				<content:encoded>
+					<![CDATA[
+						 <p>也是大坑,附錄還沒完成不過還請各位先看一下,<span style="text-decoration: line-through;">其實我覺得他比較像外圍</span><a href="http://scpsandboxcn.wikidot.com/um4vm06" target="_blank">http://scpsandboxcn.wikidot.com/um4vm06</a>另外我也沒辦法解決字體置中的問題</p> 
+				 	]]>
+				</content:encoded>							</item>
+				</channel>
+</rss>

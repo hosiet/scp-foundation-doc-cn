@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wikidot="http://www.wikidot.com/rss-namespace">
+
+	<channel>
+		<title>SCP-CN-XXX“数理竹简”</title>
+		<link>http://scp-wiki-cn.wikidot.com/forum/t-2087569/scp-cn-xxx</link>
+		<description>Posts in the discussion thread &quot;SCP-CN-XXX“数理竹简”&quot;</description>
+				<copyright></copyright>
+		<lastBuildDate>Sun, 19 Feb 2017 09:02:41 +0000</lastBuildDate>
+		
+					<item>
+				<guid>http://scp-wiki-cn.wikidot.com/forum/t-2087569#post-2737499</guid>
+				<title>Re: SCP-CN-XXX“数理竹简”</title>
+				<link>http://scp-wiki-cn.wikidot.com/forum/t-2087569/scp-cn-xxx#post-2737499</link>
+				<description></description>
+				<pubDate>Tue, 31 Jan 2017 13:27:45 +0000</pubDate>
+				<wikidot:authorName>SanRi</wikidot:authorName>				<wikidot:authorUserId>2962096</wikidot:authorUserId>				<content:encoded>
+					<![CDATA[
+						 <p>感谢指正，已经添加了一些附录内容以修补这个漏洞</p> 
+				 	]]>
+				</content:encoded>							</item>
+					<item>
+				<guid>http://scp-wiki-cn.wikidot.com/forum/t-2087569#post-2737320</guid>
+				<title>Re: SCP-CN-XXX“数理竹简”</title>
+				<link>http://scp-wiki-cn.wikidot.com/forum/t-2087569/scp-cn-xxx#post-2737320</link>
+				<description></description>
+				<pubDate>Tue, 31 Jan 2017 06:15:58 +0000</pubDate>
+				<wikidot:authorName>fuban</wikidot:authorName>				<wikidot:authorUserId>2922576</wikidot:authorUserId>				<content:encoded>
+					<![CDATA[
+						 <p>有個挺根本的問題，你的單位是啥？單位不一樣數值就不一樣，用公制去算是四捨五入用英制可就不這麼回事了</p> 
+				 	]]>
+				</content:encoded>							</item>
+					<item>
+				<guid>http://scp-wiki-cn.wikidot.com/forum/t-2087569#post-2736363</guid>
+				<title>SCP-CN-XXX“数理竹简”</title>
+				<link>http://scp-wiki-cn.wikidot.com/forum/t-2087569/scp-cn-xxx#post-2736363</link>
+				<description></description>
+				<pubDate>Sun, 29 Jan 2017 18:11:01 +0000</pubDate>
+				<wikidot:authorName>SanRi</wikidot:authorName>				<wikidot:authorUserId>2962096</wikidot:authorUserId>				<content:encoded>
+					<![CDATA[
+						 <p><a href="http://scpsandboxcn.wikidot.com/sanri">http://scpsandboxcn.wikidot.com/sanri</a><br /> 萌新求指导</p> 
+				 	]]>
+				</content:encoded>							</item>
+				</channel>
+</rss>

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=SCP Foundation Documentation (CN)
+Comment=Simplified Chinese translation of the SCP Founcation document
+Name[zh_CN]=SCP 基金会中文文档
+Keywords=SCP;foundation;documentation;
+Exec=scp-foundation-doc-cn
+Icon=scp-foundation
+Terminal=false
+Categories=Game;

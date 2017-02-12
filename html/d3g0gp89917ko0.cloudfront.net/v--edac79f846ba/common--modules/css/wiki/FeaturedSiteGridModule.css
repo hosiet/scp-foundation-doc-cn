@@ -1,0 +1,59 @@
+.featured-site-grid-box {}
+
+.featured-site-grid-box .container {
+	overflow: hidden;
+}
+
+.featured-site-grid-box .container a {
+	float: left;
+	border: 1px solid #BBB;
+	display: block;
+	margin: 0 2px 2px 2px; /* screw you, IE! */
+}
+.featured-site-grid-box .container img {
+	width: 80px;
+	height: 80px;
+	display: block;
+}
+.featured-site-hovertip {
+	width: 355px;
+	background-color: #FFF;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius: 10px;
+	border: 1px solid #BBB !important;
+}
+
+.featured-site-hovertip img {
+	display: block;
+	padding: 10px;
+	width: 160px;
+	height: 160px;
+	/*border: 1px solid #BBB;*/
+	float: left;
+}
+
+.featured-site-hovertip .description {
+	float: left;
+	width: 160px;
+	padding: 10px 10px 10px 0;	
+	/*border: 1px solid black;*/
+}
+
+.featured-site-hovertip .name {
+	font-size: 120%;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.featured-site-hovertip .tagline {
+	font-size: 90%;
+	text-align: center;
+}
+
+.featured-site-hovertip .stats {
+	font-size: 85%;
+	text-align: center;
+}

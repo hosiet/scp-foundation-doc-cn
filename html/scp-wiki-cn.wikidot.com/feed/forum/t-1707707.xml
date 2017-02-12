@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wikidot="http://www.wikidot.com/rss-namespace">
+
+	<channel>
+		<title>有谁知道“隐藏”怎么弄出来啊？</title>
+		<link>http://scp-wiki-cn.wikidot.com/forum/t-1707707/</link>
+		<description>Posts in the discussion thread &quot;有谁知道“隐藏”怎么弄出来啊？&quot;</description>
+				<copyright></copyright>
+		<lastBuildDate>Sun, 19 Feb 2017 09:02:34 +0000</lastBuildDate>
+		
+					<item>
+				<guid>http://scp-wiki-cn.wikidot.com/forum/t-1707707#post-2740702</guid>
+				<title>Re: 有谁知道“隐藏”怎么弄出来啊？</title>
+				<link>http://scp-wiki-cn.wikidot.com/forum/t-1707707/#post-2740702</link>
+				<description></description>
+				<pubDate>Sun, 05 Feb 2017 10:24:03 +0000</pubDate>
+				<wikidot:authorName>Critics</wikidot:authorName>				<wikidot:authorUserId>2912588</wikidot:authorUserId>				<content:encoded>
+					<![CDATA[
+						 <p>Wki不是用BBCode的.</p> 
+				 	]]>
+				</content:encoded>							</item>
+					<item>
+				<guid>http://scp-wiki-cn.wikidot.com/forum/t-1707707#post-2508710</guid>
+				<title>Re: 有谁知道“隐藏”怎么弄出来啊？</title>
+				<link>http://scp-wiki-cn.wikidot.com/forum/t-1707707/#post-2508710</link>
+				<description></description>
+				<pubDate>Sat, 14 May 2016 08:19:10 +0000</pubDate>
+				<wikidot:authorName>ECHOAphaniptera</wikidot:authorName>				<wikidot:authorUserId>1630887</wikidot:authorUserId>				<content:encoded>
+					<![CDATA[
+						 <p>以及 由于编程语言不同 论坛格式可能会和wikidot上的主站原文格式存在出入 搬运翻译的时候最好还是对照下主站原文改改格式</p> 
+				 	]]>
+				</content:encoded>							</item>
+					<item>
+				<guid>http://scp-wiki-cn.wikidot.com/forum/t-1707707#post-2508708</guid>
+				<title>Re: 有谁知道“隐藏”怎么弄出来啊？</title>
+				<link>http://scp-wiki-cn.wikidot.com/forum/t-1707707/#post-2508708</link>
+				<description></description>
+				<pubDate>Sat, 14 May 2016 08:14:48 +0000</pubDate>
+				<wikidot:authorName>ECHOAphaniptera</wikidot:authorName>				<wikidot:authorUserId>1630887</wikidot:authorUserId>				<content:encoded>
+					<![CDATA[
+						 <p>wikidot语言不同于其他wiki 是几乎独立的啦 如果找不到一个格式如何编辑出来 可以看看<a href="http://scp-wiki-cn.wikidot.com/wiki-syntax">维基语法</a>这页，如果还是找不到可以看看几个页面的Page Source依葫芦画瓢</p> 
+				 	]]>
+				</content:encoded>							</item>
+					<item>
+				<guid>http://scp-wiki-cn.wikidot.com/forum/t-1707707#post-2508083</guid>
+				<title>Re: 有谁知道“隐藏”怎么弄出来啊？</title>
+				<link>http://scp-wiki-cn.wikidot.com/forum/t-1707707/#post-2508083</link>
+				<description></description>
+				<pubDate>Fri, 13 May 2016 07:36:34 +0000</pubDate>
+				<wikidot:authorName>MScarlet</wikidot:authorName>				<wikidot:authorUserId>1745583</wikidot:authorUserId>				<content:encoded>
+					<![CDATA[
+						 <blockquote> <p><span style="white-space: pre-wrap;">[[collapsible&#32;show=&quot;+&#32;点击显示&quot;&#32;hide=&quot;-&#32;点击隐藏&quot;]]&#32;隐藏的东西&#32;[[/collapsible]]</span></p> </blockquote> <p>這樣加<br /> 這裡大部份會用到的語法都被我整合到<a href="http://scp-wiki-cn.wikidot.com/syntax-quick-refrence">這裡</a>了，按側欄的建立頁面就能看到了<br /> 對了，要搬運的話也看一下<a href="http://translation-movement-guide">這個</a>吧絕對能幫到你的</p> 
+				 	]]>
+				</content:encoded>							</item>
+					<item>
+				<guid>http://scp-wiki-cn.wikidot.com/forum/t-1707707#post-2508045</guid>
+				<title>有谁知道“隐藏”怎么弄出来啊？</title>
+				<link>http://scp-wiki-cn.wikidot.com/forum/t-1707707/#post-2508045</link>
+				<description></description>
+				<pubDate>Fri, 13 May 2016 05:48:14 +0000</pubDate>
+				<wikidot:authorName>ilovecforever</wikidot:authorName>				<wikidot:authorUserId>1910180</wikidot:authorUserId>				<content:encoded>
+					<![CDATA[
+						 <p>想帮忙搬运几篇没运过来的文章……结果找不到“隐藏”代码！[spoiler]难道说[/spoiler]这类代码在wiki上没有用了吗？</p> 
+				 	]]>
+				</content:encoded>							</item>
+				</channel>
+</rss>

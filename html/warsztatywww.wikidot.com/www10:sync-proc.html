@@ -1,0 +1,544 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
+
+<head>
+    <title>Synchronizacja procesów (lub jej brak) - WWW 10</title>
+    
+    
+    
+    <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--edac79f846ba/common--javascript/init.combined.js"></script>
+    <script  type="text/javascript">
+        var URL_HOST = 'www.wikidot.com';
+        var URL_DOMAIN = 'wikidot.com';
+        var USE_SSL =  true ;
+        var URL_STATIC = 'http://d3g0gp89917ko0.cloudfront.net/v--edac79f846ba';
+        // global request information
+        
+        var WIKIREQUEST = {};
+        WIKIREQUEST.info = {};
+        
+        WIKIREQUEST.info.domain = "warsztatywww.wikidot.com";
+        WIKIREQUEST.info.siteId = 64353;
+        WIKIREQUEST.info.siteUnixName = "warsztatywww";
+        WIKIREQUEST.info.categoryId = 4298665;
+        WIKIREQUEST.info.themeId = 25;
+        WIKIREQUEST.info.requestPageName = "www10:sync-proc";
+        OZONE.request.timestamp = 1487493122;
+        OZONE.request.date = new Date();
+        WIKIREQUEST.info.lang = 'pl';
+                WIKIREQUEST.info.pageUnixName = "www10:sync-proc";
+        WIKIREQUEST.info.pageId = 22426641;
+                        WIKIREQUEST.info.lang = "pl";
+        OZONE.lang = "pl";
+        var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    </script>
+    
+    
+
+
+    
+        <script  type="text/javascript">
+    
+        require.config({
+            baseUrl: URL_STATIC + '/common--javascript',
+            paths: {
+                'jquery.ui': 'jquery-ui.min',
+                'jquery.form': 'jquery.form'
+            }
+        });
+    
+    </script>
+    
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+            
+    
+    
+    
+    
+    <meta http-equiv="content-language" content="pl"/>
+    <script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--edac79f846ba/common--javascript/WIKIDOT.combined.js"></script>
+        
+    
+    <style type="text/css" id="internal-style">
+        
+        /* modules */
+        
+                
+        /* theme */
+                    @import url(http://d3g0gp89917ko0.cloudfront.net/v--edac79f846ba/common--theme/base/css/style.css);
+                    @import url(http://d3g0gp89917ko0.cloudfront.net/v--edac79f846ba/common--theme/cappuccino/css/style.css);
+            </style>
+    
+        
+        
+        
+    <link rel="shortcut icon" href="/local--favicon/favicon.gif"/>
+    <link rel="icon" type="image/gif" href="/local--favicon/favicon.gif"/>
+    
+            <link rel="apple-touch-icon" href="/common--images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/common--images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/common--images/apple-touch-icon-114x114.png" />
+        
+        
+            <link rel="alternate" type="application/wiki" title="Edit this page" href="javascript:WIKIDOT.page.listeners.editClick()"/>
+    
+        <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-18234656-1']);
+        _gaq.push(['_setDomainName', 'none']);
+        _gaq.push(['_setAllowLinker', true]);
+        _gaq.push(['_trackPageview']);
+
+        _gaq.push(['old._setAccount', 'UA-68540-5']);
+        _gaq.push(['old._setDomainName', 'none']);
+        _gaq.push(['old._setAllowLinker', true]);
+        _gaq.push(['old._trackPageview']);
+
+                _gaq.push(['userTracker._setAccount', 'UA-16827888-1']);
+        _gaq.push(['userTracker._trackPageview']);
+            </script>
+    
+    <script type="text/javascript">
+        window.google_analytics_uacct = 'UA-18234656-1';
+        window.google_analytics_domain_name = 'none';
+    </script>
+    
+    </head>
+<body id="html-body">
+<div id="skrollr-body">
+<a name="page-top"></a>
+
+<div id="container-wrap-wrap">
+    <div id="container-wrap">
+        <div id="container">
+            <div id="header">
+              <h1><a href="/"><span>WWW 10</span></a></h1>
+                
+                    <h2><span>Wakacyjne Warsztaty Wielodyscyplinarne 9</span></h2>
+                
+                
+                <!-- google_ad_section_start(weight=ignore) -->
+                
+                <div id="search-top-box" class="form-search">
+    <form id="search-top-box-form" action="dummy" class="input-append">
+        <input id="search-top-box-input" class="text empty search-query" type="text" size="15" name="query" value="Szukaj" onfocus="if(YAHOO.util.Dom.hasClass(this, 'empty')){YAHOO.util.Dom.removeClass(this,'empty'); this.value='';}"/><input class="button btn" type="submit" name="search" value="Szukaj"/>
+    </form>
+</div>
+                
+                
+                    <div id="top-bar">
+                        
+
+<img src="/local--files/nav:top/logo.gif" alt="logo.gif" class="image" />
+                    </div>
+                
+                <div id="login-status"><a href="javascript:;" onclick="WIKIDOT.page.listeners.createAccount(event)" class="login-status-create-account btn">Załóż konto</a> <span>lub</span> <a href="javascript:;" onclick="WIKIDOT.page.listeners.loginClick(event)" class="login-status-sign-in btn btn-primary">Zaloguj się</a> </div>
+                <div id="header-extra-div-1"><span></span></div><div id="header-extra-div-2"><span></span></div><div id="header-extra-div-3"><span></span></div>
+            </div>
+            
+            <div id="content-wrap">
+                
+                    <div id="side-bar">
+                        
+
+
+                        
+
+<p>WWW11</p>
+<ul>
+<li><a href="/start">Strona główna</a></li>
+<li><a href="/www11:program">Program WWW11</a></li>
+<li><a href="/www11:rejestracja">Rejestracja na WWW11</a></li>
+<li><a href="/dla-prowadzacych">Dla prowadzących</a></li>
+<li><a href="/organizatorzy">Organizatorzy</a></li>
+</ul>
+<hr />
+<ul>
+<li><a href="/historia">Historia, zdjęcia i relacje</a></li>
+<li>np. <a href="/www10:program">Program WWW10</a></li>
+</ul>
+<hr />
+<ul>
+<li><a href="/drogowskaz-pasjonata">Drogowskaz Pasjonata</a></li>
+<li><a href="/en:indie-camp-for-hs-geeks">An article on this camp</a> (for gifted high-school students)</li>
+<li><a href="/linki">Linki</a></li>
+</ul>
+<hr />
+<ul>
+<li><a href="/en">In English</a></li>
+<li><a href="http://www.facebook.com/groups/278425497876/">WWW na Facebooku</a></li>
+</ul>
+<p><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwarsztatywww.wikidot.com%2F&amp;width=170&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80&amp;appId=262622227112392" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:170px; height:80px;" allowtransparency="true"></iframe></p>
+<div class="social-frame google">
+<p><iframe src="/nav:side/html/31613c75573c4e7f486366d06df834d3bb357d41-17208489961140958001" allowtransparency="true" frameborder="0" class="html-block-iframe"></iframe></p>
+</div>
+<p><iframe src="/nav:side/html/12d37ed3bc03a7e3fbdbeed05cacf5135804a060-19651179781313192100" allowtransparency="true" frameborder="0" class="html-block-iframe"></iframe></p>
+
+                        
+
+
+                    </div>
+                
+                
+                <!-- google_ad_section_end -->
+                
+                <div id="main-content">
+                    <div id="action-area-top"></div>
+                    
+                    
+                        <div id="page-title">
+                            Synchronizacja procesów (lub jej brak)
+                        </div>
+                    
+
+                    
+
+                    
+
+
+
+                    <div id="page-content">
+                        
+
+<div id="toc" class="floatright">
+<div id="toc-action-bar"><a href="javascript:;" onclick="WIKIDOT.page.listeners.foldToc(event)">Zwiń</a><a style="display: none" href="javascript:;" onclick="WIKIDOT.page.listeners.unfoldToc(event)">Rozwiń</a></div>
+<div class="title">Spis treści</div>
+<div id="toc-list">
+<div style="margin-left: 1em;"><a href="#toc0">Prowadzący</a></div>
+<div style="margin-left: 1em;"><a href="#toc1">Opis</a></div>
+<div style="margin-left: 1em;"><a href="#toc2">Program zajęć</a></div>
+<div style="margin-left: 1em;"><a href="#toc3">Wymagania</a></div>
+<div style="margin-left: 1em;"><a href="#toc4">Zadania kwalifikacyjne</a></div>
+<div style="margin-left: 2em;"><a href="#toc5">Zadanie 1</a></div>
+<div style="margin-left: 2em;"><a href="#toc6">Opis do zadań 2-5</a></div>
+<div style="margin-left: 3em;"><a href="#toc7">Przykład</a></div>
+<div style="margin-left: 2em;"><a href="#toc8">Zadanie 2</a></div>
+<div style="margin-left: 2em;"><a href="#toc9">Zadanie 3</a></div>
+<div style="margin-left: 2em;"><a href="#toc10">Zadanie 4</a></div>
+<div style="margin-left: 2em;"><a href="#toc11">Zadanie 5*1</a></div>
+<div style="margin-left: 1em;"><a href="#toc12">Dodatkowe informacje</a></div>
+</div>
+</div>
+<h1 id="toc0"><span>Prowadzący</span></h1>
+<p><a href="/robert-obryk">Robert Obryk</a></p>
+<h1 id="toc1"><span>Opis</span></h1>
+<p>Zapewne używasz w tej chwili programu wielowątkowego (przeglądarki, w której to czytasz), który najpewniej ma do dyspozycji ponad jeden fizyczny core procesora. Być może kiedyś się zastanawiałeś, jak to działa, że wszystkie te wątki robią zależne od siebie rzeczy (np. jeden czyta stronę z socketa sieciowego, a inny ją rysuję) i jakoś się ze sobą komunikują, a czasem na siebie czekają; wszystko to bez deptania sobie po stopach. Na tych zajęciach będziemy poznawać mechanizmy, których takie programy używają; wymyślać, jak je zaimplementować na &quot;gołym metalu&quot; i faktycznie je implementować. Poza mechanizmami służącymi do czystej komunikacji będziemy próbować stworzyć struktury danych, do których może mieć dostęp wiele wątków na raz.</p>
+<h1 id="toc2"><span>Program zajęć</span></h1>
+<p>Program może ulec zmianom zarówno w zakresie tempa, jak i tematyki (jeśli np. będziecie chcieli myśleć nad innymi strukturami). Podział na dni jest tylko orientacyjny.</p>
+<ol>
+<li>Wstęp, jak działa pamięć współdzielona, synchronizacja za pomocą mutexów (de facto wpierw spinlocków), implementujemy spin lock.</li>
+<li>Jak wątki śpią, piszemy prawdziwy mutex i staramy się go uczynić szybkim. Myślimy nad strukturami typu semafor, rwmutex, once.</li>
+<li>W zależności od chęci dowolny podzbiór:
+<ul>
+<li>Struktury danych (typu stos, kolejka, drzewo binarne, &#8230;), które można naprawdę współbieżnie zmieniać</li>
+<li>Jak naprawdę działa dostęp do pamięci (czym są bariery i jak się zupełnie zdezorientować przyspieszając nasze strukturki o kilka procent).</li>
+<li>Jak szukać błędów w programach wielowątkowych.</li>
+</ul>
+</li>
+</ol>
+<h1 id="toc3"><span>Wymagania</span></h1>
+<p>Będziemy pisać w C++, więc należy znać ten język. Starczy jednak znajomość bardzo podstawowa (jeśli umiesz rozwiązać zadania kwalifikacyjne to jest OK) i zupełnie nie trzeba wiedzieć niczego o wielowątkowości w C++.</p>
+<h1 id="toc4"><span>Zadania kwalifikacyjne</span></h1>
+<blockquote>
+<p>Nie przestraszcie się tych zadań. Na pewno nie trzeba będzie zrobić wszystkich, aby się zakwalifikować. Rozwiązania częściowe też są dla mnie ciekawe (jeśli nie jesteś pewien, czy to co masz jest rozwiązaniem częściowym to jest). Jeśli jest w nich coś niejasnego, to piszcie (<span class="wiki-email">moc.liamg|kyrbor#moc.liamg|kyrbor</span>).</p>
+</blockquote>
+<h2 id="toc5"><span>Zadanie 1</span></h2>
+<p>Napisz program w C++, który:</p>
+<ul>
+<li>wczyta ze standardowego wejścia trzy liczby</li>
+<li>wypisze na standardowe wyjście `TAK` gdy jedna z nich jest dwukrotnością którejś innej, bądź `NIE` w przeciwnym przypadku.</li>
+</ul>
+<h2 id="toc6"><span>Opis do zadań 2-5</span></h2>
+<p>Zadania te polegają na wyobrażeniu sobie, jak działają programy wielowątkowe. W każdym z nich mamy parę programów, które będą się<br />
+wykonywać jednocześnie. Przez &quot;wykonywać jednocześnie&quot; rozumiemy, że wykonujemy je po jednej linijce: po wykonaniu każdej linijki wykonujemy kolejną linijkę z tego samego lub drugiego programu.</p>
+<h3 id="toc7"><span>Przykład</span></h3>
+<p>Mamy zmienną globalną X (początkowo 0) i następujące dwa programy:</p>
+<p>Program A:</p>
+<div class="code">
+<pre>
+<code>a = X
+X = a + 1</code>
+</pre></div>
+<p>Program B:</p>
+<div class="code">
+<pre>
+<code>b = X
+X = b + 1</code>
+</pre></div>
+<p>Po ich wykonaniu zmienna X może przyjmować wartość 1 lub 2, w zależności od tego, jak się one podzielą na kawałki.<br />
+Jeśli wykonają się w następującej kolejności:</p>
+<div class="code">
+<pre>
+<code>A1 a = X (0)
+A2 X = a + 1 (1)
+B1 b = X (1)
+B2 X = b + 1 (2)</code>
+</pre></div>
+<p>to X będzie miał na końcu wartość 2. Jeśli natomiast wykonają się w takiej kolejności:</p>
+<div class="code">
+<pre>
+<code>A1 a = X (0)
+B1 b = X (0)
+B2 X = b + 1 (1)
+A2 X = a + 1 (1)</code>
+</pre></div>
+<p>to X będzie miał na końcu wartość 1.</p>
+<h2 id="toc8"><span>Zadanie 2</span></h2>
+<p>Mamy dwie zmienne globalne: X i Y. Początkowo obie są równe 0. Mamy następujące dwa programy:</p>
+<p>Program A:</p>
+<div class="code">
+<pre>
+<code>Y = 1
+print(&quot;A:&quot; X)</code>
+</pre></div>
+<p>Program B:</p>
+<div class="code">
+<pre>
+<code>X = 1
+print(&quot;B:&quot; Y)</code>
+</pre></div>
+<p>Co te programy mogą wypisać, jeśli uruchomimy je oba na raz (możesz zignorować kolejność linijek na wyjściu)? Dla każdej z czterech możliwości uzasadnij, czemu może lub nie może ona nastąpić.</p>
+<h2 id="toc9"><span>Zadanie 3</span></h2>
+<blockquote>
+<p>Często w programach wielowątkowych nie chcemy, żeby pewne dwie rzeczy mogły dziać się na raz. To i kolejne zadania dotyczą (być może błędnych) sposobów powodowania tego.</p>
+</blockquote>
+<p>Mamy dwie zmienne globalne: Chce0 i Chce1, początkowo równe 0. Mamy następujące dwa programy:</p>
+<p>Program 0:</p>
+<div class="code">
+<pre>
+<code>Chce0 = 1
+loop forever
+    if Chce1 == 0 break
+print(&quot;foo0&quot;)
+print(&quot;bar0&quot;)
+Chce0 = 0</code>
+</pre></div>
+<p>Program 1:</p>
+<div class="code">
+<pre>
+<code>Chce1 = 1
+loop forever
+    if Chce0 == 0 break
+print(&quot;foo1&quot;)
+print(&quot;bar1&quot;)
+Chce1 = 0</code>
+</pre></div>
+<ul>
+<li>Czy może się zdarzyć, że w wyniku ich działania zostanie wypisane &quot;foo0 foo1 bar0 bar1&quot;?</li>
+<li>Czy może się zdarzyć, że wynikiem ich działania może być coś innego niż wypisanie &quot;foo0 bar0 foo1 bar1&quot; lub &quot;foo1 bar1 foo0 bar0&quot;?</li>
+</ul>
+<p>Swoje odpowiedzi krótko uzasadnij.</p>
+<h2 id="toc10"><span>Zadanie 4</span></h2>
+<p>Mamy jedną zmienną globalną: Kto, początkowo równą 0. Mamy dwa programy:</p>
+<p>Program 0:</p>
+<div class="code">
+<pre>
+<code>loop forever
+    if Kto == 0 break
+print(&quot;foo0&quot;)
+print(&quot;bar0&quot;)
+Kto = 1</code>
+</pre></div>
+<p>Program 1:</p>
+<div class="code">
+<pre>
+<code>loop forever
+    if Kto == 1 break
+print(&quot;foo1&quot;)
+print(&quot;bar1&quot;)
+Kto = 0</code>
+</pre></div>
+<ul>
+<li>Czy może się zdarzyć, że w wyniku ich działania zostanie wypisane &quot;foo0 foo1 bar0 bar1&quot;?</li>
+<li>Czy może się zdarzyć, że wynikiem ich działania może być coś innego niż wypisanie &quot;foo0 bar0 foo1 bar1&quot; lub &quot;foo1 bar1 foo0 bar0&quot;?</li>
+</ul>
+<p>Swoje odpowiedzi krótko uzasadnij.</p>
+<h2 id="toc11"><span>Zadanie 5*<sup class="footnoteref"><a id="footnoteref-1" href="javascript:;" class="footnoteref" onclick="WIKIDOT.page.utils.scrollToReference('footnote-1')">1</a></sup></span></h2>
+<p>Mamy trzy zmienne globalne: Kto, Chce0, Chce1, początkowo wszystkie równe 0. Mamy dwa programy:</p>
+<p>Program 0:</p>
+<div class="code">
+<pre>
+<code>Chce0 = 1
+loop forever
+    if Kto == 0 LUB Chce1 == 0 break
+Kto = 0
+print(&quot;foo0&quot;)
+print(&quot;bar0&quot;)
+Chce0 = 0
+Kto = 1</code>
+</pre></div>
+<p>Program 1:</p>
+<div class="code">
+<pre>
+<code>Chce1 = 1
+loop forever
+    if Kto == 1 LUB Chce0 == 0 break
+Kto = 1
+print(&quot;foo1&quot;)
+print(&quot;bar1&quot;)
+Chce1 = 0
+Kto = 0</code>
+</pre></div>
+<p>Czy może się zdarzyć, że w wyniku ich działania zostanie wypisane &quot;foo0 foo1 bar0 bar1&quot;?<br />
+Swoją odpowiedź uzasadnij.</p>
+<h1 id="toc12"><span>Dodatkowe informacje</span></h1>
+<p>Jeśli jakichś chcesz, to napisz (mail: <span class="wiki-email">moc.liamg|kyrbor#moc.liamg|kyrbor</span>).</p>
+<div class="footnotes-footer">
+<div class="title">Footnotes</div>
+<div class="footnote-footer" id="footnote-1"><a href="javascript:;" onclick="WIKIDOT.page.utils.scrollToReference('footnoteref-1')">1</a>. To zadanie jest istotnie trudniejsze. Na pewno nie będzie ono konieczne do zakwalifikowania się na warsztaty.</div>
+</div>
+
+                    </div>
+
+                    
+
+
+
+                    
+
+                    <div id="page-info-break"></div>
+                    
+                        <div id="page-options-container">
+                            <div id="page-info">wersja strony: 3, ostatnia edycja: <span class="odate time_1401716840 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20temu%29">02 Jun 2014 13:47</span></div>
+            <div id="page-options-bottom"  class="page-options-bottom">
+            <a href="javascript:;" class="btn btn-default" id="edit-button">Edytuj</a>
+<a href="javascript:;" class="btn btn-default" id="tags-button">Tagi</a>
+
+<a href="javascript:;" class="btn btn-default" id="history-button">Historia</a>
+<a href="javascript:;" class="btn btn-default" id="files-button">Pliki</a>
+<a href="javascript:;" class="btn btn-default" id="print-button">Drukuj</a>
+<a href="javascript:;" class="btn btn-default" id="site-tools-button">Narzędzia</a>
+<a href="javascript:;" class="btn btn-default" id="more-options-button">+&nbsp;Opcje</a> 
+</div>
+<div id="page-options-bottom-2" class="page-options-bottom form-actions" style="display:none">
+    <a href="javascript:;" class="btn btn-default" id="edit-sections-button">Edytuj sekcje</a>
+    <a href="javascript:;" class="btn btn-default" id="edit-append-button">Dołącz tekst</a>
+    <a href="javascript:;" class="btn btn-default" id="edit-meta-button">Edytuj tagi meta</a>
+    <a href="javascript:;" class="btn btn-default" id="watchers-button">Obserwowane przez</a> 
+    <a href="javascript:;" class="btn btn-default" id="backlinks-button">Linki zwrotne</a> 
+    <a href="javascript:;" class="btn btn-default" id="view-source-button">Źródło strony</a> 
+    <a href="javascript:;" class="btn btn-default" id="parent-page-button">Strona nadrzędna</a> 
+    <a href="javascript:;" class="btn btn-default" id="page-block-button">Zablokuj stronę</a>    
+    <a href="javascript:;" class="btn btn-default" id="rename-move-button">Zmień nazwę</a> 
+    <a href="javascript:;" class="btn btn-default" id="delete-button">Usuń</a> 
+</div>
+<div id="page-options-area-bottom">
+</div>
+
+                        </div>
+                    
+                    <div id="action-area" style="display: none;"></div>
+                </div>
+            </div>
+            
+            
+            
+            <div id="footer" style="display: block; visibility: visible;">
+                <div class="options" style="display: block; visibility: visible;">
+    <a href="http://www.wikidot.com/doc" id="wikidot-help-button">Pomoc</a>
+    &nbsp;|
+    <a href="http://www.wikidot.com/legal:terms-of-service" id="wikidot-tos-button">Regulamin</a>
+    &nbsp;|
+    <a href="http://www.wikidot.com/legal:privacy-policy" id="wikidot-privacy-button">Prywatność</a>
+    &nbsp;|
+    <a href="javascript:;" id="bug-report-button" onclick="WIKIDOT.page.listeners.pageBugReport(event)">Zgłoś błąd</a>
+    &nbsp;|
+    <a href="javascript:;" id="abuse-report-button" onclick="WIKIDOT.page.listeners.flagPageObjectionable(event)">Zgłoś nadużycie</a>
+</div>
+Umieszczone na <a href="http://www.wikidot.com">Wikidot.com</a> 
+            </div>
+            
+                <div id="license-area" class="license-area">
+                    O ile nie zaznaczono inaczej, treść tej strony objęta jest licencją <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 License</a>
+                </div>
+            
+            
+            
+
+
+
+            <div id="extrac-div-1"><span></span></div><div id="extrac-div-2"><span></span></div><div id="extrac-div-3"><span></span></div>
+            
+            
+            
+            
+                
+            
+        </div>
+        
+    </div>
+<!-- These extra divs/spans may be used as catch-alls to add extra imagery. -->
+<div id="extra-div-1"><span></span></div><div id="extra-div-2"><span></span></div><div id="extra-div-3"><span></span></div>
+<div id="extra-div-4"><span></span></div><div id="extra-div-5"><span></span></div><div id="extra-div-6"><span></span></div>
+</div>
+
+
+
+</div>
+<div id="dummy-ondomready-block" style="display: none;" ></div>
+    <!-- Google Analytics load -->
+    <script type="text/javascript">
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    <!-- Quantcast -->
+    <script type="text/javascript">
+    _qoptions={
+        qacct:"p-edL3gsnUjJzw-"
+    };
+    (function() {
+        var qc = document.createElement('script'); qc.type = 'text/javascript'; qc.async = true;
+        qc.src = ('https:' == document.location.protocol ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(qc, s);
+    })();
+    </script>
+    <noscript>
+        <img src="http://pixel.quantserve.com/pixel/p-edL3gsnUjJzw-.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+    </noscript>
+
+
+
+
+<div id="page-options-bottom-tips" style="display: none;">
+    <div id="edit-button-hovertip">
+        Kliknij aby edytować zawartość strony.    </div>
+</div>
+<div id="page-options-bottom-2-tips"  style="display: none;">
+    <div id="edit-sections-button-hovertip">
+        Click here to toggle editing of individual sections of the page (if possible).         Watch headings for an &quot;edit&quot; link when available.    </div>
+    <div id="edit-append-button-hovertip">
+        Dopisz treść na koniec strony.    </div>
+    <div id="history-button-hovertip">
+        Zobacz historię zmian tej strony.    </div>
+    <div id="discuss-button-hovertip">
+        Jeśli chcesz zobaczyć dyskusję o tej stronie - kliknij.    </div>
+    <div id="files-button-hovertip">
+        Zobacz informacje o dołączonych do tej strony plikach.    </div>
+    <div id="site-tools-button-hovertip">
+        Kilka użytecznych narzędzi.    </div>
+    <div id="backlinks-button-hovertip">
+        Zobacz strony które linkują do tej strony lub ją importują.    </div>
+    <div id="rename-move-button-hovertip">
+        Zmień nazwę (a także adres URL lub kategorię) tej strony.    </div>
+    <div id="view-source-button-hovertip">
+        Zobacz źródło tej strony (bez jej edycji).    </div>
+    <div id="parent-page-button-hovertip">  
+        Ustaw stronę nadrzędną (ułatwia nawigację).    </div>
+            <div id="abuse-report-button-hovertip">
+            Powiadom administratorów o niewłaściwej zawartości strony.        </div>
+        <div id="bug-report-button-hovertip">
+            Coś nie działa jak powinno? Zobacz co możesz zrobić.        </div>
+        <div id="wikidot-help-button-hovertip">
+            Sekcja dokumentacji i pomocy na Wikidot.com.        </div>
+        <div id="wikidot-tos-button-hovertip">
+            Regulamin serwisu Wikidot.com - co można, czego nie itp.        </div>
+        <div id="wikidot-privacy-button-hovertip">
+            Polityka prywatności Wikidot.com.          
+        </div>
+    </div>
+</body>
+</html>

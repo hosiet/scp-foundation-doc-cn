@@ -1,0 +1,4 @@
+html usr/share/scp-foundation-doc-cn/
+scp-foundation-doc-cn usr/bin/
+debian/scp-foundation.svg usr/share/icons/hicolor/scalable/emblems/
+debian/scp-foundation-doc-cn.desktop usr/share/applications/

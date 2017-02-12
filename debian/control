@@ -1,0 +1,21 @@
+Source: scp-foundation-doc-cn
+Section: doc
+Priority: optional
+Maintainer: Boyuan Yang <073plan@gmail.com>
+Build-Depends:
+ debhelper (>= 9),
+Standards-Version: 3.9.8
+Homepage: http://scp-wiki-cn.wikidot.com
+
+Package: scp-foundation-doc-cn
+Architecture: all
+Depends:
+ ${misc:Depends},
+Description: Chinese translation for the SCP Foundation documents
+ This package provides offline Chinese translation for the SCP
+ Foundation documents as released on scp-wiki-cn.wikidot.com.
+ .
+ Documents are provided in HTML format.
+ .
+ The SCP Foundation is a fictional organization that is the
+ subject of a web-based collaborative writing project.

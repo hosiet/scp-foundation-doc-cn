@@ -1,0 +1,9 @@
+Zadanie 3
+Napisz w języku Python skrypt, który wykonuje następujące czynności:
+1) Pobiera z internetu plik znajdujący się pod adresem podanym jako pierwszy
+argument programu.
+2) Znajduje 10 najczęściej występujących w pliku słów dłuższych niż 3. Jako
+słowa przyjmujemy spójne podciągi składające się z cyfr lub liter alfabetu
+łacińskiego.
+3) Wynik przedstawia na wykresie, który jest zapisywany w pliku "out.png".
+

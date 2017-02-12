@@ -1,0 +1,21 @@
+.join-box {
+}
+
+.join-box a {
+	display: table;
+	margin: 5px auto;
+	padding: 0.5em 1em;
+	font-size: 140%;
+	color: #000;
+	background-color: #EEE;
+	background-image: url("../../../common--theme/base/images/shade2_n.png");
+	background-position:center 50px;
+	-moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+	outline: none;
+	text-decoration: none;
+}
+
+.join-box a:hover {
+	color: #555;
+}

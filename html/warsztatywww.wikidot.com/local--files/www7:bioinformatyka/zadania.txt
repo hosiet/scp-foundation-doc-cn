@@ -1,0 +1,23 @@
+1. Napisz program obliczający rozwiązanie takiego zadania: mając dany ciąg
+liczb całkowitych znajdź najmniejszą wartość bezwzględną różnicy między dwoma
+dowolnymi wyrazami.
+
+Wejście:
+W pierwszym wierszu liczba n oznaczająca długość ciągu, 2 <= n <= 100000. W
+drugim wierszu wyrazy ciągu a_1, ..., a_n oddzielone spacjami,
+-1000000 <= a_i <= 1000000.
+
+Wyjście:
+Nieujemna liczba całkowita będąca rozwiązaniem zadania.
+
+Akceptowane języki programowania: C++ (GCC), C (GCC), Java,
+Pascal (FreePascal), Python, Perl.
+
+2. Kasia i Magda strzelają na zmianę z łuku do tarczy. Ustaliły, że za
+trafienie w tarczę otrzymuje się 1 punkt i wygrywa ta z nich, która pierwsza
+zdobędzie przewagę 2 punktów. Kasia trafia do tarczy zawsze z
+prawdopodobieństwem 0.5. Jeśli Magda trafiła w poprzednim strzale do tarczy, to
+w kolejnym strzale trafia z prawdopodobieństwem 0.6, a w przeciwnym przypadku
+trafia z prawdopodobieństwem 0.4. Magda strzela pierwsza. Oblicz
+prawdopodobieństwo tego, że Magda wygra grę.
+

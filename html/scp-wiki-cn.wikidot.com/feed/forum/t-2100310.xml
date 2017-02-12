@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wikidot="http://www.wikidot.com/rss-namespace">
+
+	<channel>
+		<title>回应于 &quot;SCP-521&quot;</title>
+		<link>http://scp-wiki-cn.wikidot.com/forum/t-2100310/scp-521</link>
+		<description>Posts in the discussion thread &quot;SCP-521&quot;</description>
+				<copyright></copyright>
+		<lastBuildDate>Sun, 19 Feb 2017 09:00:53 +0000</lastBuildDate>
+		
+					<item>
+				<guid>http://scp-wiki-cn.wikidot.com/forum/t-2100310#post-2742608</guid>
+				<title>Re: 翻译校对</title>
+				<link>http://scp-wiki-cn.wikidot.com/forum/t-2100310/scp-521#post-2742608</link>
+				<description></description>
+				<pubDate>Wed, 08 Feb 2017 09:59:23 +0000</pubDate>
+				<wikidot:authorName>tickletickle</wikidot:authorName>				<wikidot:authorUserId>2934423</wikidot:authorUserId>				<content:encoded>
+					<![CDATA[
+						 <p>譯註4：了解，搞錯normally的意思囧。<br /> 譯註3：弄錯譯註4的意思，導致這句的意思也搞錯了Orz。<br /> 那麼整個效果應該是：投遞一封信，在等待異常效果發動前，任何其他投入郵筒的郵件都會被當成正常郵件處理（也就是一次只會有一封信產生效果），大概郵差（正常人類）看不到第一封投遞的信？</p> <p>感謝指正！</p> 
+				 	]]>
+				</content:encoded>							</item>
+					<item>
+				<guid>http://scp-wiki-cn.wikidot.com/forum/t-2100310#post-2742588</guid>
+				<title>翻译校对</title>
+				<link>http://scp-wiki-cn.wikidot.com/forum/t-2100310/scp-521#post-2742588</link>
+				<description></description>
+				<pubDate>Wed, 08 Feb 2017 09:30:51 +0000</pubDate>
+				<wikidot:authorName>darkrai_0v0</wikidot:authorName>				<wikidot:authorUserId>2974712</wikidot:authorUserId>				<content:encoded>
+					<![CDATA[
+						 <p>译注3处standard mail items，应该指其他正常渠道的邮件。<br /> 译注4处应该是指在发动异常效果的信件在发出到接受期间，SCP-521收到的邮件并不会发动异常效果，而是像正常邮件一样被寄出。</p> 
+				 	]]>
+				</content:encoded>							</item>
+					<item>
+				<guid>http://scp-wiki-cn.wikidot.com/forum/t-2100310#post-2738938</guid>
+				<title>(no title)</title>
+				<link>http://scp-wiki-cn.wikidot.com/forum/t-2100310/scp-521#post-2738938</link>
+				<description></description>
+				<pubDate>Thu, 02 Feb 2017 15:37:49 +0000</pubDate>
+				<wikidot:authorName>tickletickle</wikidot:authorName>				<wikidot:authorUserId>2934423</wikidot:authorUserId>				<content:encoded>
+					<![CDATA[
+						 <p><strong>本译文翻译自由&quot;Aeish&quot;所创作的&quot;SCP-521&quot;： <a href="http://www.scp-wiki.net/scp-521">http://www.scp-wiki.net/scp-521</a></strong></p> 
+				 	]]>
+				</content:encoded>							</item>
+				</channel>
+</rss>
